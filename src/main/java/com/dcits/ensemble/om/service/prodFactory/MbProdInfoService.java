@@ -64,6 +64,7 @@ public class MbProdInfoService {
         if(mbProdType != null) {
             mbProdInfo.setProdType(mbProdType);
             Map<String, MbProdDefine> mbProdDefineMap = new LinkedHashMap<>();
+            List<MbProdDefine> mbProdDefineLists = new ArrayList<>();
             String baseType = mbProdType.getBaseProdType();
             String prodRange = mbProdType.getProdRange();
             List<MbProdDefine> mbProdDefineGroupList = new ArrayList<>();
@@ -91,10 +92,15 @@ public class MbProdInfoService {
                     //参数取自可售产品
                     mbProdDefine.setGroup("SOLD");
                 }
+                //mbProdDefinsMap为原始处理方式 测试成功之后  删除
                 mbProdDefineMap.put(mbProdDefine.getAssembleId(), mbProdDefine);
+                //tj
+                mbProdDefineLists.add(mbProdDefine);
             }
             mbProdInfo.setProdDefines(mbProdDefineMap);
-            mbProdInfo.setMbEventInfos(getMbEventInfo(prodRange, prodType, baseType));
+            mbProdInfo.setMbProdDefine(mbProdDefineLists);
+            //0417天津差异去除对mb_event_attr表，mb_event_part事件指标表的使用
+//            mbProdInfo.setMbEventInfos(getMbEventInfo(prodRange, prodType, baseType));
             //获取单表数据
             mbProdInfo = getProdTablesInfo(mbProdInfo,prodType);
 
@@ -279,12 +285,13 @@ public class MbProdInfoService {
            assembleColumnList.put(key,assembleColumn);
        }
        //完成对事件的组装
-        Map mbProdEvents=mbProdInfo.getMbEventInfos();
-       for(Object key:mbProdEvents.keySet()){
-           MbColumnInfo assembleColumn=mbAttrInfoService.getColumnInfo((String)key);
-           if(assembleColumn!=null)
-           assembleColumnList.put(key,assembleColumn);
-       }
+        //tj改造去除原事件参数表
+//        Map mbProdEvents=mbProdInfo.getMbEventInfos();
+//       for(Object key:mbProdEvents.keySet()){
+//           MbColumnInfo assembleColumn=mbAttrInfoService.getColumnInfo((String)key);
+//           if(assembleColumn!=null)
+//           assembleColumnList.put(key,assembleColumn);
+//       }
         mbProdInfo.setMbColumnInfo(assembleColumnList);
     }
 

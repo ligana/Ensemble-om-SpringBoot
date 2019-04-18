@@ -16,39 +16,43 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class MbProdDefine implements Serializable {
-    public MbProdDefine(){
+    public MbProdDefine(){};
 
-    };
 
-    public MbProdDefine(String optionPermissions,String prodType, String seqNo, String assembleType, String assembleId, String eventDefault, String attrKey, String attrValue, String status, String perEffect, String pageCode, Integer pageSeqNo) {
+    public MbProdDefine(String prodType, String eventType, String assembleType, String assembleId, String attrType, String attrValue, String status, String perEffect, String pageCode, Integer pageSeqNo, String optionPermissions, String company, String tranTime, String tranTimestamp, String group) {
         this.prodType = prodType;
-        this.seqNo = seqNo;
+        this.eventType = eventType;
         this.assembleType = assembleType;
         this.assembleId = assembleId;
-        this.eventDefault = eventDefault;
-        this.attrKey = attrKey;
+        this.attrType = attrType;
         this.attrValue = attrValue;
         this.status = status;
         this.perEffect = perEffect;
         this.pageCode = pageCode;
         this.pageSeqNo = pageSeqNo;
         this.optionPermissions = optionPermissions;
+        this.company = company;
+        this.tranTime = tranTime;
+        this.tranTimestamp = tranTimestamp;
+        this.group = group;
     }
+
 
     @Id
     @Column(name="prod_type")
     private String prodType;
     @Id
-    @Column(name="seq_no")
-    private String seqNo;
+    @Column(name="event_type")
+    private String eventType;
+    @Id
     @Column(name="assemble_type")
     private String assembleType;
+    @Id
     @Column(name="assemble_id")
     private String assembleId;
-    @Column(name="event_default")
-    private String eventDefault;
-    @Column(name="attr_key")
-    private String attrKey;
+    @Id
+    @Column(name="attr_type")
+    private String attrType;
     @Column(name="attr_value")
     private String attrValue;
     @Column(name="status")
@@ -61,24 +65,34 @@ public class MbProdDefine implements Serializable {
     private Integer pageSeqNo;
     @Column(name="option_permissions")
     private String optionPermissions;
+    @Column(name="company")
+    private String company;
+    @Column(name="tran_time")
+    private String tranTime;
+    @Column(name="tran_timestamp")
+    private String tranTimestamp;
     @Transient
     private String group;
+
     @Override
     public String toString() {
         return "MbProdDefine{" +
                 "prodType='" + prodType + '\'' +
-                ", seqNo='" + seqNo + '\'' +
+                ", eventType='" + eventType + '\'' +
                 ", assembleType='" + assembleType + '\'' +
                 ", assembleId='" + assembleId + '\'' +
-                ", eventDefault='" + eventDefault + '\'' +
-                ", attrKey='" + attrKey + '\'' +
+                ", attrType='" + attrType + '\'' +
                 ", attrValue='" + attrValue + '\'' +
                 ", status='" + status + '\'' +
                 ", perEffect='" + perEffect + '\'' +
                 ", pageCode='" + pageCode + '\'' +
-                ", pageSeqNo='" + pageSeqNo + '\'' +
+                ", pageSeqNo=" + pageSeqNo +
                 ", optionPermissions='" + optionPermissions + '\'' +
-
+                ", company='" + company + '\'' +
+                ", tranTime='" + tranTime + '\'' +
+                ", tranTimestamp='" + tranTimestamp + '\'' +
+                ", group='" + group + '\'' +
                 '}';
     }
+
 }
