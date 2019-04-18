@@ -370,7 +370,7 @@ public class DifferenceProdInfo {
                             if(mbProdDefine != null) {
                                 Map define = (Map) ResourcesUtils.getMap(mbProdInfo.get("prodDefines")).get(assembleId);
                                 keyValue.put("PROD_TYPE", mbProdDefine.getProdType());
-                                keyValue.put("SEQ_NO", mbProdDefine.getSeqNo());
+//                                keyValue.put("SEQ_NO", mbProdDefine.getSeqNo());
                                 define.put("tableName", "MB_PROD_DEFINE");
                                 define.put("optType", "D");
                                 this.prodType = mbProdDefine.getProdType();
@@ -545,15 +545,15 @@ public class DifferenceProdInfo {
         }
         if("MB_PROD_DEFINE".equals(table)){
             List<MbProdDefine> mbProdDefines = mbProdDefineRepository.findByProdType(key);
-            if(mbProdDefines.size()>0) {
-                int seqNo = Integer.parseInt(mbProdDefines.get(0).getSeqNo());
-                for (int i = 1; i < mbProdDefines.size(); i++) {
-                    if (seqNo < Integer.parseInt(mbProdDefines.get(i).getSeqNo())) {
-                        seqNo = Integer.parseInt(mbProdDefines.get(i).getSeqNo());
-                    }
-                }
-                maxSeqNo = seqNo + "";
-            }
+//            if(mbProdDefines.size()>0) {
+//                int seqNo = Integer.parseInt(mbProdDefines.get(0).getSeqNo());
+//                for (int i = 1; i < mbProdDefines.size(); i++) {
+//                    if (seqNo < Integer.parseInt(mbProdDefines.get(i).getSeqNo())) {
+//                        seqNo = Integer.parseInt(mbProdDefines.get(i).getSeqNo());
+//                    }
+//                }
+//                maxSeqNo = seqNo + "";
+//            }
         }
         if("".equals(maxSeqNo)){
             //无参数时候 return 0

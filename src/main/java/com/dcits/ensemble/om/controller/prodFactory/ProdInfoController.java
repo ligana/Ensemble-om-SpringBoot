@@ -60,23 +60,14 @@ public class ProdInfoController {
     @RequestMapping("/getProdInfo")
     @ResponseBody
     public Result getProdInfo(HttpServletResponse response, @RequestParam(value = "prodType", required = false) String prodType) {
-        //Map map = requestBean.getBody();
         response.setHeader("Content-Type", "application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
-        //String prodType = (String) map.get("prodType");
         if(prodType==null){
             return ResultUtils.success();
         }
         MbProdInfo mbProdInfo = mbProdInfoService.getProdInfo(prodType);
         OmProcessMainFlow omProcessMainFlow = omProcessMainFlowRepository.findByTranId("MbProdType");
- /*       List<OmProcessRecordHist> omProcessRecordHistList = null;*/
-        /*查询差异信息
-        if(omProcessMainFlow!=null&&omProcessMainFlow.getReqNo()!=null){
-            //获取组合信息
-            String operatorNo=omProcessDetailHistRepository.findByReqNo(omProcessMainFlow.getReqNo());
 
-            omProcessRecordHistList = omProcessRecordHistRepository.searchDiffByTableName(omProcessMainFlow.getReqNo());
-        }*/
         List<IrlProdInt> irlProdInt = mbProdInfo.getIrlProdInt();
         if(irlProdInt != null){
             for(IrlProdInt irl : irlProdInt){
@@ -89,9 +80,6 @@ public class ProdInfoController {
         }
         //从产品参数表查询参数范围
         mbProdInfoService.assembleColumnInfo(mbProdInfo);
-/*              responseMap.put("prodInfo", mbProdInfo.toString());
-  if (omProcessRecordHistList != null)
-            responseMap.put("diff", omProcessRecordHistList);*/
         return ResultUtils.success(mbProdInfo);
     }
 

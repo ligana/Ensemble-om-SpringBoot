@@ -18,6 +18,7 @@ import java.util.Map;
 public class MbProdInfo {
     private MbProdType prodType;
     private Map<String,MbProdDefine> prodDefines;
+    private List<MbProdDefine> mbProdDefine;
     private Map<String,MbEventInfo> mbEventInfos;
     private Map<String, MbColumnInfo> mbColumnInfo;
     private List<GlProdAccounting> glProdAccounting;
