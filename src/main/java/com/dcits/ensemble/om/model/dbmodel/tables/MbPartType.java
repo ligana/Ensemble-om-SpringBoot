@@ -24,7 +24,6 @@ public class MbPartType implements Serializable {
 
     public MbPartType() {
     }
-
     public MbPartType(String partType, String partDesc, String defaultPart, String partClass, String isStandard, String processMethod, String busiCategory, String status, String company, String tranTimestamp, String tranTime) {
         this.partType = partType;
         this.partDesc = partDesc;
@@ -38,7 +37,6 @@ public class MbPartType implements Serializable {
         this.tranTimestamp = tranTimestamp;
         this.tranTime = tranTime;
     }
-
     @Id
     @Column(name="part_type")
     private String partType;
