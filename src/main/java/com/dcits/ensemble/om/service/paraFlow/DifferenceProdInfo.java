@@ -61,26 +61,27 @@ public class DifferenceProdInfo {
        prodTran((Map) mbProdInfo.get("prodType"), reqNo, operatorNo);
 
        //产品参数
-       prodDefineTran(ResourcesUtils.getMap(mbProdInfo.get("prodDefines")), reqNo, operatorNo);
-       Map eventInfo=(Map) mbProdInfo.get("mbEventInfos");
-       if(eventInfo==null){
-           return;
-       }
-       eventTypeNo=null;
-       eventPartNo=null;
-       eventAttrNo=null;
-       for (Object key : eventInfo.keySet()) {
-           Map<String,Map> eventOne=(Map)eventInfo.get(key);
-           String eventType=(String)key;
-           //如果操作类型为复制则事件名字以新的产品类型为名
-           if("I".equals(this.optionType)){
-               eventType=  eventType.substring(0,eventType.indexOf("_")+1)+this.prodType;
-           }
-           this.eventType=eventType;
-           eventTypeTran(ResourcesUtils.getMap(eventOne.get("mbEventType")), reqNo, operatorNo);
-           eventAttrTran(ResourcesUtils.getMap(eventOne.get("mbEventAttrs")), reqNo, operatorNo);
-           eventPartTran(ResourcesUtils.getMap(eventOne.get("mbEventParts")), reqNo, operatorNo);
-       }
+       prodDefineTran(ResourcesUtils.getMap(mbProdInfo.get("mbProdDefine")), reqNo, operatorNo);
+       //天津项目屏蔽是mbEventInfo处理
+//       Map eventInfo=(Map) mbProdInfo.get("mbEventInfos");
+//       if(eventInfo==null){
+//           return;
+//       }
+//       eventTypeNo=null;
+//       eventPartNo=null;
+//       eventAttrNo=null;
+//       for (Object key : eventInfo.keySet()) {
+//           Map<String,Map> eventOne=(Map)eventInfo.get(key);
+//           String eventType=(String)key;
+//           //如果操作类型为复制则事件名字以新的产品类型为名
+//           if("I".equals(this.optionType)){
+//               eventType=  eventType.substring(0,eventType.indexOf("_")+1)+this.prodType;
+//           }
+//           this.eventType=eventType;
+//           eventTypeTran(ResourcesUtils.getMap(eventOne.get("mbEventType")), reqNo, operatorNo);
+//           eventAttrTran(ResourcesUtils.getMap(eventOne.get("mbEventAttrs")), reqNo, operatorNo);
+//           eventPartTran(ResourcesUtils.getMap(eventOne.get("mbEventParts")), reqNo, operatorNo);
+//       }
        //费用信息
        mbProdCharge((List)mbProdInfo.get("mbProdCharge"), reqNo, operatorNo);
        //核算信息
@@ -572,7 +573,10 @@ public class DifferenceProdInfo {
                     Map define = (Map) prodMap.get(key);
                     Map newData = (Map) define.get("newData");
                     keyValue.put("PROD_TYPE", this.prodType);
-                    keyValue.put("SEQ_NO", newData.get("seqNo"));
+                    keyValue.put("EVENT_TYPE", newData.get("eventType"));
+                    keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
+                    keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
+                    keyValue.put("ATTR_TYPE", newData.get("attrType"));
                     define.put("tableName", "MB_PROD_DEFINE");
                     define.put("optType", define.get("optionType"));
                     saveProdParaDifference(subSeqNo, define, keyValue, seqNo);
