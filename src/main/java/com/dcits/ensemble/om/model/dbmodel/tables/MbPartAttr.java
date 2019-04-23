@@ -3,14 +3,12 @@ package com.dcits.ensemble.om.model.dbmodel.tables;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "mb_part_attr")
+@IdClass(MbPartAttrKeysClass.class)
 @Getter
 @Setter
 public class MbPartAttr implements Serializable {
