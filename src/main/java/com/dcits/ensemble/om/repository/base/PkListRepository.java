@@ -26,4 +26,11 @@ public class PkListRepository {
         List<Map> dataList = dataQuery.getResultList();
         return dataList;
     }
+    public List<Map> getAll(String tableName){
+        String dataSql = "select * from "+tableName+"";
+        Query queryAll = em.createNativeQuery(dataSql);
+        queryAll.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        List<Map> resultList = queryAll.getResultList();
+        return resultList;
+    }
 }

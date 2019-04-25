@@ -41,6 +41,12 @@ public class PkListController {
         List<Map> columnMap= pkListRepository.getPkList(tableName,column,columnDesc);
         return  ResultUtils.success(columnMap);
     }
+    @RequestMapping("/getAll")
+    @ResponseBody
+    public Result getAll(HttpServletResponse response, @RequestParam(value = "tableName", required = false) String tableName) {
+        List<Map> pkList = pkListRepository.getAll(tableName);
+        return  ResultUtils.success(pkList);
+    }
     @RequestMapping("/getPkListColumnRf")
     @ResponseBody
     public Result getPkListColumnRf(HttpServletResponse response, @RequestBody Map map) {

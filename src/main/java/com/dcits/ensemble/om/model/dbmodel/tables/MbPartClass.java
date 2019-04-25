@@ -26,13 +26,13 @@ public class MbPartClass implements Serializable {
     public MbPartClass() {
     }
 
-    public MbPartClass(String partClass, String partClassDesc, String partClassLevel, String parentPartClass, String company, String tranTimeStamp, String tranTime) {
+    public MbPartClass(String partClass, String partClassDesc, String partClassLevel, String parentPartClass, String company, String tranTimestamp, String tranTime) {
         this.partClass = partClass;
         this.partClassDesc = partClassDesc;
         this.partClassLevel = partClassLevel;
         this.parentPartClass = parentPartClass;
         this.company = company;
-        this.tranTimeStamp = tranTimeStamp;
+        this.tranTimestamp = tranTimestamp;
         this.tranTime = tranTime;
     }
 
@@ -48,7 +48,7 @@ public class MbPartClass implements Serializable {
     @Column(name ="company")
     private String company;
     @Column(name ="tran_timestamp")
-    private String tranTimeStamp;
+    private String tranTimestamp;
     @Column(name ="tran_time")
     private String tranTime;
 
@@ -60,7 +60,7 @@ public class MbPartClass implements Serializable {
                 ", partClassLevel='" + partClassLevel + '\'' +
                 ", parentPartClass='" + parentPartClass + '\'' +
                 ", company='" + company + '\'' +
-                ", tranTimeStamp='" + tranTimeStamp + '\'' +
+                ", tranTimestamp='" + tranTimestamp + '\'' +
                 ", tranTime='" + tranTime + '\'' +
                 '}';
     }

@@ -2,6 +2,7 @@ package com.dcits.ensemble.om.controller.prodFactory;
 
 import com.dcits.ensemble.om.controller.model.Result;
 import com.dcits.ensemble.om.controller.model.ResultUtils;
+import com.dcits.ensemble.om.model.dbmodel.tables.MbPartClass;
 import com.dcits.ensemble.om.service.prodFactory.MbPartClassService;
 import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,7 +36,8 @@ public class MbPartClassController {
     public Result findAll(HttpServletResponse response){
         response.setHeader("Content-Type","application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
-        responseMap.put("PartClassInfo", mbPartClassService.findAll());
+        List<MbPartClass> list=mbPartClassService.findAll();
+        responseMap.put("PartClassInfo", list);
         return ResultUtils.success(responseMap);
     }
 }

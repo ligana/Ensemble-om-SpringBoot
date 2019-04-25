@@ -30,4 +30,24 @@ public class OmEnvOrg {
         responseMap.put("envInfo",omEnvOrgService.getEnvInfoByEnvId(envId));
         return ResultUtils.success(responseMap);
     }
+
+
+    /**
+     * @Author XiaoPan
+     * @Description //查询全部环境列表
+     * @Date 2019/4/11 9:49
+     * @Param [response]
+     * @return com.dcits.ensemble.om.controller.model.Result
+    **/
+  /*  @RequestMapping("/findAll")
+    @ResponseBody
+    public Result findAll(HttpServletResponse response){
+        response.setHeader("Content-Type","application/json;charset=UTF-8");
+        Map responseMap = new HashMap<>();
+        responseMap.put("envInfo",omEnvOrgService.findAll());
+        return ResultUtils.success(responseMap);
+    }*/
+
+
+
 }

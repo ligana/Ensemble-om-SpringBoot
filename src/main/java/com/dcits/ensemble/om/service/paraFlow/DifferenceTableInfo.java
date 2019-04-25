@@ -81,8 +81,9 @@ public class DifferenceTableInfo {
         List<Attr> columnList= TableDefine.getTable(tableName).getAttr();
         for(Attr column:columnList){
             if("true".equals(column.getP())){
-                if("I".equals(optType))
-                keyValue.put(column.getCode(),newData.get(column.getCode()));
+                if("I".equals(optType)){
+                    keyValue.put(column.getCode(), newData.get(column.getCode()));
+                }
                 else{
                     keyValue.put(column.getCode(),oldData.get(column.getCode()));
                 }

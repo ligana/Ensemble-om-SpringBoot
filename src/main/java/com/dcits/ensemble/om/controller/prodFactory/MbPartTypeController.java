@@ -2,6 +2,7 @@ package com.dcits.ensemble.om.controller.prodFactory;
 
 import com.dcits.ensemble.om.controller.model.Result;
 import com.dcits.ensemble.om.controller.model.ResultUtils;
+import com.dcits.ensemble.om.service.prodFactory.MbPartAttrService;
 import com.dcits.ensemble.om.service.prodFactory.MbPartTypeService;
 import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
@@ -28,12 +29,15 @@ public class MbPartTypeController {
     @Resource
     private MbPartTypeService mbPartTypeService;
 
+    @Resource
+    private MbPartAttrService mbPartAttrService;
     @RequestMapping("/QueryAll")
     @ResponseBody
     public Result QueryAll(HttpServletResponse response){
         response.setHeader("Content-Type","application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
-        responseMap.put("PartTypeInfo",mbPartTypeService.QueryAll());
+        responseMap.put("partTypeInfo",mbPartTypeService.QueryAll());
+        responseMap.put("partAttrInfo",mbPartAttrService.QueryAll());
         return ResultUtils.success(responseMap);
     }
 }

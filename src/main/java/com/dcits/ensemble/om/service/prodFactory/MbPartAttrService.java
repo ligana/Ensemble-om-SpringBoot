@@ -1,6 +1,7 @@
 package com.dcits.ensemble.om.service.prodFactory;
 
 import com.dcits.ensemble.om.model.dbmodel.tables.MbPartAttr;
+import com.dcits.ensemble.om.model.dbmodel.tables.MbPartType;
 import com.dcits.ensemble.om.repository.prodFactory.MbPartAttrRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +16,10 @@ public class MbPartAttrService {
 
     public List<MbPartAttr> findByPartType (String partType){
         return mbPartAttrRepository.findByPartType(partType);
+    }
+
+    public List<MbPartAttr> QueryAll(){
+        List<MbPartAttr> mbPartAttrRepositoryAll = mbPartAttrRepository.findAll();
+        return mbPartAttrRepositoryAll;
     }
 }
