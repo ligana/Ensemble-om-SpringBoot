@@ -99,8 +99,8 @@ public class MbProdInfoService {
             }
             mbProdInfo.setProdDefines(mbProdDefineMap);
             mbProdInfo.setMbProdDefine(mbProdDefineLists);
-            //0417天津差异去除对mb_event_attr表，mb_event_part事件指标表的使用
-//            mbProdInfo.setMbEventInfos(getMbEventInfo(prodRange, prodType, baseType));
+            //对参数进行排序 先参数 后指标
+
             //获取单表数据
             mbProdInfo = getProdTablesInfo(mbProdInfo,prodType);
 

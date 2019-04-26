@@ -15,7 +15,8 @@ public class MbPartAttrService {
     private MbPartAttrRepository mbPartAttrRepository;
 
     public List<MbPartAttr> findByPartType (String partType){
-        return mbPartAttrRepository.findByPartType(partType);
+        List<MbPartAttr> mbPartAttrList = mbPartAttrRepository.findByPartType(partType);
+        return mbPartAttrList;
     }
 
     public List<MbPartAttr> QueryAll(){

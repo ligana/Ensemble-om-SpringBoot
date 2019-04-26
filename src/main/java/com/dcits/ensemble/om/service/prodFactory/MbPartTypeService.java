@@ -27,4 +27,12 @@ public class MbPartTypeService {
         List<MbPartType> mbPartTypeRepositoryAll = mbPartTypeRepository.findAll();
         return mbPartTypeRepositoryAll;
     }
+
+    public String getPartDesc(String partType){
+        MbPartType mbPartType = mbPartTypeRepository.findByPartType(partType);
+        if(!mbPartType.equals(null)){
+            return mbPartType.getPartDesc();
+        }
+        return partType;
+    }
 }

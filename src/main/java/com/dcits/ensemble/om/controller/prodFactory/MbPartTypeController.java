@@ -7,6 +7,7 @@ import com.dcits.ensemble.om.service.prodFactory.MbPartTypeService;
 import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -38,6 +39,16 @@ public class MbPartTypeController {
         Map responseMap = new HashMap<>();
         responseMap.put("partTypeInfo",mbPartTypeService.QueryAll());
         responseMap.put("partAttrInfo",mbPartAttrService.QueryAll());
+        return ResultUtils.success(responseMap);
+    }
+
+
+    @RequestMapping("/getPartDesc")
+    @ResponseBody
+    Result findByPartType(HttpServletResponse response,  @RequestParam(value = "partType", required = false) String partType) {
+        response.setHeader("Content-Type", "application/json;charset=UTF-8");
+        Map responseMap = new HashMap<>();
+        responseMap.put("partDesc",mbPartTypeService.getPartDesc(partType));
         return ResultUtils.success(responseMap);
     }
 }
