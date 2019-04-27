@@ -61,7 +61,7 @@ public class DifferenceProdInfo {
        prodTran((Map) mbProdInfo.get("prodType"), reqNo, operatorNo);
 
        //产品参数
-       prodDefineTran(ResourcesUtils.getMap(mbProdInfo.get("mbProdDefine")), reqNo, operatorNo);
+       prodDefineTran(ResourcesUtils.getMap(mbProdInfo.get("prodDefines")), reqNo, operatorNo);
        //天津项目屏蔽是mbEventInfo处理
 //       Map eventInfo=(Map) mbProdInfo.get("mbEventInfos");
 //       if(eventInfo==null){
