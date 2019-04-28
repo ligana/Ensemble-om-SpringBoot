@@ -1,7 +1,7 @@
 package com.dcits.ensemble.om.service.prodFactory;
 
 import com.dcits.ensemble.om.model.dbmodel.system.OmEnvOrg;
-import com.dcits.ensemble.om.repository.system.OmEnvOrgRepository;
+import com.dcits.ensemble.om.repository.prodFactory.OmEnvOrgRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
