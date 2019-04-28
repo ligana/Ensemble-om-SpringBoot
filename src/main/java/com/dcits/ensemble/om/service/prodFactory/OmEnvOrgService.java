@@ -1,4 +1,4 @@
-package com.dcits.ensemble.om.service.paraTable;
+package com.dcits.ensemble.om.service.prodFactory;
 
 import com.dcits.ensemble.om.model.dbmodel.system.OmEnvOrg;
 import com.dcits.ensemble.om.repository.system.OmEnvOrgRepository;
@@ -30,6 +30,4 @@ public class OmEnvOrgService {
         List<OmEnvOrg> omEnvOrgList = omEnvOrgRepository.findAll();
         return omEnvOrgList;
     }
-
-
 }
