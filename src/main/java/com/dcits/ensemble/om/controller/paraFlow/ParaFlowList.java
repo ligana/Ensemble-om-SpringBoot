@@ -1,11 +1,14 @@
 package com.dcits.ensemble.om.controller.paraFlow;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.dcits.ensemble.om.controller.model.Result;
 import com.dcits.ensemble.om.controller.model.ResultUtils;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessDetailHist;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessMainFlow;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRecordHist;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRelationHist;
+import com.dcits.ensemble.om.model.dbmodel.system.OmEnvOrg;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessRecordHistRepository;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessRelationHistRepository;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessDetailHistRepository;
@@ -17,6 +20,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import springfox.documentation.spring.web.json.Json;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.math.BigDecimal;
@@ -129,11 +134,13 @@ public class ParaFlowList {
         String remark = (String)map.get("remark");
         String isApproved = (String)map.get("isApproved");
         Boolean flag = (Boolean)map.get("downLoad");
+        String omorgs  = JSONObject.toJSONString(map.get("omorg"));
+        List<OmEnvOrg> list = JSONArray.parseArray(omorgs,OmEnvOrg.class);
         Map responseMap = new HashMap<>();
         String optType= (String) map.get("optType");
         String sql="";
         if("Y".equals(isApproved)) {
-            sql = flowPublishService.publishSave(mainSeqNo,flag);
+            sql = flowPublishService.publishSave(mainSeqNo,flag,list);
             responseMap.put("sql",sql);
         }
         //只需变更流程信息，登记流程的变动

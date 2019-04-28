@@ -4,6 +4,7 @@ import com.dcits.ensemble.om.controller.model.CoreServiceModel;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessMainFlow;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRecordHist;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRelationHist;
+import com.dcits.ensemble.om.model.dbmodel.system.OmEnvOrg;
 import com.dcits.ensemble.om.repository.base.BaseTableRepositoryImpl;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessMainFlowRepository;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessRecordHistRepository;
@@ -33,17 +34,17 @@ public class FlowPublishService {
     private OmProcessRecordHistRepository omProcessRecordHistRepository;
     @Resource
     private BaseTableRepositoryImpl baseTableRepositoryImpl;
-    public String publishSave(String mainSeqNo,Boolean flag){
+    public String publishSave(String mainSeqNo,Boolean flag,List<OmEnvOrg> list){
         OmProcessMainFlow omProcessMainFlow = omProcessMainFlowRepository.findByMainSeqNo(mainSeqNo);
         List<OmProcessRelationHist> omProcessRelationHistList=omProcessRelationHistRepository.findByMainSeqNoAndDtlSeqNo(mainSeqNo, omProcessMainFlow.getDtlSeqNo().toString());
         StringBuffer pushSql= new StringBuffer();
         for(OmProcessRelationHist omProcessRelationHist:omProcessRelationHistList){
-            pushSql.append(save(omProcessRelationHist.getRecSeqNo(),flag));
+            pushSql.append(save(omProcessRelationHist.getRecSeqNo(),flag,list));
         }
         return pushSql.toString();
     }
 
-    public StringBuffer save(String recSeqNo,Boolean flag){
+    public StringBuffer save(String recSeqNo,Boolean flag,List<OmEnvOrg> list){
         List<OmProcessRecordHist> omProcessRecordHists=  omProcessRecordHistRepository.findByRecSeqNo(recSeqNo);
         StringBuffer pushSql=new StringBuffer();
         for(OmProcessRecordHist omProcessRecordHist:omProcessRecordHists){
@@ -57,19 +58,27 @@ public class FlowPublishService {
                 pushSql.append(baseTableRepositoryImpl.deleteTable(omProcessRecordHist.getTableName(), myJson, omProcessRecordHist.getPkAndValue(),flag));
             }
         }
-        System.out.println(adapterProperties.getURL());
         if(adapterProperties.getISADAPTER()){
-            HttpAdapterPf(omProcessRecordHists);
+            HttpAdapterPf(omProcessRecordHists,list);
         }
         return pushSql;
     }
 
-    public com.alibaba.fastjson.JSONObject  HttpAdapterPf(List<OmProcessRecordHist> omProcessRecordHists){
-        CoreServiceModel coreServiceModel = new CoreServiceModel();
-        com.alibaba.fastjson.JSONObject sysHead = ConnectUtil.getSysHeadForPublish(coreServiceModel);
+    public void  HttpAdapterPf(List<OmProcessRecordHist> omProcessRecordHists,List<OmEnvOrg> list){
+
+        com.alibaba.fastjson.JSONObject jsonObject = new com.alibaba.fastjson.JSONObject();
         com.alibaba.fastjson.JSONObject body = new com.alibaba.fastjson.JSONObject();
         body.put("models",omProcessRecordHists);
-       com.alibaba.fastjson.JSONObject result =  ConnectUtil.postToGalaxyCore(sysHead,body,adapterProperties.getURL());
-       return  result;
+        if(list!=null&&list.size()>0){
+            for(OmEnvOrg omEnvOrg : list){
+                CoreServiceModel coreServiceModel = new CoreServiceModel();
+                coreServiceModel.setServiceCode(omEnvOrg.getServiceCode());
+                coreServiceModel.setMessageType(omEnvOrg.getMessageType());
+                coreServiceModel.setMessageCode(omEnvOrg.getMessageCode());
+                coreServiceModel.setModule(omEnvOrg.getModule());
+                com.alibaba.fastjson.JSONObject sysHead = ConnectUtil.getSysHeadForPublish(coreServiceModel);
+                com.alibaba.fastjson.JSONObject result =  ConnectUtil.postToGalaxyCore(sysHead,body,omEnvOrg.getUrl());
+            }
+        }
     }
 }
