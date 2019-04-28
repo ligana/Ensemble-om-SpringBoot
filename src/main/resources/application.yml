@@ -37,8 +37,6 @@ spring:
         suffix: .jsp
      show-sql: true
 pf:
-  isadapter: false #是否同步到核心
-  httpadapter:
-    url: http://127.0.0.1:18081/pf/parameter/release  #核心参数发布接口
+  isadapter: false #同步到核心开关
 
 

@@ -15,9 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class AdapterProperties {
-    @Value("${pf.httpadapter.url}")
-    private String URL;
     @Value("${pf.isadapter}")
     private Boolean ISADAPTER;
-    //省略getter和setter
+
 }

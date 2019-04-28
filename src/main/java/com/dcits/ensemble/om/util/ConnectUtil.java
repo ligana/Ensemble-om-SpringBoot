@@ -60,6 +60,7 @@ public class ConnectUtil {
         System.out.println(requestEntity.toString());
         
         String resp = HttpAdapter.doPostMsg(url, requestEntity);
+
         JSONObject respon = JSONObject.parseObject(resp);
         System.out.println("respon："+respon);
         JSONObject head = (JSONObject) respon.get("sysHead");
@@ -72,7 +73,7 @@ public class ConnectUtil {
             String msg = ((JSONObject) ((JSONArray) head.get("ret")).get(0)).get("retMsg").toString();
             System.out.println(msg);
         }
-        return (JSONObject) respon.get("body");
+        return ((JSONObject) respon.get("sysHead"));
 
     }
 

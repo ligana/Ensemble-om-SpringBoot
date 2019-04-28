@@ -15,4 +15,6 @@ import java.util.List;
  **/
 public interface MbPartTypeRepository extends JpaRepository<MbPartType,Long>,JpaSpecificationExecutor<MbPartType> {
     List<MbPartType> findAll();
+
+    MbPartType findByPartType(String partType);
 }

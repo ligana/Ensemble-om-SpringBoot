@@ -33,7 +33,7 @@ public class MbProdInfoService {
     @Autowired
     private IrlProdIntRepository irlProdIntRepository;
     @Autowired
-    private MbProdChargeRepository mbProdChargeRepository;
+    private RbProdChargeRepository rbProdChargeRepository;
     @Autowired
     private GlProdMappingRepository glProdMappingRepository;
     @Autowired
@@ -53,7 +53,7 @@ public class MbProdInfoService {
     @Autowired
     private IrlProdTypeRepository irlProdTypeRepository;
     @Autowired
-    private MbProdAmendMapingRepository mbProdAmendMapingRepository;
+    private RbProdAmendMapingRepository rbProdAmendMapingRepository;
     @Autowired
     private MbProdGroupRepository mbProdGroupRepository;
     @Resource
@@ -65,6 +65,7 @@ public class MbProdInfoService {
             mbProdInfo.setProdType(mbProdType);
             Map<String, MbProdDefine> mbProdDefineMap = new LinkedHashMap<>();
             List<MbProdDefine> mbProdDefineLists = new ArrayList<>();
+            List<MbProdDefine> mbProdDefineListPart = new ArrayList<>();
             String baseType = mbProdType.getBaseProdType();
             String prodRange = mbProdType.getProdRange();
             List<MbProdDefine> mbProdDefineGroupList = new ArrayList<>();
@@ -93,14 +94,23 @@ public class MbProdInfoService {
                     mbProdDefine.setGroup("SOLD");
                 }
                 //mbProdDefinsMap为原始处理方式 测试成功之后  删除
-                mbProdDefineMap.put(mbProdDefine.getAssembleId(), mbProdDefine);
+                if("ATTR".equals(mbProdDefine.getAssembleType())) {
+                    mbProdDefineMap.put(mbProdDefine.getAssembleId(), mbProdDefine);
+                }
+                if("PART".equals(mbProdDefine.getAssembleType())){
+                    mbProdDefineListPart.add(mbProdDefine);
+                }
                 //tj
                 mbProdDefineLists.add(mbProdDefine);
             }
+            //指标处理
+            for (MbProdDefine mbProdDefine : mbProdDefineListPart) {
+                mbProdDefineMap.put(mbProdDefine.getAssembleId()+"-"+mbProdDefine.getAttrType(), mbProdDefine);
+            }
             mbProdInfo.setProdDefines(mbProdDefineMap);
             mbProdInfo.setMbProdDefine(mbProdDefineLists);
-            //0417天津差异去除对mb_event_attr表，mb_event_part事件指标表的使用
-//            mbProdInfo.setMbEventInfos(getMbEventInfo(prodRange, prodType, baseType));
+            //对参数进行排序 先参数 后指标
+
             //获取单表数据
             mbProdInfo = getProdTablesInfo(mbProdInfo,prodType);
 
@@ -125,13 +135,13 @@ public class MbProdInfoService {
         mbProdInfo.setIrlProdIntInfos(irlProdIntInfo);
         mbProdInfo.setIrlIntMatrices(irlIntMatrixRepository.findAll());
         //获取收费定义相关参数
-        mbProdInfo.setMbProdCharge(mbProdChargeRepository.findByProdType(prodType));
+        mbProdInfo.setRbProdCharge(rbProdChargeRepository.findByProdType(prodType));
         //获取产品映射参数
         mbProdInfo.setGlProdMappings(glProdMappingRepository.findByProdType(prodType));
         //获取定价工厂产品信息
         mbProdInfo.setIrlProdTypes(irlProdTypeRepository.findByProdType(prodType));
         //获取产品变更信息表参数
-        mbProdInfo.setMbProdAmendMaping(mbProdAmendMapingRepository.findByProdType(prodType));
+        mbProdInfo.setRbProdAmendMaping(rbProdAmendMapingRepository.findByProdType(prodType));
         //获取组合信息
         mbProdInfo.setMbProdGroup(mbProdGroupRepository.findByProdType(prodType));
         return mbProdInfo;

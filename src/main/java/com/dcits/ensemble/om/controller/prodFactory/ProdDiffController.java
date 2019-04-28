@@ -97,14 +97,14 @@ public class ProdDiffController {
                 responseMap.put("baseEffectProd", resMap);
             }
             responseMap.put("prodDefine", mbProdInfo.getProdDefines());
-            responseMap.put("mbProdCharge", mbProdInfo.getMbProdCharge());
+            responseMap.put("rbProdCharge", mbProdInfo.getRbProdCharge());
             responseMap.put("irlProdInt", mbProdInfo.getIrlProdInt());
-            responseMap.put("mbProdAmendMaping", mbProdInfo.getMbProdAmendMaping());
+            responseMap.put("rbProdAmendMaping", mbProdInfo.getRbProdAmendMaping());
             responseMap.put("glProdAccounting", mbProdInfo.getGlProdAccounting());
             responseMap.put("mbProdType", mbProdInfo.getProdType());
 
             //组装事件
-            responseMap.put("prodEvent", mbProdInfoService.assembleEvent(mbProdInfo.getMbEventInfos()));
+//            responseMap.put("prodEvent", mbProdInfoService.assembleEvent(mbProdInfo.getMbEventInfos()));
         }
         if (omProcessRecordHistList != null)
             responseMap.put("diff", omProcessRecordHistList);
