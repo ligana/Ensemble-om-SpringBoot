@@ -30,6 +30,4 @@ public class OmEnvOrgService {
         List<OmEnvOrg> omEnvOrgList = omEnvOrgRepository.findAll();
         return omEnvOrgList;
     }
-
-
 }

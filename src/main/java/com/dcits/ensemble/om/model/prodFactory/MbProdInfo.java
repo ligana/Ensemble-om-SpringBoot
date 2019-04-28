@@ -26,11 +26,11 @@ public class MbProdInfo {
     private IrlProdIntInfo irlProdIntInfos;
     private List<IrlProdInt> irlProdInt;
     private List<IrlIntMatrix> irlIntMatrices;
-    private List<MbProdCharge> mbProdCharge;
+    private List<RbProdCharge> rbProdCharge;
     private List<GlProdMapping> glProdMappings;
     private List<IrlProdType> irlProdTypes;
     private List<IrlBasisRate> irlBasisRateList;
-    private List<MbProdAmendMaping> mbProdAmendMaping;
+    private List<RbProdAmendMaping> rbProdAmendMaping;
     private List<MbProdGroup> mbProdGroup;
     @Override
     public String toString() {
@@ -44,12 +44,12 @@ public class MbProdInfo {
                 ", irlProdIntInfos=" + irlProdIntInfos +
                 ", irlProdInt=" + irlProdInt +
                 ", irlIntMatrices=" + irlIntMatrices +
-                ", mbProdCharge=" + mbProdCharge +
+                ", mbProdCharge=" + rbProdCharge +
                 ", glProdMappings=" + glProdMappings +
                 ", irlProdTypes=" + irlProdTypes +
                 ", IrlBasisRate=" + irlBasisRateList +
                 ", mbProdGroups=" + mbProdGroup +
-                ", mbProdAmendMaping=" + mbProdAmendMaping +
+                ", mbProdAmendMaping=" + rbProdAmendMaping +
                 '}';
     }
 }

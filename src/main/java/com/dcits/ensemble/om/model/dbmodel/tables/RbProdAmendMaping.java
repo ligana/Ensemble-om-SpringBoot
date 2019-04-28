@@ -10,14 +10,14 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "mb_prod_amend_maping")
+@Table(name = "rb_prod_amend_maping")
 @Getter
 @Setter
-public class MbProdAmendMaping implements Serializable {
+public class RbProdAmendMaping implements Serializable {
 
-    public MbProdAmendMaping() {}
+    public RbProdAmendMaping() {}
 
-    public MbProdAmendMaping(String prodType, String amendProdType) {
+    public RbProdAmendMaping(String prodType, String amendProdType) {
         this.prodType = prodType;
         this.amendProdType = amendProdType;
     }

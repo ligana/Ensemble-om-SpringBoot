@@ -33,7 +33,7 @@ public class MbProdInfoService {
     @Autowired
     private IrlProdIntRepository irlProdIntRepository;
     @Autowired
-    private MbProdChargeRepository mbProdChargeRepository;
+    private RbProdChargeRepository rbProdChargeRepository;
     @Autowired
     private GlProdMappingRepository glProdMappingRepository;
     @Autowired
@@ -53,7 +53,7 @@ public class MbProdInfoService {
     @Autowired
     private IrlProdTypeRepository irlProdTypeRepository;
     @Autowired
-    private MbProdAmendMapingRepository mbProdAmendMapingRepository;
+    private RbProdAmendMapingRepository rbProdAmendMapingRepository;
     @Autowired
     private MbProdGroupRepository mbProdGroupRepository;
     @Resource
@@ -135,13 +135,13 @@ public class MbProdInfoService {
         mbProdInfo.setIrlProdIntInfos(irlProdIntInfo);
         mbProdInfo.setIrlIntMatrices(irlIntMatrixRepository.findAll());
         //获取收费定义相关参数
-        mbProdInfo.setMbProdCharge(mbProdChargeRepository.findByProdType(prodType));
+        mbProdInfo.setRbProdCharge(rbProdChargeRepository.findByProdType(prodType));
         //获取产品映射参数
         mbProdInfo.setGlProdMappings(glProdMappingRepository.findByProdType(prodType));
         //获取定价工厂产品信息
         mbProdInfo.setIrlProdTypes(irlProdTypeRepository.findByProdType(prodType));
         //获取产品变更信息表参数
-        mbProdInfo.setMbProdAmendMaping(mbProdAmendMapingRepository.findByProdType(prodType));
+        mbProdInfo.setRbProdAmendMaping(rbProdAmendMapingRepository.findByProdType(prodType));
         //获取组合信息
         mbProdInfo.setMbProdGroup(mbProdGroupRepository.findByProdType(prodType));
         return mbProdInfo;

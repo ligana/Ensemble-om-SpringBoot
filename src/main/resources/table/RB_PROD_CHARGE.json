@@ -1,5 +1,5 @@
 {
-    "code": "MB_PROD_CHARGE",
+    "code": "RB_PROD_CHARGE",
     "comment": "产品类型费用类型关联表",
     "attr": [
         {

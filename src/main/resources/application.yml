@@ -37,6 +37,6 @@ spring:
         suffix: .jsp
      show-sql: true
 pf:
-  isadapter: true #同步到核心开关
+  isadapter: false #同步到核心开关
 
 

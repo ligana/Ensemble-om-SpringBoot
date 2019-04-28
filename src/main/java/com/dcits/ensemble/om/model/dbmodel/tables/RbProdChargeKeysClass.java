@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
-public class MbProdChargeKeysClass implements Serializable {
+public class RbProdChargeKeysClass implements Serializable {
     private String prodType;
     private String feeType;
 
@@ -18,7 +18,7 @@ public class MbProdChargeKeysClass implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MbProdChargeKeysClass that = (MbProdChargeKeysClass) o;
+        RbProdChargeKeysClass that = (RbProdChargeKeysClass) o;
         if (prodType != null ? !prodType.equals(that.prodType) : that.prodType != null) return false;
         return !(feeType != null ? !feeType.equals(that.feeType) : that.feeType != null);
     }
