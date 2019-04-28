@@ -32,13 +32,14 @@ public class MbPartTypeController {
 
     @Resource
     private MbPartAttrService mbPartAttrService;
+
     @RequestMapping("/QueryAll")
     @ResponseBody
-    public Result QueryAll(HttpServletResponse response){
+    public Result queryAll(HttpServletResponse response){
         response.setHeader("Content-Type","application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
-        responseMap.put("partTypeInfo",mbPartTypeService.QueryAll());
-        responseMap.put("partAttrInfo",mbPartAttrService.QueryAll());
+        responseMap.put("partTypeInfo",mbPartTypeService.queryAll());
+        responseMap.put("partAttrInfo",mbPartAttrService.queryAll());
         return ResultUtils.success(responseMap);
     }
 

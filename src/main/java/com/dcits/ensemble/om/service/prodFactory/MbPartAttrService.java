@@ -19,7 +19,7 @@ public class MbPartAttrService {
         return mbPartAttrList;
     }
 
-    public List<MbPartAttr> QueryAll(){
+    public List<MbPartAttr> queryAll(){
         List<MbPartAttr> mbPartAttrRepositoryAll = mbPartAttrRepository.findAll();
         return mbPartAttrRepositoryAll;
     }

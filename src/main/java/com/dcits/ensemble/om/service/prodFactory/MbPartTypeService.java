@@ -23,7 +23,7 @@ public class MbPartTypeService {
     @Resource
     private MbPartTypeRepository mbPartTypeRepository;
 
-    public List<MbPartType> QueryAll(){
+    public List<MbPartType> queryAll(){
         List<MbPartType> mbPartTypeRepositoryAll = mbPartTypeRepository.findAll();
         return mbPartTypeRepositoryAll;
     }

@@ -14,6 +14,7 @@ import java.util.List;
  * @Version 1.0
  **/
 public interface MbPartTypeRepository extends JpaRepository<MbPartType,Long>,JpaSpecificationExecutor<MbPartType> {
+    @Override
     List<MbPartType> findAll();
 
     MbPartType findByPartType(String partType);

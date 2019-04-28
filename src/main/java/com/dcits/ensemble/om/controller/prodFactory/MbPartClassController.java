@@ -26,8 +26,6 @@ import java.util.Map;
 @Api(value = "/findAll", tags = "指标分类")
 @Controller
 public class MbPartClassController {
-
-
     @Resource
     private MbPartClassService mbPartClassService;
 
