@@ -19,12 +19,12 @@ public class MbProdDefine implements Serializable {
     public MbProdDefine(){};
 
 
-    public MbProdDefine(String prodType, String eventType, String assembleType, String assembleId, String attrType, String attrValue, String status, String perEffect, String pageCode, Integer pageSeqNo, String optionPermissions, String company, String tranTime, String tranTimestamp, String group) {
+    public MbProdDefine(String prodType, String eventType, String assembleType, String assembleId, String attrKey, String attrValue, String status, String perEffect, String pageCode, Integer pageSeqNo, String optionPermissions, String company, String tranTime, String tranTimestamp, String group) {
         this.prodType = prodType;
         this.eventType = eventType;
         this.assembleType = assembleType;
         this.assembleId = assembleId;
-        this.attrType = attrType;
+        this.attrKey = attrKey;
         this.attrValue = attrValue;
         this.status = status;
         this.perEffect = perEffect;
@@ -51,8 +51,8 @@ public class MbProdDefine implements Serializable {
     @Column(name="assemble_id")
     private String assembleId;
     @Id
-    @Column(name="attr_type")
-    private String attrType;
+    @Column(name="attr_key")
+    private String attrKey;
     @Column(name="attr_value")
     private String attrValue;
     @Column(name="status")
@@ -81,7 +81,7 @@ public class MbProdDefine implements Serializable {
                 ", eventType='" + eventType + '\'' +
                 ", assembleType='" + assembleType + '\'' +
                 ", assembleId='" + assembleId + '\'' +
-                ", attrType='" + attrType + '\'' +
+                ", attrKey='" + attrKey + '\'' +
                 ", attrValue='" + attrValue + '\'' +
                 ", status='" + status + '\'' +
                 ", perEffect='" + perEffect + '\'' +
