@@ -17,9 +17,10 @@ import java.io.Serializable;
 public class OmMenuRole implements Serializable {
     public OmMenuRole () {}
 
-    public OmMenuRole(String roleId, String menuId) {
+    public OmMenuRole(String roleId, String menuId, String menuParentId) {
         this.roleId = roleId;
         this.menuId = menuId;
+        this.menuParentId = menuParentId;
     }
 
     @Id
@@ -28,6 +29,9 @@ public class OmMenuRole implements Serializable {
     @Id
     @Column(name="menu_id")
     private String menuId;
+    @Id
+    @Column(name="menu_parent_id")
+    private String menuParentId;
 
 
     @Override
@@ -35,6 +39,7 @@ public class OmMenuRole implements Serializable {
         return "OmMenuRole{" +
                 "roleId='" + roleId + '\'' +
                 ", menuId='" + menuId + '\'' +
+                ", menuParentId='" + menuParentId + '\'' +
                 '}';
     }
 }

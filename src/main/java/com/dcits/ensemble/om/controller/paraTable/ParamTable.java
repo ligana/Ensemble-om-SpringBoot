@@ -201,7 +201,7 @@ public class ParamTable {
                     JSONObject pkValue = new JSONObject();
                     pkValue.put("ATTR_KEY", attrValue.get("attrKey"));
                     pkValue.put("ATTR_VALUE", attrValue.get("attrValue"));
-                    systemTableRepositoryImpl.deleteTable("MB_ATTR_VALUE", attrValue, pkAttr);
+                    systemTableRepositoryImpl.deleteTable("MB_ATTR_VALUE", attrValue, pkValue);
                 }
             }
         }
