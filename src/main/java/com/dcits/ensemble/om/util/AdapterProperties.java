@@ -16,6 +16,6 @@ import org.springframework.stereotype.Component;
 @Data
 public class AdapterProperties {
     @Value("${pf.isadapter}")
-    private Boolean ISADAPTER;
+    private Boolean isAdapter;
 
 }
