@@ -8,6 +8,6 @@ import java.util.List;
 public interface OmEnvOrgRepository extends JpaRepository<OmEnvOrg,Long>, JpaSpecificationExecutor<OmEnvOrg> {
     OmEnvOrg findByEnvId(String envId);
 
-    List<OmEnvOrg> findAll();
+    OmEnvOrg findBySystemId(String systemId);
 
 }

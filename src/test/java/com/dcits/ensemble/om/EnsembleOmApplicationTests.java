@@ -44,10 +44,4 @@ public class EnsembleOmApplicationTests {
         System.out.println(list.size());
         System.out.println(list);
     }
-
-    @Test
-    public  void  test1(){
-      System.out.println( adapterProperties.getISADAPTER());
-    }
-
 }

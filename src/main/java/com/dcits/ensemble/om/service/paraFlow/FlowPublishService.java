@@ -10,7 +10,7 @@ import com.dcits.ensemble.om.repository.base.BaseTableRepositoryImpl;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessMainFlowRepository;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessRecordHistRepository;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessRelationHistRepository;
-import com.dcits.ensemble.om.repository.system.OmEnvOrgRepository;
+import com.dcits.ensemble.om.repository.prodFactory.OmEnvOrgRepository;
 import com.dcits.ensemble.om.repository.tables.OmTableListRepository;
 import com.dcits.ensemble.om.util.AdapterProperties;
 import com.dcits.ensemble.om.util.ConnectUtil;
