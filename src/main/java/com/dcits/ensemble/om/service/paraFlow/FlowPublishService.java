@@ -101,7 +101,6 @@ public class FlowPublishService {
                 coreServiceModel.setServiceCode(omEnvOrg.getServiceCode());
                 coreServiceModel.setMessageType(omEnvOrg.getMessageType());
                 coreServiceModel.setMessageCode(omEnvOrg.getMessageCode());
-                coreServiceModel.setModule(omEnvOrg.getModule());
                 com.alibaba.fastjson.JSONObject sysHead = ConnectUtil.getSysHeadForPublish(coreServiceModel);
                 com.alibaba.fastjson.JSONObject result =  ConnectUtil.postToGalaxyCore(sysHead,body,omEnvOrg.getUrl());
             }

@@ -18,11 +18,10 @@ public class OmEnvOrg implements Serializable {
     public OmEnvOrg () {};
 
 
-    public OmEnvOrg(String envId, String envDesc, String systemId, String module, String url, String serviceCode, String messageCode, String messageType, String operator, String time) {
+    public OmEnvOrg(String envId, String envDesc, String systemId, String url, String serviceCode, String messageCode, String messageType, String operator, String time) {
         this.envId = envId;
         this.envDesc = envDesc;
         this.systemId = systemId;
-        this.module = module;
         this.url = url;
         this.serviceCode = serviceCode;
         this.messageCode = messageCode;
@@ -39,8 +38,6 @@ public class OmEnvOrg implements Serializable {
     private String envDesc;
     @Column(name = "system_id")
     private String systemId;
-    @Column(name="module")
-    private String module;
     @Column(name = "url")
     private String url;
     @Column(name = "service_code")
@@ -54,13 +51,13 @@ public class OmEnvOrg implements Serializable {
     @Column(name = "time")
     private String time;
 
+
     @Override
     public String toString() {
         return "OmEnvOrg{" +
                 "envId='" + envId + '\'' +
                 ", envDesc='" + envDesc + '\'' +
                 ", systemId='" + systemId + '\'' +
-                ", module='" + module + '\'' +
                 ", url='" + url + '\'' +
                 ", serviceCode='" + serviceCode + '\'' +
                 ", messageCode='" + messageCode + '\'' +
