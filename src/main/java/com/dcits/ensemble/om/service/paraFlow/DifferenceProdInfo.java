@@ -83,27 +83,47 @@ public class DifferenceProdInfo {
 //           eventPartTran(ResourcesUtils.getMap(eventOne.get("mbEventParts")), reqNo, operatorNo);
 //       }
        //费用信息
-       mbProdCharge((List)mbProdInfo.get("mbProdCharge"), reqNo, operatorNo);
+        if(((List)mbProdInfo.get("mbProdCharge")).size()!=0) {
+            mbProdCharge((List) mbProdInfo.get("mbProdCharge"), reqNo, operatorNo);
+        }
        //核算信息
-       glProdAccounting((List)mbProdInfo.get("glProdAccounting"), reqNo, operatorNo);
-       glProdCodeMapping((List)mbProdInfo.get("glProdCodeMappings"), reqNo, operatorNo);
+        if(((List)mbProdInfo.get("glProdAccounting")).size()!=0) {
+            glProdAccounting((List) mbProdInfo.get("glProdAccounting"), reqNo, operatorNo);
+        }
+        if(((List)mbProdInfo.get("glProdCodeMappings")).size()!=0) {
+            glProdCodeMapping((List) mbProdInfo.get("glProdCodeMappings"), reqNo, operatorNo);
+        }
        //产品映射(0115屏蔽对产品映射处理)
-       glProdMapping((List)mbProdInfo.get("glProdMappings"), reqNo, operatorNo);
-       irlProdType((List)mbProdInfo.get("irlProdTypes"), reqNo, operatorNo);
+        if(((List)mbProdInfo.get("glProdMappings")).size()!=0) {
+            glProdMapping((List) mbProdInfo.get("glProdMappings"), reqNo, operatorNo);
+        }
+        if(((List)mbProdInfo.get("irlProdTypes")).size()!=0) {
+            irlProdType((List) mbProdInfo.get("irlProdTypes"), reqNo, operatorNo);
+        }
        //利率信息
-       irlProdInt((List)mbProdInfo.get("irlProdInt"), reqNo, operatorNo);
-       irlIntMatrix((List)mbProdInfo.get("irlIntMatrices"), reqNo, operatorNo);
-       intBasisRate((List)mbProdInfo.get("irlBasisRateList"), reqNo, operatorNo);
+        if(((List)mbProdInfo.get("irlProdInt")).size()!=0) {
+            irlProdInt((List) mbProdInfo.get("irlProdInt"), reqNo, operatorNo);
+        }
+        if(((List)mbProdInfo.get("irlIntMatrices")).size()!=0) {
+            irlIntMatrix((List) mbProdInfo.get("irlIntMatrices"), reqNo, operatorNo);
+        }
+        if(((List)mbProdInfo.get("irlBasisRateList")).size()!=0) {
+            intBasisRate((List) mbProdInfo.get("irlBasisRateList"), reqNo, operatorNo);
+        }
        //产品变更信息
-       mbProdAmendMaping((List)mbProdInfo.get("mbProdAmendMaping"), reqNo, operatorNo);
+        if(((List)mbProdInfo.get("mbProdAmendMaping")).size()!=0) {
+            mbProdAmendMaping((List) mbProdInfo.get("mbProdAmendMaping"), reqNo, operatorNo);
+        }
        //组合
-        mbProdGroup((List)mbProdInfo.get("mbProdGroup"), reqNo, operatorNo);
+        if(((List)mbProdInfo.get("mbProdGroup")).size()!=0) {
+            mbProdGroup((List) mbProdInfo.get("mbProdGroup"), reqNo, operatorNo);
+        }
        //参数状态
        optionPermTran(mbProdInfo,reqNo,operatorNo);
    }
     //irlIntMatrix
     public void mbProdGroup(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");
         for(Object key:prodMap){
             Map<String,Object> mbProdGroup=(Map)key;
             String operateType=(String)mbProdGroup.get("optType");
@@ -122,7 +142,7 @@ public class DifferenceProdInfo {
     }
     //irlIntMatrix
     public void irlIntMatrix(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");
         for(Object key:prodMap){
             Map<String,Object> irlIntMatrix=(Map)key;
             String operateType=(String)irlIntMatrix.get("optType");
@@ -140,7 +160,7 @@ public class DifferenceProdInfo {
     }
     //intBasisRate
     public void intBasisRate(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> intBasisRate=(Map)key;
             String operateType=(String)intBasisRate.get("optType");
@@ -160,7 +180,7 @@ public class DifferenceProdInfo {
     }
     //glProdCodeMapping
     public void glProdCodeMapping(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> glProdCodeMapping=(Map)key;
             String operateType=(String)glProdCodeMapping.get("optType");
@@ -180,7 +200,7 @@ public class DifferenceProdInfo {
     }
     //IrlProdInt
     public void mbProdAmendMaping(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> mbProdAmendMaping=(Map)key;
             String operateType=(String)mbProdAmendMaping.get("optType");
@@ -198,7 +218,7 @@ public class DifferenceProdInfo {
     }
     //IrlProdInt
     public void irlProdInt(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");
         for(Object key:prodMap){
             Map<String,Object> irlProdInt=(Map)key;
             String operateType=(String)irlProdInt.get("optType");
@@ -219,7 +239,7 @@ public class DifferenceProdInfo {
         }
     }
     public void irlProdType(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> irlProdType=(Map)key;
             String operateType=(String)irlProdType.get("optType");
@@ -238,7 +258,7 @@ public class DifferenceProdInfo {
 
     //glProdMapping
     public void glProdMapping(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> mapping=(Map)key;
             String operateType=(String)mapping.get("optType");
@@ -258,7 +278,7 @@ public class DifferenceProdInfo {
 
    //GlProdAccounting
     public void glProdAccounting(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> accounting=(Map)key;
             String operateType=(String)accounting.get("optType");
@@ -278,7 +298,7 @@ public class DifferenceProdInfo {
 
     //mbProdCharge
     public void mbProdCharge(List prodMap,String seqNo,String operatorNo){
-        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");;
+        String accountingNo=processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");;
         for(Object key:prodMap){
             Map<String,Object> charge=(Map)key;
             String operateType=(String)charge.get("optType");
@@ -299,7 +319,7 @@ public class DifferenceProdInfo {
     public void eventPartTran(Map prodMap,String seqNo,String operatorNo){
             if(prodMap.size()>0) {
                 //记录组合
-                this.eventPartNo = this.eventPartNo==null?processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0"):this.eventPartNo;
+                this.eventPartNo = this.eventPartNo==null?processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0"):this.eventPartNo;
                 JSONObject keyValue = new JSONObject();
                 keyValue.put("EVENT_TYPE", this.eventType);
                 for(Object key:prodMap.keySet()) {
@@ -321,7 +341,7 @@ public class DifferenceProdInfo {
     public void eventAttrTran(Map prodMap,String seqNo,String operatorNo){
             if(prodMap.size()>0) {
                 //记录组合
-                this.eventAttrNo = this.eventAttrNo==null?processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0"):this.eventAttrNo;
+                this.eventAttrNo = this.eventAttrNo==null?processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0"):this.eventAttrNo;
                 JSONObject keyValue = new JSONObject();
                 keyValue.put("EVENT_TYPE",this.eventType);
                 for(Object key:prodMap.keySet()) {
@@ -340,7 +360,7 @@ public class DifferenceProdInfo {
     public void eventTypeTran(Map prodMap,String seqNo,String operatorNo){
             if(prodMap.size()>0) {
                 //记录组合
-               this.eventTypeNo = this.eventTypeNo==null?processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0"):this.eventTypeNo;
+               this.eventTypeNo = this.eventTypeNo==null?processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0"):this.eventTypeNo;
                 prodMap.put("tableName", "MB_EVENT_TYPE");
                 prodMap.put("optType", this.optionType);
                 JSONObject keyValue = new JSONObject();
@@ -355,7 +375,7 @@ public class DifferenceProdInfo {
             //获取继承与该基础产品的可售产品
             String baseProdType = this.prodType;
             List<MbProdType> prodTypeList=mbProdTypeRepository.findByBaseProdType(baseProdType);
-            String subSeqNo = processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");
+            String subSeqNo = processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");
             BigDecimal defineIndex = new BigDecimal("1");
             BigDecimal attrIndex = new BigDecimal("1");
             for(Object attrKey : optPermMap.keySet()){
@@ -567,7 +587,7 @@ public class DifferenceProdInfo {
     public void prodDefineTran(Map prodMap,String seqNo,String operatorNo){
             if(prodMap.size()>0) {
                 //记录组合
-                String subSeqNo = processCombManagement.saveCombInfo(seqNo, operatorNo,this.prodType,this.prodDesc, "0");
+                String subSeqNo = processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");
                 JSONObject keyValue = new JSONObject();
                 for (Object key : prodMap.keySet()) {
                     Map define = (Map) prodMap.get(key);
@@ -603,7 +623,7 @@ public class DifferenceProdInfo {
                     keyValue.put("PROD_TYPE", oldData.get("prodType"));
                     this.prodDesc=(String)oldData.get("prodDesc");
                 }
-                String subSeqNo = processCombManagement.saveCombInfo(seqNo, operatorNo,(String)keyValue.get("PROD_TYPE"),this.prodDesc, "0");
+                String subSeqNo = processCombManagement.saveCombInfo(seqNo, operatorNo,"MB_PROD_TYPE",this.prodDesc, "0");
                 saveProdParaDifference(subSeqNo, prodMap, keyValue, seqNo);
             }else{
                 Map oldData=(Map)prodMap.get("oldData");
