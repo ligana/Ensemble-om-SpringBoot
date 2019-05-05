@@ -134,13 +134,11 @@ public class ParaFlowList {
         String remark = (String)map.get("remark");
         String isApproved = (String)map.get("isApproved");
         Boolean flag = (Boolean)map.get("downLoad");
-        String omorgs  = JSONObject.toJSONString(map.get("omorg"));
-        List<OmEnvOrg> list = JSONArray.parseArray(omorgs,OmEnvOrg.class);
         Map responseMap = new HashMap<>();
         String optType= (String) map.get("optType");
         String sql="";
         if("Y".equals(isApproved)) {
-            sql = flowPublishService.publishSave(mainSeqNo,flag,list);
+            sql = flowPublishService.publishSave(mainSeqNo,flag);
             responseMap.put("sql",sql);
         }
         //只需变更流程信息，登记流程的变动
