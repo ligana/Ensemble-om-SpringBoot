@@ -381,46 +381,29 @@ public class DifferenceProdInfo {
             for(Object attrKey : optPermMap.keySet()){
                 Map attrOptPerm = (Map) optPermMap.get(attrKey);
                 String assembleId = attrOptPerm.get("key").toString();
+                String attrRange = attrOptPerm.get("attrRange").toString();
                 if(attrOptPerm.get("optPerm").equals("D") || attrOptPerm.get("optPerm").equals("DALL")){
                     //删除mbProdDefine表参数
                     if("MB_PROD_DEFINE".equals(attrOptPerm.get("tableName").toString())){
+                        Map defines = (Map) ResourcesUtils.getMap(mbProdInfo.get("prodDefines")).get(assembleId);
+                        Map newData = (Map) defines.get("newData");
                         for(MbProdType mbProdType:prodTypeList) {
                             JSONObject keyValue = new JSONObject();
-                            MbProdDefine mbProdDefine = mbProdDefineRepository.findByProdTypeAndAssembleId(mbProdType.getProdType(), assembleId);
+                            String sonEventType = (newData.get("eventType").toString()).split("_")[0]+"_"+mbProdType.getProdType();
+                            MbProdDefine mbProdDefine = mbProdDefineRepository .findByProdTypeAndEventTypeAndAssembleTypeAndAndAssembleIdAndAttrKey(mbProdType.getProdType(), sonEventType,newData.get("assembleType").toString(),newData.get("assembleId").toString(),newData.get("attrKey").toString());
+//                            MbProdDefine mbProdDefine = mbProdDefineRepository.findByProdTypeAndAssembleId(mbProdType.getProdType(), assembleId);
                             //向omProcessRecordHist插入
                             if(mbProdDefine != null) {
                                 Map define = (Map) ResourcesUtils.getMap(mbProdInfo.get("prodDefines")).get(assembleId);
                                 keyValue.put("PROD_TYPE", mbProdDefine.getProdType());
-//                                keyValue.put("SEQ_NO", mbProdDefine.getSeqNo());
+                                keyValue.put("EVENT_TYPE", mbProdDefine.getEventType());
+                                keyValue.put("ASSEMBLE_TYPE", mbProdDefine.getAssembleType());
+                                keyValue.put("ASSEMBLE_ID", mbProdDefine.getAssembleId());
+                                keyValue.put("ATTR_KEY", mbProdDefine.getAttrKey());
                                 define.put("tableName", "MB_PROD_DEFINE");
                                 define.put("optType", "D");
                                 this.prodType = mbProdDefine.getProdType();
                                 saveProdParaDifference(subSeqNo, define, keyValue, seqNo);
-                            }
-                        }
-                    }
-                    //删除mbEventAttr表参数
-                    if("MB_EVENT_ATTR".equals(attrOptPerm.get("tableName".toString()))){
-                        String eventType =  attrOptPerm.get("eventType").toString();
-                        for(MbProdType mbProdType:prodTypeList){
-                            JSONObject keyValue = new JSONObject();
-                            String newEventType = eventType.split("_")[0]+"_"+mbProdType.getProdType().toString();
-                            MbEventAttr mbEventAttr = mbEventAttrRepository.findByEventTypeAndAssembleId(newEventType,assembleId);
-                            if(mbEventAttr != null) {
-                                Map infos = ResourcesUtils.getMap(mbProdInfo.get("mbEventInfos"));
-                                Map event = ResourcesUtils.getMap(infos.get(eventType));
-                                Map eventAttrs = ResourcesUtils.getMap(event.get("mbEventAttrs"));
-                                Map attr = ResourcesUtils.getMap(eventAttrs.get(attrOptPerm.get("key").toString()));
-                                Map newData = (Map) attr.get("newData");
-                                newData.put("eventType", newEventType);
-                                newData.put("seqNo", mbEventAttr.getSeqNo());
-                                attr.put("newData", newData);
-                                attr.put("tableName", "MB_EVENT_ATTR");
-                                attr.put("optType", "D");
-                                keyValue.put("EVENT_TYPE", newEventType);
-                                keyValue.put("SEQ_NO", mbEventAttr.getSeqNo());
-                                this.eventType = newEventType;
-                                saveProdParaDifference(subSeqNo, attr, keyValue, seqNo);
                             }
                         }
                     }
@@ -431,25 +414,23 @@ public class DifferenceProdInfo {
                         JSONObject keyValue = new JSONObject();
                         Map define = (Map) ResourcesUtils.getMap(mbProdInfo.get("prodDefines")).get(assembleId);
                         Map newData = (Map) define.get("newData");
+                        //装载主键信息
                         keyValue.put("PROD_TYPE", baseProdType);
-                        keyValue.put("SEQ_NO", newData.get("seqNo"));
+                        keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
+                        keyValue.put("EVENT_TYPE", newData.get("eventType"));
+                        if("ATTR".equals(attrRange)) {
+                            //参数处理
+                            keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
+                            keyValue.put("ATTR_KEY", newData.get("attrKey"));
+                        }
+                        if("PART".equals(attrRange)){
+                            //指标处理
+                            keyValue.put("ASSEMBLE_ID",assembleId.split("-")[0]);
+                            keyValue.put("ATTR_KEY", assembleId.split("-")[1]);
+                        }
                         define.put("tableName", "MB_PROD_DEFINE");
                         define.put("optType", "D");
                         saveProdParaDifference(subSeqNo, define, keyValue, seqNo);
-                    }
-                    if("MB_EVENT_ATTR".equals(attrOptPerm.get("tableName").toString())){
-                        String eventType =  attrOptPerm.get("eventType").toString();
-                        JSONObject keyValue = new JSONObject();
-                        Map infos =  ResourcesUtils.getMap(mbProdInfo.get("mbEventInfos"));
-                        Map event =  ResourcesUtils.getMap(infos.get(eventType));
-                        Map eventAttrs = ResourcesUtils.getMap(event.get("mbEventAttrs"));
-                        Map attr = ResourcesUtils.getMap(eventAttrs.get(attrOptPerm.get("key").toString()));
-                        Map newData = (Map) attr.get("newData");
-                        keyValue.put("EVENT_TYPE", eventType);
-                        keyValue.put("SEQ_NO", newData.get("seqNo"));
-                        attr.put("tableName","MB_EVENT_ATTR");
-                        attr.put("optType","D");
-                        saveProdParaDifference(subSeqNo, attr, keyValue, seqNo);
                     }
                 }
                 if(attrOptPerm.get("optPerm").equals("I")) {
@@ -474,42 +455,15 @@ public class DifferenceProdInfo {
                             define.put("tableName", "MB_PROD_DEFINE");
                             define.put("optType", "I");
                             keyValue.put("PROD_TYPE", mbProdType.getProdType());
-                            keyValue.put("SEQ_NO", newSeqNo);
+                            keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
+                            keyValue.put("EVENT_TYPE", newData.get("eventType"));
+                            keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
+                            keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
+                            keyValue.put("ATTR_KEY", newData.get("attrKey"));
                             this.prodType = mbProdType.getProdType();
                             saveProdParaDifference(subSeqNo, define, keyValue, seqNo);
                         }
                         defineIndex = defineIndex.add(BigDecimal.ONE);
-                    }
-                    if ("MB_EVENT_ATTR".equals(attrOptPerm.get("tableName").toString())) {
-                        String eventType =  attrOptPerm.get("eventType").toString();
-                        for(MbProdType mbProdType:prodTypeList) {
-                            String newEventType = eventType.split("_")[0]+"_"+mbProdType.getProdType().toString();
-                            JSONObject keyValue = new JSONObject();
-                            //获取新增参数的seqNo
-                            BigDecimal maxSeqNo = new BigDecimal(getMaxSeqNo(newEventType,"MB_EVENT_ATTR"));
-                            String newSeqNo = maxSeqNo.add(attrIndex).toString(); //attrIndex初始化为1 后+1递增
-                            Map infos =  ResourcesUtils.getMap(mbProdInfo.get("mbEventInfos"));
-                            Map event =  ResourcesUtils.getMap(infos.get(eventType));
-                            Map eventAttrs = ResourcesUtils.getMap(event.get("mbEventAttrs"));
-                            Map attr = ResourcesUtils.getMap(eventAttrs.get(attrOptPerm.get("key").toString()));
-                            Map newData = (Map) attr.get("newData");
-                            //获取新增参数的pageSeqNo
-                            BigDecimal maxPageSeqNo = new BigDecimal(getMaxPageSeqNo(newEventType,"MB_EVENT_ATTR",newData.get("pageCode").toString()));
-                            String newPageSeqNo = maxPageSeqNo.add(attrIndex).toString();
-                            //重新组装插入数据参数
-                            newData.put("eventType",newEventType);
-                            newData.put("seqNo",newSeqNo);
-                            newData.put("pageSeqNo",newPageSeqNo);
-                            newData.put("optionPermissions",null);
-                            attr.put("newData",newData);
-                            attr.put("tableName", "MB_EVENT_ATTR");
-                            attr.put("optType", "I");
-                            keyValue.put("EVENT_TYPE", newEventType);
-                            keyValue.put("SEQ_NO", newSeqNo);
-                            this.eventType = newEventType;
-                            saveProdParaDifference(subSeqNo, attr, keyValue, seqNo);
-                        }
-                        attrIndex = attrIndex.add(BigDecimal.ONE);
                     }
                 }
             }
@@ -596,7 +550,7 @@ public class DifferenceProdInfo {
                     keyValue.put("EVENT_TYPE", newData.get("eventType"));
                     keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
                     keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
-                    keyValue.put("ATTR_TYPE", newData.get("attrType"));
+                    keyValue.put("ATTR_KEY", newData.get("attrKey"));
                     define.put("tableName", "MB_PROD_DEFINE");
                     define.put("optType", define.get("optionType"));
                     saveProdParaDifference(subSeqNo, define, keyValue, seqNo);
@@ -674,6 +628,9 @@ public class DifferenceProdInfo {
         if(newData.get("eventType")!=null && keyValue.size()!=5) {
             newData.put("eventType", this.eventType);
         }
+//        if(newData.get("eventType")!=null && keyValue.size()==5) {
+//            newData.put("eventType", keyValue.get("EVENT_TYPE").toString());
+//        }
         String dataDui=ResourcesUtils.getJsonString(newData);
         String oldDui=ResourcesUtils.getJsonString(oldData);
         String tableName=(String)map.get("tableName");

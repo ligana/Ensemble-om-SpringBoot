@@ -27,6 +27,7 @@ public interface MbProdDefineRepository extends JpaRepository<MbProdDefine,MbPro
      @Query("update MbProdDefine set pageSeqNo=:pageSeqNo where prodType=:prodType and assembleId=:assembleId and pageCode=:pageCode")
      void updatePageSeq(@Param("pageSeqNo") Integer pageSeqNo,@Param("prodType") String prodType,@Param("assembleId") String assembleId,@Param("pageCode") String pageCode);
      public MbProdDefine findByProdTypeAndAssembleId(String prodType,String assembleId);
+     public MbProdDefine findByProdTypeAndEventTypeAndAssembleTypeAndAndAssembleIdAndAttrKey(String prodType,String eventType,String assembleType,String assembleId,String attrKey);
      public List<MbProdDefine> findByProdType(String prodType);
      public List<MbProdDefine> findByProdTypeAndPageCode(String prodType,String pageCode);
 }
