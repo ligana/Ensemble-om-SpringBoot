@@ -17,8 +17,6 @@ import com.dcits.ensemble.om.util.AdapterProperties;
 import com.dcits.ensemble.om.util.ConnectUtil;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,5 +1,7 @@
 package com.dcits.ensemble.om.controller.model;
 
+import lombok.Data;
+
 /**
  * @Author chengliang
  * @Description //TODO
@@ -13,6 +15,9 @@ public enum ResultCode {
     private String code;
     private String msg;
 
+    ResultCode() {
+    }
+
     ResultCode(String code, String msg) {
         this.code = code;
         this.msg = msg;
@@ -25,4 +30,11 @@ public enum ResultCode {
     public String getMsg() {
         return msg;
     }
-}
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }}

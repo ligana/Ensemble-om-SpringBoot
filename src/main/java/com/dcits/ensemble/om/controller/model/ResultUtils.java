@@ -1,5 +1,7 @@
 package com.dcits.ensemble.om.controller.model;
 
+import com.dcits.ensemble.om.exception.BusinessException;
+
 /**
  * @Author chengliang
  * @Description //TODO
@@ -20,5 +22,11 @@ public class ResultUtils {
 
     public static Result warn(ResultCode resultCode) {
         return new Result(resultCode);
+    }
+    public static Result warn(String Code) {
+       throw  new BusinessException(Code);
+    }
+    public static Result warn(String Code,String...msg) {
+        throw new BusinessException(Code,msg);
     }
 }

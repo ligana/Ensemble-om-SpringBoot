@@ -226,7 +226,7 @@ public class SystemTable {
      * */
     @RequestMapping("/getSysUserInfoByUser")
     @ResponseBody
-    public Result getSysUserInfoByUser(HttpServletResponse response, @RequestParam(value = "userId", required = true) String userId) {
+    public Result getSysUserInfoByUser(HttpServletResponse response, @RequestParam(value = "userId", required = true,defaultValue = "") String userId) {
         response.setHeader("Content-Type", "application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
         List<OmMenu> omMenus = new ArrayList<>();
@@ -234,10 +234,6 @@ public class SystemTable {
         List<OmUser> omUser = new ArrayList<>();
         List<OmMenuRole> omMenuRoles = new ArrayList<>();
         List<OmUserRole> omUserRoles1 = new ArrayList<>();
-
-        String userLevel = omUserRepository.findByUserId(userId).getUserLevel();
-
-        //获取用户信息
         OmUser omUsers = omUserRepository.findByUserId(userId);
         List<OmUser> omUserList = new ArrayList();
         omUserList.add(omUsers);
