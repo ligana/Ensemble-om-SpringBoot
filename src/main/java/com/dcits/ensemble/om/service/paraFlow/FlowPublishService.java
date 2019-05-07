@@ -1,6 +1,7 @@
 package com.dcits.ensemble.om.service.paraFlow;
 
 import com.dcits.ensemble.om.controller.model.CoreServiceModel;
+import com.dcits.ensemble.om.controller.model.ResultUtils;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessMainFlow;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRecordHist;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRelationHist;
@@ -77,18 +78,30 @@ public class FlowPublishService {
             String systemId = null ;
             if(isProd){
                 systemId = MbFactoryRoute.map.get(tablename);
+                if(systemId==null){
+                    throw ResultUtils.warn("OM1001",tablename);
+                }
             }else {
                 OmTableList omTableList= omTableListRepository.findByTableName(tablename);
                 systemId =omTableList.getSystem();
             }
-            omEnvOrg = omEnvOrgRepository.findBySystemId(systemId);
-            HttpAdapterPf(omProcessRecordHists,omEnvOrg);
+            String[] systemIds = systemId.split(",");
+            for(String sys : systemIds){
+                omEnvOrg = omEnvOrgRepository.findBySystemId(sys);
+                if(omEnvOrg==null){
+                    throw ResultUtils.warn("OM1002",sys);
+                }
+                HttpAdapterPf(omProcessRecordHists,omEnvOrg);
+            }
         }
         return pushSql;
     }
 
 
     public void  HttpAdapterPf(List<OmProcessRecordHist> omProcessRecordHists,OmEnvOrg omEnvOrg){
+        if(omEnvOrg==null){
+            throw ResultUtils.warn("OM1004");
+        }
         com.alibaba.fastjson.JSONObject jsonObject = new com.alibaba.fastjson.JSONObject();
         com.alibaba.fastjson.JSONObject body = new com.alibaba.fastjson.JSONObject();
         body.put("models",omProcessRecordHists);
