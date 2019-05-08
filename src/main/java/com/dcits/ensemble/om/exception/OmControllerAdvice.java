@@ -26,7 +26,7 @@ import javax.persistence.PersistenceException;
 public class OmControllerAdvice {
 
     /**
-     * 全局异常捕捉处理
+     * 数据异常
      * @param ex
      * @return
      */
@@ -41,7 +41,7 @@ public class OmControllerAdvice {
         resultCode.setCode(String.valueOf(ex.getErrorCode()));
         resultCode.setMsg(ex.getSQLException().getMessage());
         return ResultUtils.warn(resultCode);
-    }
+}
 
 
     /**
@@ -76,4 +76,8 @@ public class OmControllerAdvice {
         ResultCode resultCode = ResultCode.WARN;
         return ResultUtils.warn(resultCode);
     }
+
+
+
+
 }

@@ -13,13 +13,20 @@ import com.dcits.ensemble.om.repository.paraFlow.OmProcessRecordHistRepository;
 import com.dcits.ensemble.om.repository.paraFlow.OmProcessRelationHistRepository;
 import com.dcits.ensemble.om.repository.prodFactory.MbFactoryRoute;
 import com.dcits.ensemble.om.repository.prodFactory.OmEnvOrgRepository;
+import com.dcits.ensemble.om.repository.system.FmSystemRepository;
 import com.dcits.ensemble.om.repository.tables.OmTableListRepository;
-import com.dcits.ensemble.om.util.AdapterProperties;
+import com.dcits.ensemble.om.util.ConfigProperties;
 import com.dcits.ensemble.om.util.ConnectUtil;
+import com.dcits.ensemble.om.util.DateUtils;
+import com.dcits.ensemble.om.util.FilesUtiles;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import sun.rmi.runtime.Log;
 
 import javax.annotation.Resource;
 import java.util.*;
@@ -28,10 +35,11 @@ import java.util.*;
  * Created by ligan on 2018/9/13.
  */
 @Service
+@Slf4j
 public class FlowPublishService {
 
     @Autowired
-    AdapterProperties adapterProperties;
+    ConfigProperties configProperties;
     @Resource
     private OmProcessRelationHistRepository omProcessRelationHistRepository;
     @Resource
@@ -44,7 +52,6 @@ public class FlowPublishService {
     private OmTableListRepository omTableListRepository;
     @Resource
     private OmEnvOrgRepository omEnvOrgRepository;
-
     @Transactional
     public String publishSave(String mainSeqNo,Boolean flag){
         OmProcessMainFlow omProcessMainFlow = omProcessMainFlowRepository.findByMainSeqNo(mainSeqNo);
@@ -60,32 +67,36 @@ public class FlowPublishService {
     public StringBuffer save(String recSeqNo,Boolean flag,Boolean isProd){
         List<OmProcessRecordHist> omProcessRecordHists=  omProcessRecordHistRepository.findByRecSeqNo(recSeqNo);
         StringBuffer pushSql=new StringBuffer();
+        StringBuffer filesql=new StringBuffer();
         String tablename= null;
         for(OmProcessRecordHist omProcessRecordHist:omProcessRecordHists){
             JSONObject myJson = ParaDifferenceManagement.getJsonByBolb(omProcessRecordHist.getDmlData());
             if("I".equals(omProcessRecordHist.getDmlType())) {
                 pushSql.append(baseTableRepositoryImpl.insertTable(omProcessRecordHist.getTableName(), myJson, flag));
+                filesql.append(baseTableRepositoryImpl.insertTable(omProcessRecordHist.getTableName(), myJson, false));
             }else if("U".equals(omProcessRecordHist.getDmlType())) {
                 pushSql.append(baseTableRepositoryImpl.updateTable(omProcessRecordHist.getTableName(), myJson, omProcessRecordHist.getPkAndValue(),flag));
+                filesql.append(baseTableRepositoryImpl.updateTable(omProcessRecordHist.getTableName(), myJson, omProcessRecordHist.getPkAndValue(),false));
             }else if("D".equals(omProcessRecordHist.getDmlType())){
                 //参数删除
                 pushSql.append(baseTableRepositoryImpl.deleteTable(omProcessRecordHist.getTableName(), myJson, omProcessRecordHist.getPkAndValue(),flag));
+                filesql.append(baseTableRepositoryImpl.deleteTable(omProcessRecordHist.getTableName(), myJson, omProcessRecordHist.getPkAndValue(),false));
             }
             tablename = omProcessRecordHist.getTableName();
         }
-        if(adapterProperties.getIsAdapter()){
-            OmEnvOrg omEnvOrg = null;
-            String systemId = null ;
-            if(isProd){
-                systemId = MbFactoryRoute.map.get(tablename);
-                if(systemId==null){
-                    throw ResultUtils.warn("OM1001",tablename);
-                }
-            }else {
-                OmTableList omTableList= omTableListRepository.findByTableName(tablename);
-                systemId =omTableList.getSystem();
+        OmEnvOrg omEnvOrg = null;
+        String systemId = null ;
+        if(isProd){
+            systemId = MbFactoryRoute.map.get(tablename);
+            if(systemId==null){
+                throw ResultUtils.warn("OM1001",tablename);
             }
-            String[] systemIds = systemId.split(",");
+        }else {
+            OmTableList omTableList= omTableListRepository.findByTableName(tablename);
+            systemId =omTableList.getSystem();
+        }
+        String[] systemIds = systemId.split(",");
+        if(configProperties.getIsAdapter()){
             for(String sys : systemIds){
                 omEnvOrg = omEnvOrgRepository.findBySystemId(sys);
                 if(omEnvOrg==null){
@@ -94,6 +105,7 @@ public class FlowPublishService {
                 HttpAdapterPf(omProcessRecordHists,omEnvOrg);
             }
         }
+        writeFile(systemIds,filesql,tablename);
         return pushSql;
     }
 
@@ -111,6 +123,16 @@ public class FlowPublishService {
         coreServiceModel.setMessageCode(omEnvOrg.getMessageCode());
         com.alibaba.fastjson.JSONObject sysHead = ConnectUtil.getSysHeadForPublish(coreServiceModel);
         com.alibaba.fastjson.JSONObject result =  ConnectUtil.postToGalaxyCore(sysHead,body,omEnvOrg.getUrl());
+    }
+
+    public void  writeFile(String[] systemIds,StringBuffer sql,String tablename){
+       String date =  DateUtils.getDateTime(new Date(),DateUtils.PATTERN_DEFAULT_DATE);
+       String filename = date+".sql";
+       String path = configProperties.getFilePath();
+       for(String systemId:systemIds){
+           path = path+systemId+"/path";
+           FilesUtiles.writeFiles(path,sql.toString(),filename);
+       }
     }
 
 }

@@ -38,5 +38,7 @@ spring:
      show-sql: true
 pf:
   isadapter: false #同步到核心开关
+  file:
+    path: D:\OM\param\
 
 
