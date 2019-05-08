@@ -2,6 +2,7 @@ package com.dcits.ensemble.om.controller.paraTable;
 
 import com.dcits.ensemble.om.controller.model.Result;
 import com.dcits.ensemble.om.controller.model.ResultUtils;
+import com.dcits.ensemble.om.model.dbmodel.tables.OmTableList;
 import com.dcits.ensemble.om.repository.tables.OmTableListRepository;
 import com.dcits.ensemble.om.util.TableToJson;
 import io.swagger.annotations.Api;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,7 +35,12 @@ public class TableList {
     public Result getTableList(HttpServletResponse response, @RequestParam(value = "system", required = false) String system) {
         response.setHeader("Content-Type", "application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
-        responseMap.put("tableList",omTableListRepository.findBySystem(system));
+        if("CM".equals(system)){
+            responseMap.put("tableList", omTableListRepository.findByLoadModel("M"));
+        }
+        if(!"CM".equals(system)) {
+            responseMap.put("tableList", omTableListRepository.findBySystem(system));
+        }
        /* tableToJson.tableToJson();*/
         return ResultUtils.success(responseMap);
     }
