@@ -448,7 +448,6 @@ public class DifferenceProdInfo {
                             String newPageSeqNo = maxPageSeqNo.add(defineIndex).toString();
                             //重新组装插入数据参数
                             newData.put("prodType",mbProdType.getProdType());
-                            newData.put("seqNo",newSeqNo);
                             newData.put("pageSeqNo",newPageSeqNo);
                             newData.put("optionPermissions",null);
                             define.put("newData",newData);
