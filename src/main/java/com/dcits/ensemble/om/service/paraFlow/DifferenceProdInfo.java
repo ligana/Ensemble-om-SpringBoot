@@ -456,8 +456,7 @@ public class DifferenceProdInfo {
                             define.put("optType", "I");
                             keyValue.put("PROD_TYPE", mbProdType.getProdType());
                             keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
-                            keyValue.put("EVENT_TYPE", newData.get("eventType"));
-                            keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
+                            keyValue.put("EVENT_TYPE", (newData.get("eventType").toString()).split("_")[0]+"_"+mbProdType.getProdType());
                             keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
                             keyValue.put("ATTR_KEY", newData.get("attrKey"));
                             this.prodType = mbProdType.getProdType();
