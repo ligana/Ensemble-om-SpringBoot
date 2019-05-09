@@ -105,7 +105,7 @@ public class MbProdInfoService {
             }
             //指标处理
             for (MbProdDefine mbProdDefine : mbProdDefineListPart) {
-                mbProdDefineMap.put(mbProdDefine.getAssembleId()+"-"+mbProdDefine.getAttrKey(), mbProdDefine);
+                mbProdDefineMap.put(mbProdDefine.getAssembleId()+"-"+mbProdDefine.getAttrKey()+"-"+mbProdDefine.getEventType(), mbProdDefine);
             }
             mbProdInfo.setProdDefines(mbProdDefineMap);
             mbProdInfo.setMbProdDefine(mbProdDefineLists);
