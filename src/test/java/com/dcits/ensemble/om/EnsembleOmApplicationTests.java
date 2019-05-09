@@ -3,7 +3,6 @@ package com.dcits.ensemble.om;
 import com.dcits.ensemble.om.model.dbmodel.OmProdPageDefine;
 import com.dcits.ensemble.om.repository.tables.OmProdPageDefineRepository;
 import com.dcits.ensemble.om.table.DbTables;
-import com.dcits.ensemble.om.util.AdapterProperties;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,8 +21,6 @@ public class EnsembleOmApplicationTests {
     OmProdPageDefineRepository omProdPageDefineRepository;
     @Autowired
     private DbTables dbTables;
-    @Autowired
-    private AdapterProperties adapterProperties;
     @Test
     public void contextLoads() {
     }
