@@ -33,8 +33,8 @@ public class OmControllerAdvice {
     @ResponseBody
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(value = PersistenceException.class)
-    public Result DataerrorHandler(DataException ex) {
-        if(log.isInfoEnabled()){
+    public Result dataErrorHandler(DataException ex) {
+        if (log.isInfoEnabled()) {
             ex.printStackTrace();
         }
         ResultCode resultCode = ResultCode.WARN;

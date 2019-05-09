@@ -33,9 +33,37 @@ public class FilesUtiles {
             }else {
                 Files.write(path , sqls.getBytes());
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Boolean isTableFile(String filePath,String filename){
+        Path rootLocation = Paths.get(filePath);
+        try {
+            if(Files.notExists(rootLocation)){
+                Files.createDirectories(rootLocation);
+            }
+            Path path = rootLocation.resolve(filename);
+            if(path.toFile().exists()){
+               return true;
+            }else {
+               return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static void DeteleFile(String filePath,String filename){
+        Path rootLocation = Paths.get(filePath);
+            if(Files.notExists(rootLocation)){
+                return;
+            }
+            Path path = rootLocation.resolve(filename);
+            if(path.toFile().exists()){
+                path.toFile().delete();
+            }
     }
 }
