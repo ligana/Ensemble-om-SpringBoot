@@ -56,13 +56,14 @@ public class PkListController {
         //取同单号下的交易数据
         String mainSeqNo =(String) map.get("mainSeqNo");
         List<Map> columnMap= pkListRepository.getPkList(tableName,column,columnDesc);
-        if(mainSeqNo!=null) {
-            OmProcessRelationHist omProcessRelationHist=omProcessRelationHistRepository.findByMainSeqNoAndAndTranId(mainSeqNo,tableName);
-            //从差异表结合新表反向得到数据
-            if(omProcessRelationHist!=null) {
-                paraDifferenceManagement.mergePkList(omProcessRelationHist.getRecSeqNo(), columnMap,column,columnDesc);
-            }
-        }
+        //如果在产品界面跳转到参数界面 参数界面维护后 产品界面该参数字段需要加载新维护的字段信息
+//        if(mainSeqNo!=null) {
+//            OmProcessRelationHist omProcessRelationHist=omProcessRelationHistRepository.findByMainSeqNoAndAndTranId(mainSeqNo,tableName);
+//            //从差异表结合新表反向得到数据
+//            if(omProcessRelationHist!=null) {
+//                paraDifferenceManagement.mergePkList(omProcessRelationHist.getRecSeqNo(), columnMap,column,columnDesc);
+//            }
+//        }
         return  ResultUtils.success(columnMap);
     }
 }
