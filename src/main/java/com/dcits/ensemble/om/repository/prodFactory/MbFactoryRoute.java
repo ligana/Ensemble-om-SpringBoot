@@ -27,7 +27,7 @@ public class MbFactoryRoute {
         map.put("MB_PROD_CHARGE","RB");
         map.put("GL_PROD_ACCOUNTING","AC");
         map.put("GL_PROD_CODE_MAPPING","AC");
-        map.put("GL_PROD_MAPPINGS","AC");
+        map.put("GL_PROD_MAPPING","AC");
         map.put("IRL_PERI_SPLIT","LI");
         map.put("IRL_AMT_SPLIT","LI");
         map.put("IRL_INT_TYPE","LI");
