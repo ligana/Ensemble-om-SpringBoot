@@ -131,12 +131,12 @@ public class FlowPublishService {
         String filename = date + ".sql";
         String path = configProperties.getFilePath();
         for (String systemId : systemIds) {
-            String patch = path + systemId + "/path";
+            String patch = path + systemId + "/NERT";
             FilesUtiles.writeFiles(patch, sql.toString(), filename);
         }
         String filetablename = tablename.toUpperCase() + ".sql";
         for (String systemId : systemIds) {
-            String allFilePath = path + systemId + "/allSql";
+            String allFilePath = path + systemId + "/NORT";
             Boolean flag = FilesUtiles.isTableFile(allFilePath, filetablename);
             if (flag) {
                 FilesUtiles.DeteleFile(allFilePath, filetablename);
