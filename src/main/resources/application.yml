@@ -13,8 +13,8 @@ spring:
      #password: root
 
      driver-class-name: com.mysql.cj.jdbc.Driver
-     url: jdbc:mysql://localhost:3306/om?charset=utf8mb4&serverTimezone=UTC&useSSL=false
-     username: root
+     url: jdbc:mysql://10.7.25.205:3306/ensemble-om?charset=utf8mb4&serverTimezone=UTC&useSSL=false
+     username: ac
      password: 123456
 
      hikari:
@@ -37,8 +37,8 @@ spring:
         suffix: .jsp
      show-sql: true
 pf:
-  isadapter: false #同步到核心开关
+  isadapter: true #同步到核心开关
   file:
-    path: D:\OM\param\
+    path: /home/dcits/param/
 
 
