@@ -1,0 +1,74 @@
+{
+	"attr":[
+		{
+			"code":"ACCT_TYPE",
+			"comment":"主账户类型 ",
+			"dictionary":"ACCT_TYPE",
+			"id":"1f011c2f971f44788f3f9a050aa44418",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"PAY_REC_IND",
+			"comment":"收付款方向",
+			"dictionary":"PAY_REC_IND",
+			"id":"5b8c8cabff5e4cc39bb77198dfaf94c3",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"SETTLE_GL_TYPE",
+			"comment":"结算账户总账",
+			"dictionary":"SETTLE_GL_TYPE",
+			"id":"5bc06aa3542a4165a0d21bbcc9408f55",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TYPE_LIST",
+			"comment":"交易类型",
+			"dictionary":"TRAN_TYPE_LIST",
+			"id":"279aabc497244244b336adfabc9150a1",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"10b81c27149a441a8a25821b43bb5f55",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"85bdf3387bec4879ba9b05f61a8a2272",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"55c88380b20544248144ed493cd497f5",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_SETTLE_TRAN_MAPPING",
+	"comment":"结算交易类型映射表  (PARAM) ",
+	"dbType":"upright",
+	"id":"928489914eb94d6d8c40d9b2d897cf9e",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

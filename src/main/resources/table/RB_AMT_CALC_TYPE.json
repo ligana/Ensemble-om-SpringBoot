@@ -1,0 +1,92 @@
+{
+	"attr":[
+		{
+			"code":"AMT_CALC_TYPE",
+			"comment":"金额计算类型 ",
+			"dictionary":"AMT_CALC_TYPE",
+			"id":"8580661564bb4c91a3a4dbcafbde764a",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"AMT_CALC_DESC",
+			"comment":"金额计算类型描述 ",
+			"dictionary":"AMT_CALC_DESC",
+			"id":"645bfbf8f4544c1483b043dfcb8aa5a0",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"AMT_TYPE",
+			"comment":"金额类型",
+			"dictionary":"AMT_TYPE",
+			"id":"9aa95dcb569a42e893f3ffc66aa6d548",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CALC_FORMULA",
+			"comment":"计算公式 ",
+			"dictionary":"CALC_FORMULA",
+			"id":"5098b1673dea431fb44618defd2af8f0",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_HIST_AMT",
+			"comment":"交易流水金额 ",
+			"dictionary":"TRAN_HIST_AMT",
+			"id":"a01d7017bb074bf4a019ae0da502ea93",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_HIST_FLAG",
+			"comment":"登记交易流水",
+			"dictionary":"TRAN_HIST_FLAG",
+			"id":"e4f573fe49a54af0beb7c1e4e0567859",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"e3fd1506676e40669b84b09c2d0b1f42",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"6d52f4556901434aa8da7eeea8b4b0cc",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"8eb3d61f16a94857b21a3646c5eec89e",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_AMT_CALC_TYPE",
+	"comment":"金额计算类型定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"e6521ad0f0e04c0bb1078ac731f6fa25",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

@@ -1,0 +1,303 @@
+{
+	"attr":[
+		{
+			"code":"BRANCH",
+			"comment":"机构",
+			"dictionary":"BRANCH",
+			"id":"69ca100006a14e82890bbddc9657e564",
+			"m":false,
+			"p":true,
+			"valid":true,
+			"scope":"FM_BRANCH.BRANCH"
+		},
+		{
+			"code":"BRANCH_NAME",
+			"comment":"机构名称 ",
+			"dictionary":"BRANCH_NAME",
+			"id":"287525ffe8b24e33893a49423eb98e9a",
+			"m":false,
+			"p":false,
+			"valid":true,
+			"scope":"FM_BRANCH.BRANCH_NAME"
+		},
+		{
+			"code":"BRANCH_SHORT",
+			"comment":"机构简称 ",
+			"dictionary":"BRANCH_SHORT",
+			"id":"442eb3e5148442cd8764da16ff214107",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"HIERARCHY_CODE",
+			"comment":"机构层级 ",
+			"dictionary":"HIERARCHY_CODE",
+			"id":"b833c38ff43a4d3590ea2140de4348b0",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值 FM_BANK_HIERARCHY.HIERARCHY_CODE 取值 FM_BANK_HIERARCHY.HIERARCHY_CODE"
+
+		},
+		{
+			"code":"ATTACHED_TO",
+			"comment":"所属机构 ",
+			"dictionary":"ATTACHED_TO",
+			"id":"7678121e2f02403daaaa0ee1d5cf6cd2",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值 FM-BRANCH_TBL.BRANCH 取值 FM-BRANCH_TBL.BRANCH"
+		},
+		{
+			"code":"INTERNAL_CLIENT",
+			"comment":"内部客户号 ",
+			"dictionary":"INTERNAL_CLIENT",
+			"id":"da53e56950de4e928ac0990666670cb1",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"默认等于机构号 "
+		},
+		{
+			"code":"LOCAL_CCY",
+			"comment":"本地币种 ",
+			"dictionary":"LOCAL_CCY",
+			"id":"8f7bd129bb8649d39906e8167051e2dd",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值FM_CURRENCY.CCY "
+		},
+		{
+			"code":"BASE_CCY",
+			"comment":"基本币种 ",
+			"dictionary":"BASE_CCY",
+			"id":"1e4436b16ae0498f8691e93c96ede2b6",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值FM_CURRENCY.CCY FM_CURRENCY.CCY "
+		},
+		{
+			"code":"PROFIT_CENTRE",
+			"comment":"利润中心 ",
+			"dictionary":"PROFIT_CENTRE",
+			"id":"f22e642617084663900f0c32a367be1b",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值 FM_PROFIT_CENTRE_TBL.PROFIT_CENTRE 取值FM_PROFIT_CENTRE_TBL.PROFIT_CENTRE"
+		},
+		{
+			"code":"COUNTRY",
+			"comment":"所属国家 ",
+			"dictionary":"COUNTRY",
+			"id":"ea8fbbda1ec94fcf8a6ddd1560ef0b66",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值FM_COUNTRY.COUNTRY FM_CURRENCY.COUNTRY"
+		},
+		{
+			"code":"STATE",
+			"comment":"所在地区(省/州) ",
+			"dictionary":"STATE",
+			"id":"84103fa99043439a89130d265f27ee61",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值FM_STATE.STATE "
+
+		},
+		{
+			"code":"CITY",
+			"comment":"所在城市 ",
+			"dictionary":"CITY",
+			"id":"ea00328b61f44c78b18178c6d3b507a7",
+			"m":true,
+			"p":false,
+			"valid":true,
+			"scope":"取值 FM_CITY.CITY 取值 FM_CITY.CITY"
+		},
+		{
+			"code":"DISTRICT",
+			"comment":"区号 ",
+			"dictionary":"DISTRICT",
+			"id":"81fbf9e5b9f2462780297038cdce6dd0",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"POSTAL_CODE",
+			"comment":"邮编 ",
+			"dictionary":"POSTAL_CODE",
+			"id":"cca186504c7d4b9dafb7b4617b8ca854",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CHEQUE_ISSUING_BRANCH",
+			"comment":"是否签发支票 ",
+			"dictionary":"CHEQUE_ISSUING_BRANCH",
+			"id":"611af4fda90e4de5bb3f6bc1e66791cb",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_BR_IND",
+			"comment":"是否为交易分行",
+			"dictionary":"TRAN_BR_IND",
+			"id":"66b3455e08b6453c9d553538ac1dbe4e",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"SUB_BRANCH_CODE",
+			"comment":"分行代码 默认为空 ",
+			"dictionary":"SUB_BRANCH_CODE",
+			"id":"a91c933ee9ec4ea4b1958035822fa839",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CNY_BUSINESS_UNIT",
+			"comment":"业务单元(人民币) ",
+			"dictionary":"CNY_BUSINESS_UNIT",
+			"id":"1eb1fcdefa104246856261a176d9e7a0",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"HKD_BUSINESS_UNIT",
+			"comment":"业务单元(港币) ",
+			"dictionary":"HKD_BUSINESS_UNIT",
+			"id":"2966dad223754a97a1f110b9b97d8c72",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FX_ORGAN_CODE",
+			"comment":"外汇金融机构代码 ",
+			"dictionary":"FX_ORGAN_CODE",
+			"id":"369ac137caae4e8b9c678cd823643cf2",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PBOC_FUND_CHECK_FALG",
+			"comment":"人行备付金检查标志 ",
+			"dictionary":"PBOC_FUND_CHECK_FALG",
+			"id":"96e675484a234812ab8a37ecd732ab75",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CCY_CTRL_BRANCH",
+			"comment":"结售汇平盘机构",
+			"dictionary":"CCY_CTRL_BRANCH",
+			"id":"f5f26cad6367444b8d1fd04db5876af8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"EOD_IND",
+			"comment":"日终标识",
+			"dictionary":"EOD_IND",
+			"id":"b5d3f24d102d49a18793a4515136b375",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"STATUS",
+			"comment":"状态",
+			"dictionary":"STATUS",
+			"id":"2a1cd62a7ee44106941da8386e7e4b1c",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"IP_ADDR",
+			"comment":"机构IP地址 ",
+			"dictionary":"IP_ADDR",
+			"id":"3cdc04a6b6254b8fb5399e6e4e959638",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"公司代码",
+			"dictionary":"COMPANY",
+			"id":"cd5d1c7edc5a4c82b16e2cd3c3529077",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FTA_CODE",
+			"comment":"自贸区代码 ",
+			"dictionary":"FTA_CODE",
+			"id":"cbad9796aa504b45bb6fe325ba38712e",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FTA_FLAG",
+			"comment":"是否自贸区机构",
+			"dictionary":"FTA_FLAG",
+			"id":"59df948575ce4964aa873efd38e33ac2",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"VOUCHER_USER_CONTRAL",
+			"comment":"是否限制凭证入库柜员",
+			"dictionary":"VOUCHER_USER_CONTRAL",
+			"id":"74c8a58e998d467fa16591be8368bce0",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"4fc48c9661af43e996cf816d017f4721",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"23aa668870c24a21a4efddf11a099787",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_BRANCH",
+	"comment":"机构信息表(PARAM)",
+	"dbType":"upright",
+	"id":"c122d6f8937b47d69dae8c7d8452bbf4",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

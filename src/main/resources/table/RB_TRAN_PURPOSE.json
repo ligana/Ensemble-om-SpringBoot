@@ -1,0 +1,57 @@
+{
+	"attr":[
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"5cbb6aafb68445d7aa748363862bdb75",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"6d7e0183290645c78d6f8096c2977afd",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_PURPOSE",
+			"comment":"目的 ",
+			"dictionary":"TRAN_PURPOSE",
+			"id":"2949b961e23945f8852414117d1ca26b",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"TRAN_PURPOSE_DESC",
+			"comment":"描述 ",
+			"dictionary":"TRAN_PURPOSE_DESC",
+			"id":"7e983179ccc54227baaad723503b4c91",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"4dc0dfbab76044a8aea445ae287b90cc",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_TRAN_PURPOSE",
+	"comment":"交易目的表  (PARAM) ",
+	"dbType":"upright",
+	"id":"a9d26bc3fa7d42789b4d817d50ab42da",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

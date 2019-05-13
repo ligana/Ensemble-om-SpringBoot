@@ -1,0 +1,102 @@
+{
+    "code": "IRL_DATA_MAPPING",
+    "comment": "因子映射表",
+    "attr": [
+        {
+            "dictionary": "SYSTEM_ID",
+            "code": "SYSTEM_ID",
+            "codeOld": "SYSTEM_ID",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "系统标识",
+            "scope": "10：核心系统 20：互联网金融",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "OLD_VALUE_KEY",
+            "code": "OLD_VALUE_KEY",
+            "codeOld": "OLD_VALUE_KEY",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "原参数字段 ",
+            "scope": "TRAN_TYPE:交易类型,EVENT_TYPE:事件类型,PROD_TYPE:产品类型  ",
+            "M": true,
+            "P": true
+        },
+        {
+            "code": "OLD_VALUE",
+            "dataType": "Varchar",
+            "lengths": "50",
+            "precision": "",
+            "M": true,
+            "P": true,
+            "comment": "原参数字段值",
+            "defaults": "",
+            "dictionary": "OLD_VALUE",
+            "column": "原参数字段值",
+            "scope": ""
+        },
+        {
+            "code": "MAPPING_KEY",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "M": true,
+            "P": true,
+            "comment": "映射参数字段",
+            "defaults": "",
+            "dictionary": "MAPPING_KEY",
+            "column": "映射参数字段",
+            "scope": ""
+        },
+        {
+            "code": "MAPPING_VALUE",
+            "dataType": "Varchar",
+            "lengths": "50",
+            "precision": "",
+            "M": true,
+            "P": true,
+            "comment": "映射参数字段值",
+            "defaults": "",
+            "dictionary": "MAPPING_VALUE",
+            "column": "映射参数字段值",
+            "scope": ""
+        },
+        {
+            "code": "TRAN_TIMESTAMP",
+            "dataType": "Varchar",
+            "lengths": "17",
+            "precision": "",
+            "M": false,
+            "P": false,
+            "comment": "交易时间戳",
+            "defaults": "",
+            "dictionary": "TRAN_TIMESTAMP",
+            "column": "时间戳",
+            "scope": ""
+        },
+        {
+            "code": "TRAN_TIME",
+            "dataType": "Number",
+            "lengths": "11",
+            "precision": "0",
+            "M": false,
+            "P": false,
+            "comment": "交易时间",
+            "defaults": "",
+            "dictionary": "TRAN_TIME",
+            "column": "交易时间",
+            "scope": ""
+        }
+    ],
+    "table_space": "price_data",
+    "dbType": "upright",
+    "parameter": "tran",
+    "system": "Limarket",
+    "commentDesc": "对于交易类型、产品类型、事件类型等公共参数需要提供按系统的映射方案，从而确保外围系统的正常接入"
+}

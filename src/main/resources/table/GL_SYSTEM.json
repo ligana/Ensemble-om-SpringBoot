@@ -77,8 +77,8 @@
             "comment": "净利润科目",
             "defaults": "",
             "dictionary": "RETAIN_EARNINGS",
-            "column": "净利润科目 取值AC_SUBJECT",
-            "scope": ""
+            "column": "净利润科目 ",
+            "scope": "取值AC_SUBJECT"
         },
         {
             "code": "INT_PAYABLE",
@@ -90,8 +90,8 @@
             "comment": "应付利息科目",
             "defaults": "",
             "dictionary": "INT_PAYABLE",
-            "column": "应付利息科目 取值AC_SUBJECT",
-            "scope": ""
+            "column": "应付利息科目 ",
+            "scope": "取值AC_SUBJECT"
         },
         {
             "code": "INT_RECEIVABLE",
@@ -100,11 +100,11 @@
             "precision": "",
             "M": false,
             "P": false,
-            "comment": "应收利息科目",
+            "comment": "应计利息科目",
             "defaults": "",
             "dictionary": "INT_RECEIVABLE",
-            "column": "应收利息科目 取值AC_SUBJECT",
-            "scope": ""
+            "column": "应计利息科目 ",
+            "scope": "取值AC_SUBJECT"
         },
         {
             "code": "OS_CLOSE_BAL",
@@ -116,8 +116,8 @@
             "comment": "销户挂账科目",
             "defaults": "",
             "dictionary": "OS_CLOSE_BAL",
-            "column": "销户挂账科目 取值AC_SUBJECT",
-            "scope": ""
+            "column": "销户挂账科目 ",
+            "scope": "取值AC_SUBJECT"
         },
         {
             "code": "ACCT_HIST_PERIOD_NO",
@@ -152,7 +152,7 @@
             "precision": "",
             "M": false,
             "P": false,
-            "comment": "利息帐户类型",
+                "comment": "利息帐户类型",
             "defaults": "",
             "dictionary": "INT_ACCT_TYPE",
             "column": "利息帐户类型 I 内部 C 客户级",

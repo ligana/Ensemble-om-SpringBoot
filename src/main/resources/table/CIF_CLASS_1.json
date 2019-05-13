@@ -6,7 +6,7 @@
     "dataType":"Varchar",
     "lengths":"6",
     "precision":"",
-    "M":true,"P":true,"comment":"分类1",
+      "M":true,"P":true,"comment":"分类1",
     "defaults":"",
     "dictionary":"CLASS_1"}
   ,{

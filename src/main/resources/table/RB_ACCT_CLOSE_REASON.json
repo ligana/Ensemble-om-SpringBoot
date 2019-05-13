@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"REASON_CODE",
+			"comment":"原因代码 ",
+			"dictionary":"REASON_CODE",
+			"id":"792bdf7dda544281b1cfa7556b410e31",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"REASON_CODE_DESC",
+			"comment":"原因代码描述 ",
+			"dictionary":"REASON_CODE_DESC",
+			"id":"15cc75eb601f476db535e4423a9fcf35",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"f230c07697a74742a9b63c49e26f6bcf",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"7be73567e5794c25a3b6888aee4d4d86",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"101801cc1e21479e84f236353e59020c",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_ACCT_CLOSE_REASON",
+	"comment":"账户销户原因定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"16fe0edf63494fd19e3c212fcfbf87f3",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

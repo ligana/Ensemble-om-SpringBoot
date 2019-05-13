@@ -1,0 +1,102 @@
+{
+	"attr":[
+		{
+			"code":"SEQ_NO",
+			"comment":"序号 ",
+			"dictionary":"SEQ_NO",
+			"id":"d68c0420c4da411193d80b20dc997c48",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"COMPLETE_FLAG",
+			"comment":"是否调整完毕 ",
+			"dictionary":"COMPLETE_FLAG",
+			"id":"952478b396e64ef888a2a7ba8804c6df",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PERIOD_FREQ",
+			"comment":"结转频率",
+			"dictionary":"PERIOD_FREQ",
+			"id":"1d227e633ca543729f63dd01a9ac9a83",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FC_ADJUST_FLAG",
+			"comment":"外币结转方式",
+			"dictionary":"FC_ADJUST_FLAG",
+			"id":"01bad5503f244509a1de875806fedd33",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FX_CODE",
+			"comment":"外汇交易编码 ",
+			"dictionary":"FX_CODE",
+			"id":"bf4117f17c3a4a27b38544c69658581a",
+			"m":false,
+			"p":false,
+			"valid":true,
+			"scope":"建议使用270 Fm_fx_code数据"
+		},
+		{
+			"code":"ADJUST_DATE",
+			"comment":"结转日 ",
+			"dictionary":"ADJUST_DATE",
+			"id":"e1a14ea80d144351b98739c2dab7adb7",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"NEXT_ADJUST_DATE",
+			"comment":"下一结转日 ",
+			"dictionary":"NEXT_ADJUST_DATE",
+			"id":"8f6a1762ffb540b7810de8ceb458133b",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"91a1b674abfe4d51988c849aab44b112",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"84106004b53a44068ffc05fd84ecae31",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"b70e7f8a18da40dea9680190bc7692b2",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_ADJUST_DEF",
+	"comment":"损益结转定义表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"181588e4ac874ef5adf5e6d25cf3b677",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

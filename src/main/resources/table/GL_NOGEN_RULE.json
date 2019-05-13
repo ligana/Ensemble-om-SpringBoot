@@ -1,0 +1,101 @@
+{
+	"attr":[
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品类型",
+			"dictionary":"PROD_TYPE",
+			"id":"520f61540303499ba49646452edc4782",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"SOURCE_TYPE",
+			"comment":"源类型 ",
+			"dictionary":"SOURCE_TYPE",
+			"id":"627461c73b684c219c7ebabbe53f48b7",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"EVENT_TYPE",
+			"comment":"事件类型 ",
+			"dictionary":"EVENT_TYPE",
+			"id":"5951c73c3d1947f8b630f11e400195e2",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TYPE",
+			"comment":"交易类型 ",
+			"dictionary":"TRAN_TYPE",
+			"id":"d85f319729384439b80df79810757b9f",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"AMOUNT_TYPE",
+			"comment":"金额类型",
+			"dictionary":"AMOUNT_TYPE",
+			"id":"41b478969cbd4569a876bf270437c9e2",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"ACCOUNTING_STATUS",
+			"comment":"核算状态 ",
+			"dictionary":"ACCOUNTING_STATUS",
+			"id":"5f474c176a574c6c84329c999e7867d7",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"SOURCE_MODULE",
+			"comment":"源类型 ",
+			"dictionary":"SOURCE_MODULE",
+			"id":"e447b8b07f734f1a800195ef40e9cc74",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"4489c318054f4da8a8a20e99a8bbd03c",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"9356055fbf0c41ef9e01222cdcc4573d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码 FM_COMPANY.COMPANY",
+			"dictionary":"COMPANY",
+			"id":"c981d90933094011ba15ac7d84f6c262",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_NOGEN_RULE",
+	"comment":"免于生成分录规则表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"6fbebd2bbd9c480f9fcc807a42f19249",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

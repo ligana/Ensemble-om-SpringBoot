@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"ATTR",
+			"comment":"结构属性",
+			"dictionary":"ATTR",
+			"id":"c02e83a02ae04b68859540639f448242",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"DESCRIPTION",
+			"comment":"结构属性说明",
+			"dictionary":"DESCRIPTION",
+			"id":"81551da452344b63b8adf26ce5ce1219",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CHAR_ARRAY",
+			"comment":"取值范围 ",
+			"dictionary":"CHAR_ARRAY",
+			"id":"a704beeb16d84c36ba4535c91546c06b",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人",
+			"dictionary":"COMPANY",
+			"id":"c7e30851063d440bb87ff41dd6f294b9",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"b2bdffd61d46479988ef0790580d9bea",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"ce441f89cd484007824075f5cd911c55",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"FM_STRUCTURE_ATTR",
+	"comment":"结构属性定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"333706d210d34a57b5640d448d9bb62a",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

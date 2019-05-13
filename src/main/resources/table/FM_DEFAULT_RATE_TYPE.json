@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"TRAN_SCENE",
+			"comment":"交易场景 ",
+			"dictionary":"TRAN_SCENE",
+			"id":"1755f26c2ca44972a06051b498609898",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"RATE_TYPE",
+			"comment":"汇率类型 ",
+			"dictionary":"RATE_TYPE",
+			"id":"ea8098fd388f47f6b1dcbf64c78a2a62",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_SCENC_DESC",
+			"comment":"交易场景描述 ",
+			"dictionary":"TRAN_SCENC_DESC",
+			"id":"a0dfd9728a5d4fb9bf5bce16708dcecc",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"73941d433767410984e56489fd1360f0",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"4ffbb1afd9184ca2b5c11120c4a1059e",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"7e479c59ef4c403996965653c8375f42",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"FM_DEFAULT_RATE_TYPE",
+	"comment":"公共汇率类型定义表(PARAM)",
+	"dbType":"upright",
+	"id":"e028233eb7dc43cb92a408b8f5cd691b",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

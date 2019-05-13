@@ -1,0 +1,75 @@
+{
+    "system": "ensemble",
+    "code": "GL_RESERVE_GAT_BRANCH",
+    "table_space": "core_data",
+    "comment": "准备金缴存配置表",
+    "dbType": "level",
+    "parameter": "busi_para",
+    "attr": [
+        {
+            "dictionary": "FREQ_BRANCH",
+            "code": "FREQ_BRANCH",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "缴存机构",
+            "scope": "",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "DOWN_BRANCH",
+            "code": "DOWN_BRANCH",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "下级机构",
+            "scope": "",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "PAY_TYPE",
+            "code": "PAY_TYPE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "8",
+            "precision": "",
+            "defaults": "",
+            "comment": "准备金类型",
+            "scope": "",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "TRAN_TIME",
+            "code": "TRAN_TIME",
+            "codeOld": "",
+            "dataType": "Number",
+            "lengths": "11",
+            "precision": "0",
+            "defaults": "",
+            "comment": "交易时间",
+            "scope": "",
+            "M": false,
+            "P": false
+        },
+        {
+            "dictionary": "TRAN_TIMESTAMP",
+            "code": "TRAN_TIMESTAMP",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "17",
+            "precision": "",
+            "defaults": "",
+            "comment": "交易时间戳",
+            "scope": "",
+            "M": false,
+            "P": false
+        }
+    ]
+}

@@ -49,7 +49,7 @@
             "lengths": "2",
             "precision": "",
             "defaults": "",
-            "comment": "频率类型",
+            "comment": "结转频率",
             "scope": "取自FM_PERIOD_FREQ.PERIOD_FREQ",
             "M": false,
             "P": false

@@ -1,0 +1,83 @@
+{
+	"attr":[
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品",
+			"dictionary":"PROD_TYPE",
+			"id":"d1e7b1b613ac45a2b6040994a0ca39f5",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"STATUS",
+			"comment":"状态",
+			"dictionary":"STATUS",
+			"id":"2348dcc2ef184bc0912612efaf9ab23c",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"AMT_TYPE",
+			"comment":"金额类型",
+			"dictionary":"AMT_TYPE",
+			"id":"9b7b90b87cee4c0fa38932aa1fa20676",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"GL_CODE_COL",
+			"comment":"科目映射列名 ",
+			"dictionary":"GL_CODE_COL",
+			"id":"b394c30429b044eeb0aa43b96797a071",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"GL_CODE",
+			"comment":"科目代码 ",
+			"dictionary":"GL_CODE",
+			"id":"2a1a7b128bf448f6b3d61a929eacbf99",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"5fcd0d6395ad4a2dbe02d074e4c8a482",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"cf89ba3a930648eea63f8f05639c6ace",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码 FM_COMPANY.COMPANY",
+			"dictionary":"COMPANY",
+			"id":"357ddd95111a46b284973c4e0e0d2b75",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_PROD_CODE_MAPPING",
+	"comment":"产品科目映射表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"15c50309a8594bde870cee13d3ad856b",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

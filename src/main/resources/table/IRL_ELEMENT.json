@@ -23,7 +23,7 @@
             "lengths": "1",
             "precision": "",
             "defaults": "",
-            "comment": "因子类型",
+                "comment": "因子类型",
             "scope": "E:汇率因子,F:费用因子, L:利率因子",
             "M": true,
             "P": true

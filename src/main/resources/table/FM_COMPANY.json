@@ -9,7 +9,7 @@
             "precision": "",
             "M": true,
             "P": true,
-            "comment": "公司代码",
+            "comment": "法人代码",
             "defaults": "",
             "dictionary": "COMPANY",
             "scope": "FM_COMPANY.COMPANY"
@@ -110,7 +110,7 @@
             "lengths": "100",
             "precision": "",
             "defaults": "",
-            "comment": "分库路由关键字",
+            "comment": "分库路由KEY",
             "scope": "",
             "M": false,
             "P": false

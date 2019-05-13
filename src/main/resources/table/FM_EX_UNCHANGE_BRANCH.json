@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"BRANCH",
+			"comment":"维护机构",
+			"dictionary":"BRANCH",
+			"id":"eb015c4e3d1346dab3de992b340e4f18",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"UNCHANGE_BRANCH",
+			"comment":"平盘机构号 ",
+			"dictionary":"UNCHANGE_BRANCH",
+			"id":"cdf6bb5266c5494fafdc77fff278c737",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"7777c9332e3e4c15ad8e7381c70769c7",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"4770ace3569a434ca4aa56fc9367afc1",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"88b0cf841d08457989910c3834f43552",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"FM_EX_UNCHANGE_BRANCH",
+	"comment":"汇率平盘机构定义  (PARAM) ",
+	"dbType":"upright",
+	"id":"bc8a3d6b68bb4e65812bb718cbf4bc3b",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

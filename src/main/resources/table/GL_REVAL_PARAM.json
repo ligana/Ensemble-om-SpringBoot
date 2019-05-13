@@ -1,0 +1,62 @@
+{
+    "system": "Accounting",
+    "code": "GL_REVAL_PARAM",
+    "table_space": "account_data",
+    "comment": "汇兑损益重估参数定义表",
+    "dbType": "upright",
+    "parameter": "busi_para",
+    "attr": [
+        {
+            "dictionary": "REVAL_FREQ",
+            "code": "REVAL_FREQ",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "重估频率",
+            "scope": "取值FM_PERIOD_FREQ.PERIOD_FREQ",
+            "M": true,
+            "P": false
+        },
+        {
+            "dictionary": "RATE_TYPE",
+            "code": "RATE_TYPE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "3",
+            "precision": "",
+            "defaults": "",
+            "comment": "汇率类型 IRL_INT_TYPE.INT_TAX_TYPE",
+            "scope": "",
+            "M": true,
+            "P": false
+        },
+        {
+            "dictionary": "LAST_REVAL_DATE",
+            "code": "LAST_REVAL_DATE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "8",
+            "precision": "",
+            "defaults": "",
+            "comment": "上次重估日期",
+            "scope": "",
+            "M": false,
+            "P": false
+        },
+        {
+            "dictionary": "NEXT_REVAL_DATE",
+            "code": "NEXT_REVAL_DATE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "8",
+            "precision": "",
+            "defaults": "",
+            "comment": "下次重估日期",
+            "scope": "",
+            "M": false,
+            "P": false
+        }
+    ]
+}

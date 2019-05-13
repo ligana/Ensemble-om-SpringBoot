@@ -1,0 +1,74 @@
+{
+	"attr":[
+		{
+			"code":"AREA_CODE",
+			"comment":"地区代码",
+			"dictionary":"AREA_CODE",
+			"id":"9887d11294864d1eb54370baf92fcf8e",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"AREA_NAME",
+			"comment":"地区名称 ",
+			"dictionary":"AREA_NAME",
+			"id":"e6584e7136524a5797225cd005287ec2",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PROV_FLAG",
+			"comment":"省内省外",
+			"dictionary":"PROV_FLAG",
+			"id":"6afc80ac253e4572bc3feaea030ce21d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"INLAND_OFFSHORE",
+			"comment":"境内境外",
+			"dictionary":"INLAND_OFFSHORE",
+			"id":"d395343b8b9b4df6a6509ec3ad43ffec",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码 FM_COMPANY.COMPANY",
+			"dictionary":"COMPANY",
+			"id":"039cb4bd7e1f4b13ab98f2ccf129d5f2",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"74bc9556cbc74667837dae37b89ffce8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"111c95635ee34dccb7e24f2120e9ae8c",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"CD_AREA_DEF",
+	"comment":"地区参数表  (PARAM) ",
+	"dbType":"upright",
+	"id":"a58db23e4d5943ad84fddbb5e110f1d2",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"AVAILBAL_CALC_TYPE",
+			"comment":"金额计算类型 ",
+			"dictionary":"AVAILBAL_CALC_TYPE",
+			"id":"1ace30ee31974f54bca7e9b5e8a7a843",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"AVAILBAL_CALC_DESC",
+			"comment":"金额计算类型描述 ",
+			"dictionary":"AVAILBAL_CALC_DESC",
+			"id":"2542263025ee4164ae9ac2abfd50ced2",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CALC_FORMULA",
+			"comment":"计算公式 ",
+			"dictionary":"CALC_FORMULA",
+			"id":"bbd95b665824490cb0421b971c78e353",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"93a498f7780846068c8498a0b8446bf5",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"74d8c71621e246368b070c26d9c97f06",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_AVAILBAL_CALC_TYPE",
+	"comment":"可用余额计算类型定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"a007cf8290e54f1d83ffa63b9ad3a6cc",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

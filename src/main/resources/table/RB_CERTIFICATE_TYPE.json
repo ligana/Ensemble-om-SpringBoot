@@ -1,0 +1,74 @@
+{
+	"attr":[
+		{
+			"code":"CERTIFICATE_TYPE",
+			"comment":"产权证明种类",
+			"dictionary":"CERTIFICATE_TYPE",
+			"id":"6e5bfc412d25492494cc855b782dc7ba",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CERTIFICATE_TYPE_DESC",
+			"comment":"产权种类描述 ",
+			"dictionary":"CERTIFICATE_TYPE_DESC",
+			"id":"5e6e0988c92f4a04a7b4631825abee63",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"4835f62c8c3e48e2b48a728e28697941",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_DATE",
+			"comment":"交易日期 ",
+			"dictionary":"TRAN_DATE",
+			"id":"f2684a4e53454de998d3d6facc5c44fb",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"USER_ID",
+			"comment":"交易柜员",
+			"dictionary":"USER_ID",
+			"id":"7bfba95822a64989913bb45f4a78038a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"LAST_CHANGE_DATE",
+			"comment":"最后变更日期  ",
+			"dictionary":"LAST_CHANGE_DATE",
+			"id":"f845da7e9e1b4b63b11c8811a963aa07",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"LAST_CHANGE_USER_ID",
+			"comment":"上次修改柜员 ",
+			"dictionary":"LAST_CHANGE_USER_ID",
+			"id":"be7ff6d9b769498f96773a80386cbc92",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_CERTIFICATE_TYPE",
+	"comment":"产权证明种类  (PARAM) ",
+	"dbType":"upright",
+	"id":"617caf8980324611a2389106d06ccead",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

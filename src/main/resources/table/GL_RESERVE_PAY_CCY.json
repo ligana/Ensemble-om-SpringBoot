@@ -14,7 +14,7 @@
       "dataType":"Varchar",
       "lengths":"20",
       "precision":"",
-      "M":true,"P":true,"comment":"机构",
+      "M":true,"P":true,"comment":"维护机构",
       "defaults":"",
       "dictionary":"BRANCH"}
   ,{

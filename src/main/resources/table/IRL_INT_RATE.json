@@ -87,7 +87,7 @@
             "precision": "",
             "M": true,
             "P": false,
-            "comment": "机构代码",
+            "comment": "维护机构",
             "defaults": "",
             "dictionary": "BRANCH",
             "column": "机构代码",

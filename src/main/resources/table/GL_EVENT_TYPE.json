@@ -14,7 +14,7 @@
       "dataType":"Varchar",
       "lengths":"1",
       "precision":"",
-      "M":true,"P":false,"comment":"借贷方向",
+      "M":true,"P":false,"comment":"借贷标志",
       "defaults":"",
       "dictionary":"CR_DR"}
   ,{

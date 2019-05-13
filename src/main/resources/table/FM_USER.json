@@ -9,7 +9,7 @@
             "precision": "",
             "M": true,
             "P": true,
-            "comment": "柜员ID",
+            "comment": "交易柜员",
             "defaults": "",
             "dictionary": "USER_ID",
             "scope": ""

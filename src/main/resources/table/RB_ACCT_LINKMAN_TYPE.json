@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"LINKMAN_TYPE",
+			"comment":"联系人类型",
+			"dictionary":"LINKMAN_TYPE",
+			"id":"17fb9df4f7d441acb48797a1353dcdb1",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"LINKMAN_DESC",
+			"comment":"联系人描述 ",
+			"dictionary":"LINKMAN_DESC",
+			"id":"e72d4e8f05a84895b2b8c0511bf50a22",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"14858a25fa9e4671881541ecec61faa6",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"6125bd5a7bb34ec3a5e8742cefa02ce0",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"0309a34eb52844899dcb5d230e3dcc5d",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_ACCT_LINKMAN_TYPE",
+	"comment":"账户联系人类型表  (PARAM) ",
+	"dbType":"upright",
+	"id":"a523da63265843d78daff967fde215b4",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

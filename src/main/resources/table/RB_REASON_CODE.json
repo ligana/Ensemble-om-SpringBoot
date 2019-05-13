@@ -1,0 +1,83 @@
+{
+	"attr":[
+		{
+			"code":"REASON_CODE",
+			"comment":"原因代码",
+			"dictionary":"REASON_CODE",
+			"id":"c27425dd010a4af3acb3c33b7521d981",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"REASON_CODE_DESC",
+			"comment":"原因代码描述",
+			"dictionary":"REASON_CODE_DESC",
+			"id":"05b28fe7538848e98ca3b30c8e4cad21",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"SOURCE_MODE",
+			"comment":"模块 ",
+			"dictionary":"SOURCE_MODE",
+			"id":"31113e3642764813820ae8bb6a6e0477",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"936ab174457b43469e14dd701b4ec526",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"0c8e4387df85433f84eb2ae4a80a134a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"REASON_CLASS",
+			"comment":"原因分类 ",
+			"dictionary":"REASON_CLASS",
+			"id":"4fd46b82dde243049aebcbc4fc2704b4",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"BORROW_FOR_REPAY",
+			"comment":"借新还旧续存",
+			"dictionary":"BORROW_FOR_REPAY",
+			"id":"74c57804f1c44cc7b0dd4b9ee286ab2e",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"7eb8ce636239411883667b11d8e6f803",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_REASON_CODE",
+	"comment":"原因代码  (PARAM) ",
+	"dbType":"upright",
+	"id":"5f5f80b2b51e4824b55b6041fb07c4d8",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

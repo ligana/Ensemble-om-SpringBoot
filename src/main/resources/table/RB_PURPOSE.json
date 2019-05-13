@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"PURPOSE",
+			"comment":"目的 ",
+			"dictionary":"PURPOSE",
+			"id":"95a849eca22d4eb0b6e58e160ada767f",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"PURPOSE_DESC",
+			"comment":"描述 ",
+			"dictionary":"PURPOSE_DESC",
+			"id":"8e92e5a11c9b49cc9cbcca104026db8f",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"f2bd04d0700c4ec68ed11e8e09a0a6eb",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"d134b5e604644afd9864556e4904ac1d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"2107addce18c47f5837efe1c2b2b2ef4",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_PURPOSE",
+	"comment":"资金用途  (PARAM) ",
+	"dbType":"upright",
+	"id":"293b078f3e0e4cbf859eb5d8b7655091",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

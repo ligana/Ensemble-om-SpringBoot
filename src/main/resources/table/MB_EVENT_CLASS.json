@@ -1,0 +1,103 @@
+{
+    "code": "MB_EVENT_CLASS",
+    "comment": "事件分类定义表",
+    "attr": [
+        {
+            "code": "EVENT_CLASS",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "M": true,
+            "P": true,
+            "comment": "事件分类",
+            "defaults": "",
+            "dictionary": "EVENT_CLASS",
+            "column": "事件分类 取值于MB_EVENT_CLASS.EVENT_CLASS",
+            "scope": "取值于MB_EVENT_CLASS.EVENT_CLASS"
+        },
+        {
+            "code": "EVENT_CLASS_DESC",
+            "dataType": "Varchar",
+            "lengths": "100",
+            "precision": "",
+            "M": true,
+            "P": false,
+            "comment": "事件分类描述",
+            "defaults": "",
+            "dictionary": "EVENT_CLASS_DESC",
+            "column": "事件分类描述",
+            "scope": ""
+        },
+        {
+            "dictionary": "EVENT_CLASS_LEVEL",
+            "code": "EVENT_CLASS_LEVEL",
+            "codeOld": "EVENT_CLASS_LEVEL",
+            "dataType": "Varchar",
+            "lengths": "10",
+            "precision": "",
+            "defaults": "",
+            "comment": "事件分类层级",
+            "scope": " 1:1级,2:2级",
+            "M": false,
+            "P": false
+        },
+        {
+            "dictionary": "PARENT_EVENT_CLASS",
+            "code": "PARENT_EVENT_CLASS",
+            "codeOld": "PARENT_EVENT_CLASS",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "上级事件分类",
+            "scope": "取值于MB_EVENT_CLASS.EVENT_CLASS",
+            "M": false,
+            "P": false
+        },
+        {
+            "code": "COMPANY",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "M": false,
+            "P": false,
+            "comment": "法人代码",
+            "defaults": "",
+            "dictionary": "COMPANY",
+            "column": "法人代码",
+            "scope": "FM_COMPANY.COMPANY"
+        },
+        {
+            "code": "TRAN_TIMESTAMP",
+            "dataType": "Varchar",
+            "lengths": "17",
+            "precision": "",
+            "M": false,
+            "P": false,
+            "comment": "交易时间戳",
+            "defaults": "",
+            "dictionary": "TRAN_TIMESTAMP",
+            "column": "时间戳",
+            "scope": ""
+        },
+        {
+            "code": "TRAN_TIME",
+            "dataType": "Number",
+            "lengths": "11",
+            "precision": "0",
+            "M": false,
+            "P": false,
+            "comment": "交易时间",
+            "defaults": "",
+            "dictionary": "TRAN_TIME",
+            "column": "交易时间",
+            "scope": ""
+        }
+    ],
+    "table_space": "core_data",
+    "dbType": "upright",
+    "parameter": "init_para",
+    "system": "Ensemble",
+    "commentDesc": "描述产品工厂使用事件的分类",
+    "moduleType": "产品参数"
+}

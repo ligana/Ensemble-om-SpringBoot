@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"PARA_KEY",
+			"comment":"参数名 ",
+			"dictionary":"PARA_KEY",
+			"id":"ed2cfe0c2e004637b51acfd8a3401fc2",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"PARA_VALUE",
+			"comment":"参数值 ",
+			"dictionary":"PARA_VALUE",
+			"id":"6c040e57cfd3436d9d0264dde12b21c8",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PARA_DESC",
+			"comment":"参数描述 ",
+			"dictionary":"PARA_DESC",
+			"id":"cc79db09a0fa469fb088634cd8d09bb4",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"ca730c8997cc43649ab588bef835c676",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"25f2e4729d784f28b3887a11a5816184",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"136dec81cba24a6ea271b5f2c5048c8f",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_PCP_PARAMETER",
+	"comment":"资金池参数表  (PARAM) ",
+	"dbType":"upright",
+	"id":"7212bb79992542eab5f73d5f822f9819",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

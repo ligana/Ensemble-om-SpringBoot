@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"CCY",
+			"comment":"币种",
+			"dictionary":"CCY",
+			"id":"bec662f9686143479a384bb274e9eaff",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"GL_SEQ_NO",
+			"comment":"总账序列号 ",
+			"dictionary":"GL_SEQ_NO",
+			"id":"7b9b66d14c1c49dd9dffb7f8c0e971e3",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"da0ecab55e7b40aa9470a3d52beaf44d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"b62ee9525ad348f097dd70f16b34ef90",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"ac26f0fc17a64d939cf30327fe4cd594",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_CURRENCY_SEQNO_DEF",
+	"comment":"币种序号定义表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"62dc166b29df4e2f9339cbae6b3aa790",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

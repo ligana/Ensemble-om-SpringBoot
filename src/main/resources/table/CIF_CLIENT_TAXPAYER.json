@@ -1,0 +1,31 @@
+{
+	"code": "CIF_CLIENT_TAXPAYER",
+	"comment": "纳税人类型码值表",
+	"attr":[
+		{
+			"code":"FIELD_VALEU",
+			"comment":"取值范围",
+			"dictionary":"FIELD_VALEU",
+			"id":"084ae7a0cfe545f5a16b5406e6807b11",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"MEANING",
+			"comment":"取值的含义说明",
+			"dictionary":"MEANING",
+			"id":"084ae7a0cfe545f5a16b5406e6807b11",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"CIF_CLIENT_TAXPAYER",
+	"comment":"纳税人类型码值表(PARAM)",
+	"dbType":"upright",
+	"id":"7ba73d1f42264fe28a030af1e185ea70",
+	"parameter":"init_para",
+	"system":"CIF",
+	"valid":true
+}

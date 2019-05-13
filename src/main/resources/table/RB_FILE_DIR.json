@@ -1,0 +1,74 @@
+{
+	"attr":[
+		{
+			"code":"FILE_TYPE",
+			"comment":"文件类型 ",
+			"dictionary":"FILE_TYPE",
+			"id":"1192755eadb04da8b77f4aacb65d394d",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"FILE_DESC",
+			"comment":"描述 ",
+			"dictionary":"FILE_DESC",
+			"id":"b7610f2b07e34f318b71397fca78d58b",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FILE_SND_DIR",
+			"comment":"发送文件路径 ",
+			"dictionary":"FILE_SND_DIR",
+			"id":"cce2855bbb7643de84c3389d828ee6ab",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FILE_REC_DIR",
+			"comment":"接收文件路径 ",
+			"dictionary":"FILE_REC_DIR",
+			"id":"fcc755f426e34d7cb9f7adfb96708b05",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"547089f831eb4895bf56b933aa9aa2ab",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"e0ddacf88c734d65926e84099ca6323b",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"cf6fcb0831a24f43b09c8646d6625ddc",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_FILE_DIR",
+	"comment":"核心文件路径配置表  (PARAM) ",
+	"dbType":"upright",
+	"id":"8dc6086edebe40bd839f0a471de66bdb",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

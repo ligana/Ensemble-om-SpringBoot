@@ -1,0 +1,83 @@
+{
+	"attr":[
+		{
+			"code":"RATE_TYPE",
+			"comment":"汇率类型 ",
+			"dictionary":"RATE_TYPE",
+			"id":"09997cec1fdd42daba6ab6b24c204381",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"RATE_TYPE_DESC",
+			"comment":"汇率类型描述 ",
+			"dictionary":"RATE_TYPE_DESC",
+			"id":"09bec1bde3a743759478d4fc96e1456a",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"QUOTE_CCY",
+			"comment":"报价币种",
+			"dictionary":"QUOTE_CCY",
+			"id":"ab9bb3ff2d9c4ba1aa0bd0f79a2ef955",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FLOAT_TYPE",
+			"comment":"浮动方式",
+			"dictionary":"FLOAT_TYPE",
+			"id":"646a223ded304e4ea24639168a25da16",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"be1452a1f1734eb896663571f17bb3a7",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"HBD_FLAG",
+			"comment":"货币对汇率标志 Y:是,N:否",
+			"dictionary":"HBD_FLAG",
+			"id":"69dac519c8b6411dbac4c538ff9f66f8",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"6eda9222392c4bbd9e62521c50dca260",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"e77de9d8afff4864b3176fbc9ff25771",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_IRL_EXCHANGE_TYPE",
+	"comment":"汇率类型表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"77a088f22c6340e4abd96dd4632cc8ce",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

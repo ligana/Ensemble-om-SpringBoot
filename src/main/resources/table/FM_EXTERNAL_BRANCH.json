@@ -1,0 +1,83 @@
+{
+	"attr":[
+		{
+			"code":"BANK_CODE",
+			"comment":"银行代码 ",
+			"dictionary":"BANK_CODE",
+			"id":"5778c2142b7c41e89f2847b2a338d69d",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"BRANCH_CODE",
+			"comment":"机构代码 ",
+			"dictionary":"BRANCH_CODE",
+			"id":"173aeaa295404ef38fa452e9ae354ada",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"BRANCH_NAME",
+			"comment":"机构名称",
+			"dictionary":"BRANCH_NAME",
+			"id":"f92b237ca75d4ed2a4f76e28a243b11a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COUNTRY",
+			"comment":"国家",
+			"dictionary":"COUNTRY",
+			"id":"f9820c524a364f2fa9fe00a135c9b6f3",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"STATE",
+			"comment":"省、州 ",
+			"dictionary":"STATE",
+			"id":"8d22169bc75d47199c43f1a5b36b3e67",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人",
+			"dictionary":"COMPANY",
+			"id":"ef27e526c39c462eb94f1a27dd8be4cd",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"bde9e70c75a04b6f80df82be079b2172",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"d87e7a14766445c98c98fdf0b8e48cc4",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"FM_EXTERNAL_BRANCH",
+	"comment":"外部金融机构分行表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"b7d24b8612b54484a5eb558a9110646b",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

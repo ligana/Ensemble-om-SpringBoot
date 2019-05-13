@@ -6,7 +6,7 @@
     "dataType":"Varchar",
     "lengths":"10",
     "precision":"",
-    "M":true,"P":true,"comment":"对手",
+    "M":true,"P":true,"comment":"交易对手",
     "defaults":"",
     "dictionary":"COUNTER_PARTY"}
   ,{

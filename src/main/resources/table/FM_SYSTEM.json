@@ -311,7 +311,7 @@
             "lengths": "1",
             "precision": "",
             "defaults": "",
-            "comment": "是否多法人系统",
+                "comment": "是否多法人系统",
             "scope": "Y:是,N:否",
             "M": false,
             "P": false

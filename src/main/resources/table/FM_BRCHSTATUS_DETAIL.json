@@ -1,0 +1,88 @@
+{
+  "system": "Ensemble",
+  "dbType": "upright",
+  "parameter": "tran",
+  "table_space": "core_data",
+  "code": "fm_brchstatus_detail",
+  "comment": "机构登记簿",
+  "attr": [        {
+    "code": "BRANCH",
+    "dataType": "Varchar",
+    "lengths": "20",
+    "precision": "",
+    "M": false,            "P": false,            "comment": "机构代码",
+    "defaults": "",
+    "scope": "",
+    "dictionary": "BRANCH",
+    "column": "维护机构"        }
+  ,        {
+      "code": "TRAN_DATE",
+      "dataType": "Varchar",
+      "lengths": "8",
+      "precision": "",
+      "M": false,            "P": false,            "comment": "交易日期",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "TRAN_DATE",
+      "column": "交易日期"        }
+  ,        {
+      "code": "REG_TYPE",
+      "dataType": "Varchar",
+      "lengths": "1",
+      "precision": "",
+      "M": false,            "P": false,            "comment": "登记类型",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "REG_TYPE",
+      "column": "登记簿类型：  1-开户/卡  2-销户/卡  "        }
+  ,        {
+      "code": "REG_VALUE",
+      "dataType": "Varchar",
+      "lengths": "10",
+      "precision": "",
+      "M": false,            "P": false,            "comment": "登记值  ",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "REG_VALUE",
+      "column": "登记值  "        }
+  ,        {
+      "code": "USER_ID",
+      "dataType": "Varchar",
+      "lengths": "30",
+      "precision": "",
+      "M": false,            "P": false,            "comment": "交易柜员",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "USER_ID",
+      "column": "交易柜员"        }
+  ,        {
+      "code": "COMPANY",
+      "dataType": "Varchar",
+      "lengths": "20",
+      "precision": "",
+      "M": false,            "P": false,            "comment": "法人代码",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "COMPANY",
+      "column": "法人代码"        }
+  ,        {
+      "code": "TRAN_TIME",
+      "dataType": "Number",
+      "lengths": "11",
+      "precision": "0",
+      "M": false,            "P": false,            "comment": "交易时间",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "TRAN_TIME",
+      "column": "交易时间"        }
+  ,        {
+      "code": "TRAN_TIMESTAMP",
+      "dataType": "Varchar",
+      "lengths": "17",
+      "precision": "",
+      "M": false,            "P": false,            "comment": "时间戳",
+      "defaults": "",
+      "scope": "",
+      "dictionary": "TRAN_TIMESTAMP",
+      "column": "时间戳"        }
+  ],    "indexs": [],"commentDesc":""}

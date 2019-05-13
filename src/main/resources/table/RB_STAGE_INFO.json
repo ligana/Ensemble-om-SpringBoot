@@ -1,0 +1,101 @@
+{
+	"attr":[
+		{
+			"code":"ISSUE_YEAR",
+			"comment":"发行年度 ",
+			"dictionary":"ISSUE_YEAR",
+			"id":"9399cbdee601422da6a5c9e138b2c7c1",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品类型",
+			"dictionary":"PROD_TYPE",
+			"id":"98a12e49719e45c7984f921216d22637",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CCY",
+			"comment":"币种",
+			"dictionary":"CCY",
+			"id":"2910a18021aa4eafbbf88f22d3aa83d3",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"STAGE_CODE",
+			"comment":"期次代码 ",
+			"dictionary":"STAGE_CODE",
+			"id":"81a2bf64721f4f87a3cf7e58245e5442",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"ISSUE_AMT",
+			"comment":"期次发行额度 ",
+			"dictionary":"ISSUE_AMT",
+			"id":"6b8a48cefa1a4c67aa335b815fa2402a",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"USED_AMT",
+			"comment":"已使用额度 ",
+			"dictionary":"USED_AMT",
+			"id":"435f0947ec70472d9cf8e50d970619d3",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PREV_USED_AMT",
+			"comment":"已使用额度 ",
+			"dictionary":"PREV_USED_AMT",
+			"id":"ac6e5346a1234cb79e0ff26686a8cdc7",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"LAST_CHANGE_DATE",
+			"comment":"上次更新日期 ",
+			"dictionary":"LAST_CHANGE_DATE",
+			"id":"d2b3bdc9ec6f413bb615a184d00eb6d8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"b5c710f2afec46038e631f9f0344b637",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"b4fe3698ae81428ca391946dc33c3e7e",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_STAGE_INFO",
+	"comment":"期次信息表  (PARAM) ",
+	"dbType":"upright",
+	"id":"7c5cb920e959430193d5c9d00968d632",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

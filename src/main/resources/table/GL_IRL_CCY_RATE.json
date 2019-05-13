@@ -1,0 +1,155 @@
+{
+	"attr":[
+		{
+			"code":"CCY",
+			"comment":"币种",
+			"dictionary":"CCY",
+			"id":"2cba0dbdcec14c2aa1b327b752fa2b55",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"BRANCH",
+			"comment":"机构",
+			"dictionary":"BRANCH",
+			"id":"0881c46f252d4ab9a473b3c9d2aa1f51",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"RATE_TYPE",
+			"comment":"汇率类型 ",
+			"dictionary":"RATE_TYPE",
+			"id":"31eaddc9886d4c5bbc0274a89c1d4004",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"EFFECT_DATE",
+			"comment":"生效日期 ",
+			"dictionary":"EFFECT_DATE",
+			"id":"e06fb9f0ee704c4a9aa568e9170319a1",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"EFFECT_TIME",
+			"comment":"生效时间 ",
+			"dictionary":"EFFECT_TIME",
+			"id":"bc3c042f90a04324b89137c2cae531c0",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"QUOTE_TYPE",
+			"comment":"牌价类型 ",
+			"dictionary":"QUOTE_TYPE",
+			"id":"77bf19e95cce49da8434dcd786855470",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"MIDDLE_RATE",
+			"comment":"中间价 ",
+			"dictionary":"MIDDLE_RATE",
+			"id":"9de9896ea8b04610a8a3cc7fd5f70ce2",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"EXCH_BUY_RATE",
+			"comment":"汇买价 ",
+			"dictionary":"EXCH_BUY_RATE",
+			"id":"ff1fdf114bb34e9190e83ce4bcbeb8af",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"EXCH_SELL_RATE",
+			"comment":"汇卖价 ",
+			"dictionary":"EXCH_SELL_RATE",
+			"id":"6216d42fb51f4c86bc3ef95f0eb8bfef",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CENTRAL_BANK_RATE",
+			"comment":"央行参考汇率 ",
+			"dictionary":"CENTRAL_BANK_RATE",
+			"id":"38d556d51754489b905bc9f909367807",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"NOTES_BUY_RATE",
+			"comment":"钞买价 ",
+			"dictionary":"NOTES_BUY_RATE",
+			"id":"9486e0cb198b419493d21e7ea60db6aa",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"NOTES_SELL_RATE",
+			"comment":"钞卖价 ",
+			"dictionary":"NOTES_SELL_RATE",
+			"id":"8d6becf233574be9932751266e7f7cf3",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"MAX_FLOAT_RATE",
+			"comment":"最大浮动点 ",
+			"dictionary":"MAX_FLOAT_RATE",
+			"id":"d1d2429cc0f04ffc86c6b88125351985",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"c08501e8eb2d4fec8fbb7ca1eea58cb8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"b140bdf5d5894c7a8c9d84ffa2328f26",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"8f5697db8ca54872a9ce87f640524bce",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"GL_IRL_CCY_RATE",
+	"comment":"汇率牌价表(UPRIGHT)",
+	"dbType":"upright",
+	"id":"56a7fa28085b4a0aa7fc8f3498023519",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

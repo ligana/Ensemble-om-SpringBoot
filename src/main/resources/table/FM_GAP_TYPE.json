@@ -72,7 +72,7 @@
             "lengths": "1",
             "precision": "",
             "defaults": "",
-            "comment": "所属模块",
+            "comment": "是否产品组合",
             "scope": "Y:组合产品,N:单一产品",
             "M": false,
             "P": false

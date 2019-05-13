@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"PARA_KEY",
+			"comment":"参数名 ",
+			"dictionary":"PARA_KEY",
+			"id":"0ad24ac10dd74b2aa8afa45e4d77fcf6",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"PARA_VALUE",
+			"comment":"参数值 ",
+			"dictionary":"PARA_VALUE",
+			"id":"1574573fb1244697a1b02287f9f7662b",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PARA_DESC",
+			"comment":"参数描述 ",
+			"dictionary":"PARA_DESC",
+			"id":"5d347c734ede42e19bf354f954e40dc8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人",
+			"dictionary":"COMPANY",
+			"id":"688af5dd69f546ca98420ede90cee729",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"a910c03ed9934f2abb06be0ddfdf8765",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"bad2e64612b84b02815831c45d73725f",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"FM_PARAMETER",
+	"comment":"公共业务参数表  (PARAM) ",
+	"dbType":"upright",
+	"id":"256fdbdba62b433d95448fa84974da62",
+	"parameter":"init_para",
+	"system":"AC",
+	"valid":true
+}

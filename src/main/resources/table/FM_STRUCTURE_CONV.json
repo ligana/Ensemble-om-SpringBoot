@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"CHAR_VALUE",
+			"comment":"字符值 ",
+			"dictionary":"CHAR_VALUE",
+			"id":"f0d6de9e943049ba855515d56ac9f83b",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"NUMERIC_EQUIV",
+			"comment":"同等的数字 ",
+			"dictionary":"NUMERIC_EQUIV",
+			"id":"d56fd5df68c6452d8e4684cdae61d941",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人",
+			"dictionary":"COMPANY",
+			"id":"c3306cfcfaaa43288bbb209de622e9aa",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"362d7d7ea69d45fda9812b743f2029f8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"3634a1ae16b24420bae931e2618998c3",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"FM_STRUCTURE_CONV",
+	"comment":"结构转化规则定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"a52a7c67ddec474cb193842745b671a6",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

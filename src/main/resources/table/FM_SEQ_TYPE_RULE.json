@@ -30,7 +30,7 @@
       "dataType":"Varchar",
       "lengths":"30",
       "precision":"",
-      "M":true,"P":false,"comment":"终止号",
+      "M":true,"P":false,"comment":"结束号",
       "defaults":"",
       "dictionary":"END_NO"}
   ,{

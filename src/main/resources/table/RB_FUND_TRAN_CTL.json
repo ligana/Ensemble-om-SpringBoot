@@ -1,0 +1,83 @@
+{
+	"attr":[
+		{
+			"code":"ACCT_CLASS",
+			"comment":"账户类别",
+			"dictionary":"ACCT_CLASS",
+			"id":"8a0d03ed385842628d03a4b8aa742e8e",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CTL_PARAMETER",
+			"comment":"控制交易类型 ",
+			"dictionary":"CTL_PARAMETER",
+			"id":"88687bff125b426f8ff4e05355cd4433",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CTL_TYPE",
+			"comment":"控制方式 ",
+			"dictionary":"CTL_TYPE",
+			"id":"c1c89249bc214c97b3e317ae8ab6e56c",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CTL_ATTR",
+			"comment":"控制参数 ",
+			"dictionary":"CTL_ATTR",
+			"id":"43d68cb3f8e04f0da70823ce1c371254",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CTL_DESC",
+			"comment":"类型描述 ",
+			"dictionary":"CTL_DESC",
+			"id":"80bab6ceaa6b417692055bf15b8213fb",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"1edb9fa2282c4e14865b9d8ac44774fc",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"14fd79fe2f8b444da5b2ae732ca751f6",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"393ad62b4ec94211904d7b2e72b34dab",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_FUND_TRAN_CTL",
+	"comment":"账户类别交易控制表  (PARAM) ",
+	"dbType":"upright",
+	"id":"836bdb5fde6e43b489dbb2540a7dc344",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

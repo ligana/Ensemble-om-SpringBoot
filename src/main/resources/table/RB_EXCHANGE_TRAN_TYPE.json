@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"TRAN_TYPE",
+			"comment":"交易类型 ",
+			"dictionary":"TRAN_TYPE",
+			"id":"b8033f0adb504f3b8ee2a035b8b188f9",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"EX_TYPE",
+			"comment":"兑换类型",
+			"dictionary":"EX_TYPE",
+			"id":"08362878f4c44bc1ae0055efa02f71d1",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"OP_TYPE",
+			"comment":"兑换方式",
+			"dictionary":"OP_TYPE",
+			"id":"f8e10df0eb28414abe7cf94494ca129c",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"a3362f3e2f0e48a6834b9141a470d87a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"e1c13bef2497496e97bd55c89cc55a5a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"520024b3559145ee99498a9494aa9ae7",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_EXCHANGE_TRAN_TYPE",
+	"comment":"结售汇交易类型  (PARAM) ",
+	"dbType":"upright",
+	"id":"2a0634b7b68647219bfecd1f149530aa",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

@@ -128,7 +128,7 @@
             "precision": "",
             "defaults": "",
             "comment": "折算标志",
-            "scope": "B:比率前折算,A:比率后折算",
+                "scope": "B:比率前折算,A:比率后折算",
             "M": false,
             "P": false
         },

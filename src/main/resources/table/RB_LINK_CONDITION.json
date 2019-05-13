@@ -1,0 +1,74 @@
+{
+	"attr":[
+		{
+			"code":"CONDITION_ID",
+			"comment":"条件规则ID ",
+			"dictionary":"CONDITION_ID",
+			"id":"ec0306214b224cbba5bea8cd3659a4c4",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CONDITION_RULE",
+			"comment":"链接条件规则",
+			"dictionary":"CONDITION_RULE",
+			"id":"b5c74833c91c49a8976ab765d4b91da5",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CONDITION_DESC",
+			"comment":"规则描述 ",
+			"dictionary":"CONDITION_DESC",
+			"id":"0cfb4cf260724d7b88932256b63baa70",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"STATUS",
+			"comment":"状态",
+			"dictionary":"STATUS",
+			"id":"257ca0f040dc433a8026e7b8b45e3290",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"7ff5a6e1bbed44aca4592caa683070e1",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"fbcf320832a743539a51408108a229a9",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"aa0427e04f1a4cacaf40d52740421be6",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_LINK_CONDITION",
+	"comment":"链接条件定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"fabe04f55d394699aa632852b478bc5e",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

@@ -22,7 +22,7 @@
       "dataType":"Varchar",
       "lengths":"10",
       "precision":"",
-      "M":true,"P":true,"comment":"源类型",
+      "M":true,"P":true,"comment":"模块",
       "defaults":"",
       "dictionary":"SOURCE_MODULE"}
   ,{
@@ -30,7 +30,7 @@
       "dataType":"Varchar",
       "lengths":"10",
       "precision":"",
-      "M":true,"P":true,"comment":"源类型",
+      "M":true,"P":true,"comment":"渠道",
       "defaults":"",
       "dictionary":"SOURCE_TYPE"}
   ,{
@@ -62,7 +62,7 @@
       "dataType":"Varchar",
       "lengths":"30",
       "precision":"",
-      "M":true,"P":false,"comment":"会计分录标号",
+      "M":true,"P":false,"comment":"会计分录编号",
       "defaults":"",
       "dictionary":"ACCOUNTING_NO"}
   ,{

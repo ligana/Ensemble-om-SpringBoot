@@ -6,7 +6,7 @@
     "dataType":"Varchar",
     "lengths":"2",
     "precision":"",
-    "M":true,"P":true,"comment":"频率id",
+    "M":true,"P":true,"comment":"频率ID",
     "defaults":"",
     "dictionary":"PERIOD_FREQ"}
   ,{

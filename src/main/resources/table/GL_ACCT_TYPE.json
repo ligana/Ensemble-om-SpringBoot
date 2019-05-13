@@ -35,7 +35,7 @@
             "precision": "",
             "M": true,
             "P": false,
-            "comment": "存款类型";
+            "comment": "存款类型",
             "defaults": "",
             "dictionary": "DEPOSIT_TYPE",
             "column": "存款类型 S-储蓄 C-往来 T-定期",

@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"CASH_ITEM",
+			"comment":"现金项目 ",
+			"dictionary":"CASH_ITEM",
+			"id":"e08cf9f06b3549daa46d4f51f8446927",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CASH_ITEM_DESC",
+			"comment":"现金项目描述 ",
+			"dictionary":"CASH_ITEM_DESC",
+			"id":"731620a35f684b9aa38c45695895d2dc",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CR_DR_IND",
+			"comment":"收入支出标志",
+			"dictionary":"CR_DR_IND",
+			"id":"0956fca183944e2ba37ee7b46843b18f",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"b669c5359fc9424a866862600e7097ae",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"d935b937805947db8c4e3a386ecbd529",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"a0238935de1c47539882f4183c1dea04",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_CASH_ITEM",
+	"comment":"现金项目定义  (PARAM) ",
+	"dbType":"upright",
+	"id":"3da5e37141c94727b42cae853bc3c859",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

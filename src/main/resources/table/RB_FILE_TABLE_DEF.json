@@ -1,0 +1,83 @@
+{
+	"attr":[
+		{
+			"code":"SEQ_NO",
+			"comment":"序号 ",
+			"dictionary":"SEQ_NO",
+			"id":"404145df22b7431b8d1202b0db0fa213",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"SQL_ID",
+			"comment":"sqlID ",
+			"dictionary":"SQL_ID",
+			"id":"059032ecca984925b79696a9be8c56c8",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FILE_TEMPALTE_ID",
+			"comment":"转换模板ID ",
+			"dictionary":"FILE_TEMPALTE_ID",
+			"id":"049c24837bb64222b323f149409da331",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FILE_NAME",
+			"comment":"文件名 ",
+			"dictionary":"FILE_NAME",
+			"id":"d7ae2809b779485f878e8ea2b8e7661f",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FILE_PATH",
+			"comment":"文件路径 ",
+			"dictionary":"FILE_PATH",
+			"id":"84d1844a35394ca8b064f382ef3becf4",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"7edf344004cd46e99c3d12feb1e54598",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"e7eaa095842b40e38f733734db69d7f9",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"bae57f241abc4beb886e9e0ae92b8872",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_FILE_TABLE_DEF",
+	"comment":"根据配置属性生成数据文件  (PARAM) ",
+	"dbType":"upright",
+	"id":"6e3737e36e52460cb554d1eb40794014",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

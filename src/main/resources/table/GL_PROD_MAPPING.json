@@ -6,7 +6,7 @@
     "dataType":"Varchar",
     "lengths":"50",
     "precision":"",
-    "M":true,"P":true,"comment":"映射产品类型",
+    "M":true,"P":true,"comment":"映射类型",
     "defaults":"",
     "dictionary":"MAPPING_TYPE"}
   ,{

@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"SETTLE_ACCT_CLASS",
+			"comment":"结算账户分类",
+			"dictionary":"SETTLE_ACCT_CLASS",
+			"id":"2851c5abd48745f5aecfdbc11df44a21",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"SETTLE_ACCT_DESC",
+			"comment":"结算账户描述 ",
+			"dictionary":"SETTLE_ACCT_DESC",
+			"id":"91ac794bfdf64cebbf180a97daecbe67",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"SOURCE_MODULE",
+			"comment":"模块",
+			"dictionary":"SOURCE_MODULE",
+			"id":"7ea440ebd47f48d69cdff4b690268d00",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"7c9b01d72dbf4f95852af293a62dc9df",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"f2e6586ceb8f4629b1ac2bfda6eb9731",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"d2afbdd9d9a54cd3a659b3f54772519f",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_SETTLE_ACCT_CLASS",
+	"comment":"结算账户分类定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"5af7399b8ee54402ba3e5a5329492347",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

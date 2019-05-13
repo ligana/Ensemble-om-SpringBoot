@@ -1,0 +1,110 @@
+{
+	"attr":[
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品类型",
+			"dictionary":"PROD_TYPE",
+			"id":"7376a9d1a2114633aa474663fb1f9cc4",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CD_CUST_GRADE",
+			"comment":"卡客户等级 ",
+			"dictionary":"CD_CUST_GRADE",
+			"id":"68952a8b020e4b7bb83f4e1e4abbc326",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"PROD_CHANNEL",
+			"comment":"产品渠道 ",
+			"dictionary":"PROD_CHANNEL",
+			"id":"d34008b620ab40619bcf1be54a12826e",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"CD_AREA_CODE",
+			"comment":"所属区域",
+			"dictionary":"CD_AREA_CODE",
+			"id":"4284e7e511074fa9bde02ace634b8610",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"PASSWORD_CTR",
+			"comment":"密码控制 ",
+			"dictionary":"PASSWORD_CTR",
+			"id":"1e51366082b4460aa58ddee9e5ac0f1d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_COUNT",
+			"comment":"交易笔数",
+			"dictionary":"TRAN_COUNT",
+			"id":"fa044ce466e5465cbb30ca263c19b3da",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"SINGLE_TRAN_LIM",
+			"comment":"单次交易限额 ",
+			"dictionary":"SINGLE_TRAN_LIM",
+			"id":"2706b0c99d7049388639f50bdc5ee9b7",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"DAY_TRAN_LIM",
+			"comment":"日交易限额 ",
+			"dictionary":"DAY_TRAN_LIM",
+			"id":"9437a7f29da0450fb54fdfd25b133877",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"0516e051b94744b8afc11af9bb2d4d40",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"ad717ca72bee4d63b9e09022de31adef",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"a8a11eeda7744d4081aaa309df39e863",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_TRAN_CONTROL",
+	"comment":"交易控制表  (PARAM) ",
+	"dbType":"upright",
+	"id":"51ed07952db24a4197b31ddfadb8b0da",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

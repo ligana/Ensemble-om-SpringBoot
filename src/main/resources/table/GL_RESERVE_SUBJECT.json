@@ -1,0 +1,88 @@
+{
+    "system": "ensemble",
+    "code": "GL_RESERVE_SUBJECT",
+    "table_space": "core_data",
+    "comment": "准备金缴存科目定义表",
+    "dbType": "level",
+    "parameter": "busi_para",
+    "attr": [
+        {
+            "dictionary": "PAY_GL_CODE",
+            "code": "PAY_GL_CODE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "defaults": "",
+            "comment": "缴存科目",
+            "scope": "",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "PAY_TYPE",
+            "code": "PAY_TYPE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "8",
+            "precision": "",
+            "defaults": "",
+            "comment": "准备金类型 ",
+            "scope": "",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "COUNT_RATE",
+            "code": "COUNT_RATE",
+            "codeOld": "",
+            "dataType": "Number",
+            "lengths": "5",
+            "precision": "2",
+            "defaults": "",
+            "comment": "缴存比例",
+            "scope": "",
+            "M": false,
+            "P": false
+        },
+        {
+            "dictionary": "SUM_BAL_FLAG",
+            "code": "SUM_BAL_FLAG",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "1",
+            "precision": "",
+            "defaults": "",
+            "comment": "余额汇总方式",
+            "scope": "",
+            "M": false,
+            "P": false
+        },
+        {
+            "dictionary": "TRAN_TIME",
+            "code": "TRAN_TIME",
+            "codeOld": "",
+            "dataType": "Number",
+            "lengths": "11",
+            "precision": "0",
+            "defaults": "",
+            "comment": "交易时间",
+            "scope": "",
+            "M": false,
+            "P": false
+        },
+        {
+            "dictionary": "TRAN_TIMESTAMP",
+            "code": "TRAN_TIMESTAMP",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "17",
+            "precision": "",
+            "defaults": "",
+            "comment": "交易时间戳",
+            "scope": "",
+            "M": false,
+            "P": false
+        }
+    ]
+}

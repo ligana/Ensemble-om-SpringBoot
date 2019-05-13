@@ -1,0 +1,49 @@
+{
+    "system": "limarket",
+    "code": "IRL_TAXRATE_DEFINE",
+    "table_space": "price_data",
+    "comment": "税率类型定义表",
+    "dbType": "level",
+    "parameter": "busi_para",
+    "attr": [
+        {
+            "dictionary": "TAXRATE_TYPE",
+            "code": "TAXRATE_TYPE",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "3",
+            "precision": "",
+            "defaults": "",
+            "comment": "税率类型",
+            "scope": "",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "TAXRATE_DESC",
+            "code": "TAXRATE_DESC",
+            "codeOld": "",
+            "dataType": "Varchar",
+            "lengths": "30",
+            "precision": "",
+            "defaults": "",
+            "comment": "税率类型描述",
+            "scope": "",
+            "M": true,
+            "P": false
+        },
+        {
+            "dictionary": "START_METHOD",
+            "code": "START_METHOD",
+            "codeOld": "START_METHOD",
+            "dataType": "Varchar",
+            "lengths": "1",
+            "precision": "",
+            "defaults": "",
+            "comment": "启动方式",
+            "scope": "A:实时生效，S:按周期生效，F:固定生效",
+            "M": true,
+            "P": false
+        }
+    ]
+}

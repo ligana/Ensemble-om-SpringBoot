@@ -1,0 +1,38 @@
+{
+	"attr":[
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品类型",
+			"dictionary":"PROD_TYPE",
+			"id":"7e7103ebf889453bb46dc04e65412c2e",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"AMEND_PROD_TYPE",
+			"comment":"可变产品类型",
+			"dictionary":"AMEND_PROD_TYPE",
+			"id":"73313fedffbc4d03a11bfbeda2dedc36",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码 ",
+			"dictionary":"COMPANY",
+			"id":"41301e8e1b9f423b9efcefb3d2b8e277",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_PROD_AMEND_MAPING",
+	"comment":"产品变更映射表  (PARAM) ",
+	"dbType":"upright",
+	"id":"bc03bf98a82f40508cead187d6d9e5f0",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

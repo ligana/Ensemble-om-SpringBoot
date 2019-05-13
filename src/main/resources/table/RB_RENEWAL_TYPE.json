@@ -1,0 +1,92 @@
+{
+	"attr":[
+		{
+			"code":"RENEWAL_TYPE",
+			"comment":"比例类型 ",
+			"dictionary":"RENEWAL_TYPE",
+			"id":"0fdca84c6b174f18a717ec7dac46eb89",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"RENEWAL_RATE",
+			"comment":"比率 ",
+			"dictionary":"RENEWAL_RATE",
+			"id":"09b60fda54e64ad7a9085ec3cae1a1ba",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品类型",
+			"dictionary":"PROD_TYPE",
+			"id":"3b0767e65ca141e3b907e9901cb1cf7e",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TERM",
+			"comment":"存期 ",
+			"dictionary":"TERM",
+			"id":"aaa3866017eb426e92f3aa524cb58671",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TERM_TYPE",
+			"comment":"存期类型 ",
+			"dictionary":"TERM_TYPE",
+			"id":"b070cc239f13423a882fb472f3b9119a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"WTD_TRAN_TYPE",
+			"comment":"支取交易类型 ",
+			"dictionary":"WTD_TRAN_TYPE",
+			"id":"09ccf089ca6d4281a49a3db6a4a79f7f",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"DEP_TRAN_TYPE",
+			"comment":"存入交易类型 ",
+			"dictionary":"DEP_TRAN_TYPE",
+			"id":"68a58761af6647c39792cab5d840d410",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"f07d931c00674307a5c3801135c344a2",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"6bd22e3d9a9b4d258164c97c60847356",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_RENEWAL_TYPE",
+	"comment":"定期产品比例定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"39ba9f447f7f4596a1f2c8c39983f844",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

@@ -123,7 +123,7 @@
             "comment": "国家",
             "defaults": "",
             "dictionary": "COUNTRY",
-            "scope": "FM_CURRENCY.COUNTRY"
+            "scope": "FM_COUNTRY.COUNTRY"
         },
         {
             "dictionary": "STATE",
@@ -294,7 +294,7 @@
             "precision": "",
             "defaults": "",
             "comment": "状态 ",
-            "scope": "O: 关门，I:开门",
+            "scope": "A: 有效，C:无效",
             "M": false,
             "P": false
         },

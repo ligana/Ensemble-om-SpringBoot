@@ -10,7 +10,7 @@
             "lengths": "50",
             "precision": "",
             "defaults": "",
-            "comment": "费用代码",
+            "comment": "序号",
             "scope": "取值范围：计提INPUT_DATE|| PROD_TYPE  结息  RUN_DATE||INTERNAL_KEY|| PROD_TYPE  ",
             "M": true,
             "P": true
@@ -23,7 +23,7 @@
             "lengths": "8",
             "precision": "",
             "defaults": "",
-            "comment": "费率类型",
+            "comment": "费用类型",
             "scope": "取自IRL_FEE_TYPE.FEE_TYPE",
             "M": true,
             "P": false

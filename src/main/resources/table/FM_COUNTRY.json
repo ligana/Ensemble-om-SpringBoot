@@ -49,7 +49,7 @@
             "comment": "国家电话区号",
             "defaults": "",
             "dictionary": "COUNTRY_TEL",
-            "scope": "FM_CURRENCY.COUNTRY"
+            "scope": "FM_COUNTRY.COUNTRY"
         },
         {
             "dictionary": "NCCT",

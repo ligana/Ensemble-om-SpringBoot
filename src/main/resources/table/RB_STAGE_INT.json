@@ -1,0 +1,128 @@
+{
+	"attr":[
+		{
+			"code":"ISSUE_YEAR",
+			"comment":"发行年度 ",
+			"dictionary":"ISSUE_YEAR",
+			"id":"eab9f713ac3844d4a620203a2f64342b",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"PROD_TYPE",
+			"comment":"产品类型",
+			"dictionary":"PROD_TYPE",
+			"id":"5a1c8572d3c4498e956cbba38708ca9b",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CCY",
+			"comment":"币种",
+			"dictionary":"CCY",
+			"id":"af3fa20259d441569be0f91721ad09d3",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"STAGE_CODE",
+			"comment":"期次代码 ",
+			"dictionary":"STAGE_CODE",
+			"id":"84c4e261ec794346a6a98c531044e92d",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"SEQ_NO",
+			"comment":"序号 ",
+			"dictionary":"SEQ_NO",
+			"id":"3f48a141cc12478b85825c1c5d30fc59",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"EVENT_TYPE",
+			"comment":"事件类型 ",
+			"dictionary":"EVENT_TYPE",
+			"id":"3f1d0bdf31ac4b9bb5357f48b3c927b1",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"INT_CALC_TYPE",
+			"comment":"计息方式 ",
+			"dictionary":"INT_CALC_TYPE",
+			"id":"566114b4b24b495e9090e7f93199e238",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"INT_TYPE",
+			"comment":"利率类型 ",
+			"dictionary":"INT_TYPE",
+			"id":"53273c6189044ca2ab9c24dc07a0dc17",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"ACTUAL_RATE",
+			"comment":"行内利率 ",
+			"dictionary":"ACTUAL_RATE",
+			"id":"21c5c6d5d5a9424783b19340b0bb03c8",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"FLOAT_RATE",
+			"comment":"浮动利率 ",
+			"dictionary":"FLOAT_RATE",
+			"id":"fa7a6ce0f7ea4ca2979535d8ec8b2c21",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"REAL_RATE",
+			"comment":"执行利率 ",
+			"dictionary":"REAL_RATE",
+			"id":"a6abcad82ba041af9ea4c2a44349625d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"eb4ddbbc35f34c03982abe2f39d2d969",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"027d3170fcb24ac387b71993d630dcea",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_STAGE_INT",
+	"comment":"期次管理利率信息表  (PARAM) ",
+	"dbType":"upright",
+	"id":"7502c0e97f9a4c02a60a92786662e415",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

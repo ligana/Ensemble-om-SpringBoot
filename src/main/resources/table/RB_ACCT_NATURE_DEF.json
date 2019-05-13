@@ -1,0 +1,65 @@
+{
+	"attr":[
+		{
+			"code":"ACCT_NATURE",
+			"comment":"账户属性",
+			"dictionary":"ACCT_NATURE",
+			"id":"b4c8fa5f35e24ee2a4566137f093a0ac",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"DESCRIPTION",
+			"comment":"账户属性描述",
+			"dictionary":"DESCRIPTION",
+			"id":"c45347bbc4f4469d883e357368b066a7",
+			"m":false,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"32814fdaf5bd4fb3a0b8cbff88368a32",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"d2a0db4be21d4c60bc19738fd69af49c",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"aa7c5e66efef42e5abda30d20e35ccfc",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"NATURE_CLASS",
+			"comment":"账户属性分类",
+			"dictionary":"NATURE_CLASS",
+			"id":"ab3167b8d1bf48ec996cbf97d81e53e5",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_ACCT_NATURE_DEF",
+	"comment":"账户属性定义  (PARAM) ",
+	"dbType":"upright",
+	"id":"8e35d532c90b4682bedd91e9c2c3a0a1",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

@@ -1,0 +1,56 @@
+{
+	"attr":[
+		{
+			"code":"DEP_TRAN_TYPE",
+			"comment":"存入交易类型 ",
+			"dictionary":"DEP_TRAN_TYPE",
+			"id":"0689039fa3964363852f1c0a891f955d",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"WTD_TRAN_TYPE",
+			"comment":"支取交易类型 ",
+			"dictionary":"WTD_TRAN_TYPE",
+			"id":"9c86ec3359934f2ca918bc2905ae8103",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"b729082849804fbd9b7f332810fb46e6",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"3b746ebb52e34b73b6a13da2bbb440a4",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"fba3c73841ef43d894b2e946f8a99429",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_DEP_WTD_TRAN_TYPE",
+	"comment":"存入支取交易类型定义表  (PARAM) ",
+	"dbType":"upright",
+	"id":"caa8f86675b648908f4d2c4692fa7e16",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

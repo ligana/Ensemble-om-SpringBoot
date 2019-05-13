@@ -10,7 +10,7 @@
             "lengths": "50",
             "precision": "",
             "defaults": "",
-            "comment": "序号",
+            "comment": "指数序号",
             "scope": "",
             "M": true,
             "P": false
@@ -62,7 +62,7 @@
             "lengths": "2",
             "precision": "",
             "defaults": "",
-            "comment": "频率类型",
+            "comment": "结转频率",
             "scope": "取自FM_PERIOD_FREQ.PERIOD_FREQ",
             "M": false,
             "P": false

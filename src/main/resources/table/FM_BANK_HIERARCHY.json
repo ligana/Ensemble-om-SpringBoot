@@ -6,7 +6,7 @@
     "dataType":"Varchar",
     "lengths":"5",
     "precision":"",
-    "M":true,"P":true,"comment":"层级代码",
+    "M":true,"P":true,"comment":"机构层级",
     "defaults":"",
     "dictionary":"HIERARCHY_CODE"}
   ,{

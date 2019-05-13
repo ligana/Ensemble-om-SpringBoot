@@ -1,0 +1,74 @@
+{
+	"attr":[
+		{
+			"code":"ACCT_NATURE",
+			"comment":"账户属性",
+			"dictionary":"ACCT_NATURE",
+			"id":"6493e1806e8349a2a98174056f6cc659",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"RESTRAINT_TYPE",
+			"comment":"限制类型",
+			"dictionary":"RESTRAINT_TYPE",
+			"id":"bf28c63380484129b092915cc4e8d6fa",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"COMPANY",
+			"comment":"法人代码",
+			"dictionary":"COMPANY",
+			"id":"1e506609af0f43bc860f516a07191e0e",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"00edec1391cf41b4a368d6fbdc853963",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"b4e537112b89486e939fa7cde97de1b1",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TERM",
+			"comment":"存期 ",
+			"dictionary":"TERM",
+			"id":"f34142b6f3f64b3fa7908790ebf4ec1a",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TERM_TYPE",
+			"comment":"存期类型 ",
+			"dictionary":"TERM_TYPE",
+			"id":"365349244f9d468eba6499f5d6091e14",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_ACCT_NATURE_RESTRAINTS",
+	"comment":"属性限制配置",
+	"dbType":"upright",
+	"id":"234b933ca4c049fbb819aa5025dad32f",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

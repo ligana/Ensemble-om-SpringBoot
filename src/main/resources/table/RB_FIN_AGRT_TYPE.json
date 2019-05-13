@@ -1,0 +1,110 @@
+{
+	"attr":[
+		{
+			"code":"FIN_TYPE",
+			"comment":"理财类型 ",
+			"dictionary":"FIN_TYPE",
+			"id":"1e65b03719174ceb907de9e5581ffe2a",
+			"m":false,
+			"p":true,
+			"valid":true
+		},
+		{
+			"code":"FIN_TYPE_DESC",
+			"comment":"理财类型描述 ",
+			"dictionary":"FIN_TYPE_DESC",
+			"id":"c19407f7e793449fa526312b3cfb8815",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"KEEP_DAYS",
+			"comment":"保留天数 ",
+			"dictionary":"KEEP_DAYS",
+			"id":"c2ef1cd8a38b4293a4a790b3928e7c61",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"AUTO_TRANSFER",
+			"comment":"自动支取",
+			"dictionary":"AUTO_TRANSFER",
+			"id":"9afd79837da147748f1abde10d2f1540",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"RETRAIN_AMT",
+			"comment":"保留金额 ",
+			"dictionary":"RETRAIN_AMT",
+			"id":"671bf7a7e0094b11ad95e36623f3ed7d",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TERM_AMT",
+			"comment":"定期固定金额 ",
+			"dictionary":"TERM_AMT",
+			"id":"9e6e32fac0d74da68fe880c5c3969f41",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"RENEWAL_TYPE",
+			"comment":"定期理财方式 ",
+			"dictionary":"RENEWAL_TYPE",
+			"id":"255184f26cac4a04bc16973e06174f79",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"CHECK_TRAN_FLAG",
+			"comment":"交易检查标志",
+			"dictionary":"CHECK_TRAN_FLAG",
+			"id":"9cd77f75a7fd485d996d3bc3464a9aa2",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"MIN_INIT_AMT",
+			"comment":"起始最底金额 ",
+			"dictionary":"MIN_INIT_AMT",
+			"id":"27f00a7dad12460eaf45e386eb1b77d3",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIMESTAMP",
+			"comment":"交易时间戳 ",
+			"dictionary":"TRAN_TIMESTAMP",
+			"id":"c7d55a9c2d28410585cf8bfdde9b2423",
+			"m":true,
+			"p":false,
+			"valid":true
+		},
+		{
+			"code":"TRAN_TIME",
+			"comment":"交易时间 ",
+			"dictionary":"TRAN_TIME",
+			"id":"26742ea7f126459f8df6796539569ea0",
+			"m":true,
+			"p":false,
+			"valid":true
+		}
+	],
+	"code":"RB_FIN_AGRT_TYPE",
+	"comment":"活期理财协议表  (PARAM) ",
+	"dbType":"upright",
+	"id":"f3bd25756531441398304f653cdb00a6",
+	"parameter":"init_para",
+	"system":"RB",
+	"valid":true
+}

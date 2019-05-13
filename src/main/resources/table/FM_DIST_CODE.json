@@ -46,7 +46,7 @@
       "dataType":"Varchar",
       "lengths":"8",
       "precision":"",
-      "M":false,"P":false,"comment":"州/省代码",
+      "M":false,"P":false,"comment":"州/省",
       "defaults":"",
       "dictionary":"STATE"}
   ,{
