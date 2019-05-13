@@ -15,10 +15,7 @@ import com.dcits.ensemble.om.repository.paraFlow.OmProcessRelationHistRepository
 import com.dcits.ensemble.om.repository.prodFactory.MbFactoryRoute;
 import com.dcits.ensemble.om.repository.prodFactory.OmEnvOrgRepository;
 import com.dcits.ensemble.om.repository.tables.OmTableListRepository;
-import com.dcits.ensemble.om.util.ConfigProperties;
-import com.dcits.ensemble.om.util.ConnectUtil;
-import com.dcits.ensemble.om.util.DateUtils;
-import com.dcits.ensemble.om.util.FilesUtiles;
+import com.dcits.ensemble.om.util.*;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +23,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
@@ -103,14 +101,33 @@ public class FlowPublishService {
                 if (omEnvOrg == null) {
                     throw ResultUtils.warn("OM1002", sys);
                 }
+                for(OmProcessRecordHist omProcessRecordHist:omProcessRecordHists){
+                    JSONObject newDataJson = getJsonByBolb(omProcessRecordHist.getDmlData());
+//                    JSONObject oldDataJson = getJsonByBolb(omProcessRecordHist.getDmlOldData());
+                    JSONObject tt = new JSONObject();
+                    for(Object data : newDataJson.keySet()){
+                        String columnName = data.toString();
+                        String columnValue = newDataJson.get(data).toString();
+                        if (!columnName.equals(columnName.toUpperCase())) {
+                            columnName = ResourcesUtils.camelToUnderline11(data.toString());
+                        }
+                        tt.put(columnName,columnValue);
+                    }
+                    String newDataStr = ResourcesUtils.getJsonString(tt);
+                    byte[] tmpOldDui;
+                    try {
+                        tmpOldDui = newDataStr.getBytes("UTF-8");
+                        omProcessRecordHist.setDmlData(tmpOldDui);
+                    }catch (UnsupportedEncodingException e){
+
+                    }
+                }
                 HttpAdapterPf(omProcessRecordHists, omEnvOrg);
             }
         }
         writeFile(systemIds, filesql, tablename);
         return pushSql;
     }
-
-
     public void HttpAdapterPf(List<OmProcessRecordHist> omProcessRecordHists, OmEnvOrg omEnvOrg) {
         if (omEnvOrg == null) {
             throw ResultUtils.warn("OM1004");
@@ -119,9 +136,9 @@ public class FlowPublishService {
         com.alibaba.fastjson.JSONObject body = new com.alibaba.fastjson.JSONObject();
         body.put("models", omProcessRecordHists);
         CoreServiceModel coreServiceModel = new CoreServiceModel();
-        coreServiceModel.setServiceCode(omEnvOrg.getServiceCode());
-        coreServiceModel.setMessageType(omEnvOrg.getMessageType());
-        coreServiceModel.setMessageCode(omEnvOrg.getMessageCode());
+//        coreServiceModel.setServiceCode(omEnvOrg.getServiceCode());
+//        coreServiceModel.setMessageType(omEnvOrg.getMessageType());
+//        coreServiceModel.setMessageCode(omEnvOrg.getMessageCode());
         com.alibaba.fastjson.JSONObject sysHead = ConnectUtil.getSysHeadForPublish(coreServiceModel);
         com.alibaba.fastjson.JSONObject result = ConnectUtil.postToGalaxyCore(sysHead, body, omEnvOrg.getUrl());
     }
@@ -154,4 +171,14 @@ public class FlowPublishService {
 
     }
 
+    public static JSONObject getJsonByBolb(byte[] data){
+        String str= null;
+        try {
+            str = new String(data,"utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        JSONObject myJson = JSONObject.fromObject(str);
+        return myJson;
+    }
 }

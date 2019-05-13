@@ -39,6 +39,35 @@ public class ResourcesUtils {
         }
         return sb.toString();
     }
+    public static String camelToUnderline11(String param){
+        if (param==null||"".equals(param.trim())){
+            return "";
+        }
+        int len=param.length();
+        StringBuilder sb=new StringBuilder(len);
+        for (int i = 0; i < len; i++) {
+            char c=param.charAt(i);
+            if (Character.isUpperCase(c)){
+                sb.append(UNDERLINE);
+                sb.append(c);
+            }else{
+                sb.append(Character.toUpperCase(c));
+            }
+        }
+        return sb.toString();
+    }
+    private static Pattern humpPattern = Pattern.compile("[A-Z]");
+    /**驼峰转下划线,效率比上面高*/
+    public static String humpToLine2(String str){
+        Matcher matcher = humpPattern.matcher(str);
+        StringBuffer sb = new StringBuffer();
+        while(matcher.find()){
+            matcher.appendReplacement(sb, "_"+matcher.group(0).toUpperCase());
+        }
+        matcher.appendTail(sb);
+        return sb.toString();
+    }
+
     public static String underlineToCamel(String param){
         if (param==null||"".equals(param.trim())){
             return "";
