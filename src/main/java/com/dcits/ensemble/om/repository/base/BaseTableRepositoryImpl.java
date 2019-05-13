@@ -149,7 +149,7 @@ public class BaseTableRepositoryImpl {
                 columnName = ResourcesUtils.camelToUnderline(data.toString());
             }
             Object value = dataMap.get(data);
-            if (value != null && !"null".equals(value.toString()) && !value.toString().equals("")) {
+            if (value != null && !"null".equals(value.toString())) {
                 sqlStr.append(columnName);
                 sqlStr.append(comm);
             }
@@ -188,7 +188,7 @@ public class BaseTableRepositoryImpl {
             int dataSize = 0;
             for (Object data : dataMap.keySet()) {
                 Object value = dataMap.get(data);
-                if (value != null && !"null".equals(value.toString()) && !"".equals(value.toString())) {
+                if (value != null && !"null".equals(value.toString())) {
                     dataSize++;
                 }
             }
@@ -197,7 +197,7 @@ public class BaseTableRepositoryImpl {
                 Object value = dataMap.get(data);
                 //sql导出
                 if (!flag) {
-                    if (value != null && !"null".equals(value.toString()) && !"".equals(value.toString())) {
+                    if (value != null && !"null".equals(value.toString())) {
                         sqlStr.append("'");
                         sqlStr.append(value.toString());
                         sqlStr.append("'");
