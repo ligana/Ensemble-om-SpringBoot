@@ -28,13 +28,13 @@ public class MbFactoryRoute {
         map.put("GL_PROD_ACCOUNTING","AC");
         map.put("GL_PROD_CODE_MAPPING","AC");
         map.put("GL_PROD_MAPPING","AC");
-        map.put("IRL_PERI_SPLIT","LI");
-        map.put("IRL_AMT_SPLIT","LI");
-        map.put("IRL_INT_TYPE","LI");
-        map.put("IRL_INT_RATE","LI");
-        map.put("IRL_PROD_INT","LI");
-        map.put("IRL_INT_MATRICES","LI");
-        map.put("IRL_PROD_TYPE","LI");
-        map.put("IRL_BASE_RATE","LI");
+        map.put("IRL_PERI_SPLIT","PF");
+        map.put("IRL_AMT_SPLIT","PF");
+        map.put("IRL_INT_TYPE","PF");
+        map.put("IRL_INT_RATE","PF");
+        map.put("IRL_PROD_INT","PF");
+        map.put("IRL_INT_MATRICES","PF");
+        map.put("IRL_PROD_TYPE","PF");
+        map.put("IRL_BASE_RATE","PF");
     }
 }

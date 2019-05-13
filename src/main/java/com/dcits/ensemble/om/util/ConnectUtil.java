@@ -65,11 +65,11 @@ public class ConnectUtil {
         System.out.println("respon："+respon);
         JSONObject head = (JSONObject) respon.get("sysHead");
         if (head.get("retStatus").toString().equals("F")) {
-            if (head.get("messageType").toString().equals("1200") && head.get("messageCode").toString().equals("9101")) {
-                JSONObject result = new JSONObject();
-                result.put("status", "F");
-                return result;
-            }
+//            if (head.get("messageType").toString().equals("1200") && head.get("messageCode").toString().equals("9101")) {
+//                JSONObject result = new JSONObject();
+//                result.put("status", "F");
+//                return result;
+//            }
             String msg = ((JSONObject) ((JSONArray) head.get("ret")).get(0)).get("retMsg").toString();
             System.out.println(msg);
         }

@@ -34,8 +34,7 @@ public class MbPartClassController {
     public Result findAll(HttpServletResponse response){
         response.setHeader("Content-Type","application/json;charset=UTF-8");
         Map responseMap = new HashMap<>();
-        List<MbPartClass> list=mbPartClassService.findAll();
-        responseMap.put("PartClassInfo", list);
+        responseMap.put("MB_PART_CLASS",mbPartClassService.findAllTable("MB_PART_CLASS"));
         return ResultUtils.success(responseMap);
     }
 }
