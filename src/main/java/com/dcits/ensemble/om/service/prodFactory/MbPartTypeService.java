@@ -1,5 +1,6 @@
 package com.dcits.ensemble.om.service.prodFactory;
 
+import com.dcits.ensemble.om.controller.model.ResultUtils;
 import com.dcits.ensemble.om.model.dbmodel.MbAttrClass;
 import com.dcits.ensemble.om.model.dbmodel.MbAttrType;
 import com.dcits.ensemble.om.model.dbmodel.tables.MbPartType;
@@ -25,6 +26,9 @@ public class MbPartTypeService {
 
     public List<MbPartType> queryAll(){
         List<MbPartType> mbPartTypeRepositoryAll = mbPartTypeRepository.findAll();
+        if(mbPartTypeRepositoryAll==null){
+            throw ResultUtils.warn("OM101","1");
+        }
         return mbPartTypeRepositoryAll;
     }
 

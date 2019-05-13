@@ -95,7 +95,7 @@ public class MbProdInfoService {
                 }
                 //mbProdDefinsMap为原始处理方式 测试成功之后  删除
                 if("ATTR".equals(mbProdDefine.getAssembleType())) {
-                    mbProdDefineMap.put(mbProdDefine.getAssembleId(), mbProdDefine);
+                    mbProdDefineMap.put(mbProdDefine.getAssembleId()+"-"+mbProdDefine.getEventType(), mbProdDefine);
                 }
                 if("PART".equals(mbProdDefine.getAssembleType())){
                     mbProdDefineListPart.add(mbProdDefine);
@@ -105,7 +105,7 @@ public class MbProdInfoService {
             }
             //指标处理
             for (MbProdDefine mbProdDefine : mbProdDefineListPart) {
-                mbProdDefineMap.put(mbProdDefine.getAssembleId()+"-"+mbProdDefine.getAttrKey(), mbProdDefine);
+                mbProdDefineMap.put(mbProdDefine.getAssembleId()+"-"+mbProdDefine.getAttrKey()+"-"+mbProdDefine.getEventType(), mbProdDefine);
             }
             mbProdInfo.setProdDefines(mbProdDefineMap);
             mbProdInfo.setMbProdDefine(mbProdDefineLists);

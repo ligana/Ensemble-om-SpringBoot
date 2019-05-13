@@ -14,8 +14,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Data
-public class AdapterProperties {
+public class ConfigProperties {
     @Value("${pf.isadapter}")
     private Boolean isAdapter;
+
+    @Value("${pf.file.path}")
+    private String filePath;
 
 }

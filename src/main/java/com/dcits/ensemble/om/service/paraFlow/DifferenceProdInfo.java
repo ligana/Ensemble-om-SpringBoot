@@ -417,7 +417,7 @@ public class DifferenceProdInfo {
                         //装载主键信息
                         keyValue.put("PROD_TYPE", baseProdType);
                         keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
-                        keyValue.put("EVENT_TYPE", newData.get("eventType"));
+                        keyValue.put("EVENT_TYPE", (newData.get("eventType").toString()).split("_")[0]+"_"+baseProdType);
                         if("ATTR".equals(attrRange)) {
                             //参数处理
                             keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
@@ -448,7 +448,6 @@ public class DifferenceProdInfo {
                             String newPageSeqNo = maxPageSeqNo.add(defineIndex).toString();
                             //重新组装插入数据参数
                             newData.put("prodType",mbProdType.getProdType());
-                            newData.put("seqNo",newSeqNo);
                             newData.put("pageSeqNo",newPageSeqNo);
                             newData.put("optionPermissions",null);
                             define.put("newData",newData);
@@ -456,8 +455,7 @@ public class DifferenceProdInfo {
                             define.put("optType", "I");
                             keyValue.put("PROD_TYPE", mbProdType.getProdType());
                             keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
-                            keyValue.put("EVENT_TYPE", newData.get("eventType"));
-                            keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
+                            keyValue.put("EVENT_TYPE", (newData.get("eventType").toString()).split("_")[0]+"_"+mbProdType.getProdType());
                             keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
                             keyValue.put("ATTR_KEY", newData.get("attrKey"));
                             this.prodType = mbProdType.getProdType();
@@ -623,14 +621,13 @@ public class DifferenceProdInfo {
             }
         }
         if(newData.get("prodType")!=null) {
-            newData.put("prodType", this.prodType);
+            newData.put("prodType", keyValue.get("PROD_TYPE"));
+            oldData.put("prodType", keyValue.get("PROD_TYPE"));
         }
-        if(newData.get("eventType")!=null && keyValue.size()!=5) {
-            newData.put("eventType", this.eventType);
+        if(newData.get("eventType")!=null){
+            newData.put("eventType", keyValue.get("EVENT_TYPE"));
+            oldData.put("eventType", keyValue.get("EVENT_TYPE"));
         }
-//        if(newData.get("eventType")!=null && keyValue.size()==5) {
-//            newData.put("eventType", keyValue.get("EVENT_TYPE").toString());
-//        }
         String dataDui=ResourcesUtils.getJsonString(newData);
         String oldDui=ResourcesUtils.getJsonString(oldData);
         String tableName=(String)map.get("tableName");

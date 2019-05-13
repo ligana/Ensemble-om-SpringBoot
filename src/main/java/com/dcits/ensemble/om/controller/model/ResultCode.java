@@ -10,7 +10,7 @@ import lombok.Data;
  **/
 public enum ResultCode {
     SUCCESS("000000", "请求成功"),
-    WARN("999999", "网络异常，请稍后重试");
+    WARN("999999", "系统错误，请稍后重试");
 
     private String code;
     private String msg;

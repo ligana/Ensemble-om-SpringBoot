@@ -1,0 +1,90 @@
+{
+    "code": "MB_PART_ATTR",
+    "comment": "指标参数定义表",
+    "attr": [
+        {
+            "dictionary": "PART_TYPE",
+            "code": "PART_TYPE",
+            "codeOld": "PART_TYPE",
+            "dataType": "Varchar",
+            "lengths": "50",
+            "precision": "",
+            "defaults": "",
+            "comment": "指标类型",
+            "scope": "取值于MB_PART_TYPE.PART_TYPE",
+            "M": true,
+            "P": true
+        },
+        {
+            "dictionary": "ATTR_KEY",
+            "code": "ATTR_KEY",
+            "codeOld": "ATTR_KEY",
+            "dataType": "Varchar",
+            "lengths": "30",
+            "precision": "",
+            "defaults": "",
+            "comment": "参数KEY",
+            "scope": "取值于MB_ATTR_TYPE ",
+            "M": true,
+            "P": true
+        },
+        {
+            "code": "ATTR_VALUE",
+            "dataType": "Varchar",
+            "lengths": "400",
+            "precision": "",
+            "M": false,
+            "P": false,
+            "comment": "参数值",
+            "defaults": "",
+            "dictionary": "ATTR_VALUE",
+            "column": "参数值",
+            "scope": "MB_ATTR_VALUE.ATTR_VALUE"
+        },
+        {
+            "code": "COMPANY",
+            "dataType": "Varchar",
+            "lengths": "20",
+            "precision": "",
+            "M": false,
+            "P": false,
+            "comment": "法人代码",
+            "defaults": "",
+            "dictionary": "COMPANY",
+            "column": "法人代码",
+            "scope": "FM_COMPANY.COMPANY"
+        },
+        {
+            "code": "TRAN_TIMESTAMP",
+            "dataType": "Varchar",
+            "lengths": "17",
+            "precision": "",
+            "M": false,
+            "P": false,
+            "comment": "交易时间戳",
+            "defaults": "",
+            "dictionary": "TRAN_TIMESTAMP",
+            "column": "时间戳",
+            "scope": ""
+        },
+        {
+            "code": "TRAN_TIME",
+            "dataType": "Number",
+            "lengths": "11",
+            "precision": "0",
+            "M": false,
+            "P": false,
+            "comment": "交易时间",
+            "defaults": "",
+            "dictionary": "TRAN_TIME",
+            "column": "交易时间",
+            "scope": ""
+        }
+    ],
+    "table_space": "core_data",
+    "dbType": "upright",
+    "parameter": "init_para",
+    "system": "Ensemble",
+    "commentDesc": "描述指标的参数",
+    "moduleType": "产品参数"
+}

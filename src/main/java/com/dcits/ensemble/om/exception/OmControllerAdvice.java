@@ -26,22 +26,22 @@ import javax.persistence.PersistenceException;
 public class OmControllerAdvice {
 
     /**
-     * 全局异常捕捉处理
+     * 数据异常
      * @param ex
      * @return
      */
     @ResponseBody
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(value = PersistenceException.class)
-    public Result DataerrorHandler(DataException ex) {
-        if(log.isInfoEnabled()){
+    public Result dataErrorHandler(DataException ex) {
+        if (log.isInfoEnabled()) {
             ex.printStackTrace();
         }
         ResultCode resultCode = ResultCode.WARN;
         resultCode.setCode(String.valueOf(ex.getErrorCode()));
         resultCode.setMsg(ex.getSQLException().getMessage());
         return ResultUtils.warn(resultCode);
-    }
+}
 
 
     /**
@@ -76,4 +76,8 @@ public class OmControllerAdvice {
         ResultCode resultCode = ResultCode.WARN;
         return ResultUtils.warn(resultCode);
     }
+
+
+
+
 }
