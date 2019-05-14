@@ -5,6 +5,7 @@ import com.dcits.ensemble.om.model.dbmodel.MbProdType;
 import com.dcits.ensemble.om.model.dbmodel.system.*;
 import com.dcits.ensemble.om.repository.base.SystemTableRepositoryImpl;
 import com.dcits.ensemble.om.repository.prodFactory.MbProdTypeRepository;
+import com.dcits.ensemble.om.repository.prodFactory.OmEnvOrgRepository;
 import com.dcits.ensemble.om.repository.system.*;
 import com.dcits.ensemble.om.repository.tables.OmTableListRepository;
 import io.swagger.annotations.Api;
@@ -17,9 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Array;
 import java.util.*;
-
+import com.dcits.ensemble.om.service.paraTable.AsyncParamService;
 import com.dcits.ensemble.om.util.ResourcesUtils;
 /**
  * Created by jiajt on 2018/11/21.
@@ -53,6 +53,10 @@ public class SystemTable {
     private OmUserCollectRepository omUserCollectRepository;
     @Resource
     private MbProdTypeRepository mbProdTypeRepository;
+    @Resource
+    private OmEnvOrgRepository omEnvOrgRepository;
+    @Resource
+    private AsyncParamService asyncParamService;
 
     @ApiOperation(value = "系统表信息", notes = "获取用户，菜单，角色，权限表信息")
     @RequestMapping("/getSysTable")
@@ -356,4 +360,26 @@ public class SystemTable {
         return ResultUtils.success();
     }
 
+    /*
+     * 获取所有参数表以及系统信
+     * */
+    @RequestMapping("/getAllTableInfo")
+    @ResponseBody
+    public Result getAllTableInfo(HttpServletResponse response) {
+        response.setHeader("Content-Type", "application/json;charset=UTF-8");
+        Map responseMap = new HashMap<>();
+        responseMap.put("omEnvOrg",omEnvOrgRepository.findAll());
+        responseMap.put("omTableList",omTableListRepository.findAll());
+        return ResultUtils.success(responseMap);
+
+    }
+
+    @RequestMapping("/asyncParam")
+    @ResponseBody
+    public Result asyncParam(HttpServletResponse response, @RequestBody Map map) {
+        response.setHeader("Content-Type", "application/json;charset=UTF-8");
+        ArrayList arrayList = (ArrayList)map.get("tableInfo");
+        asyncParamService.asyncParam(arrayList);
+        return ResultUtils.success();
+    }
 }
