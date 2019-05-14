@@ -414,17 +414,20 @@ public class DifferenceProdInfo {
                         JSONObject keyValue = new JSONObject();
                         Map define = (Map) ResourcesUtils.getMap(mbProdInfo.get("prodDefines")).get(assembleId);
                         Map newData = (Map) define.get("newData");
+                        String key = attrOptPerm.get("key").toString();
                         //装载主键信息
-                        keyValue.put("PROD_TYPE", baseProdType);
                         keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
-                        keyValue.put("EVENT_TYPE", (newData.get("eventType").toString()).split("_")[0]+"_"+baseProdType);
                         if("ATTR".equals(attrRange)) {
                             //参数处理
+                            keyValue.put("PROD_TYPE", (key.split("-")[1]).split("_")[1]);
+                            keyValue.put("EVENT_TYPE", (newData.get("eventType").toString()).split("_")[0]+"_"+key.split("-")[1].split("_")[1]);
                             keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
                             keyValue.put("ATTR_KEY", newData.get("attrKey"));
                         }
                         if("PART".equals(attrRange)){
                             //指标处理
+                            keyValue.put("PROD_TYPE", (key.split("-")[2]).split("_")[1]);
+                            keyValue.put("EVENT_TYPE", (newData.get("eventType").toString()).split("_")[0]+"_"+key.split("-")[2].split("_")[1]);
                             keyValue.put("ASSEMBLE_ID",assembleId.split("-")[0]);
                             keyValue.put("ATTR_KEY", assembleId.split("-")[1]);
                         }
@@ -544,7 +547,7 @@ public class DifferenceProdInfo {
                 for (Object key : prodMap.keySet()) {
                     Map define = (Map) prodMap.get(key);
                     Map newData = (Map) define.get("newData");
-                    keyValue.put("PROD_TYPE", this.prodType);
+                    keyValue.put("PROD_TYPE", newData.get("prodType"));
                     keyValue.put("EVENT_TYPE", newData.get("eventType"));
                     keyValue.put("ASSEMBLE_TYPE", newData.get("assembleType"));
                     keyValue.put("ASSEMBLE_ID", newData.get("assembleId"));
