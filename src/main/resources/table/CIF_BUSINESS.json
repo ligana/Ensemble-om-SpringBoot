@@ -1,40 +1,58 @@
 {
-	"attr":[
-		null,
-		null,
-		{
-			"code":"COMPANY",
-			"comment":"法人代码",
-			"dictionary":"COMPANY",
-			"id":"f9a10b9851104bff88bcf37ec6abb059",
-			"m":true,
-			"p":false,
-			"valid":true
-		},
-		{
-			"code":"TRAN_TIMESTAMP",
-			"comment":"交易时间戳",
-			"dictionary":"TRAN_TIMESTAMP",
-			"id":"793ce06cc129487e9be99552698297ff",
-			"m":true,
-			"p":false,
-			"valid":true
-		},
-		{
-			"code":"TRAN_TIME",
-			"comment":"交易时间",
-			"dictionary":"TRAN_TIME",
-			"id":"8ae36b993eba4294b1b5bca197e390c9",
-			"m":true,
-			"p":false,
-			"valid":true
-		}
-	],
-	"code":"CIF_BUSINESS",
-	"comment":"行业代码表(PARAM)",
-	"dbType":"upright",
-	"id":"5e4265a0c8a84c0c98b13a0b65a4e9ba",
-	"parameter":"init_para",
-	"system":"CIF",
-	"valid":true
-}
+	"code": "CIF_BUSINESS",
+	"comment": "行业代码表",
+	"attr": [        {
+		"code": "BUSINESS",
+		"dataType": "Varchar",
+		"lengths": "3",
+		"precision": "",
+		"M": true,            "P": true,            "comment": "行业代码",
+		"defaults": "",
+		"dictionary": "BUSINESS",
+		"column": "行业代码",
+		"scope": ""        },        {
+			"code": "BUSINESS_DESC",
+			"dataType": "Varchar",
+			"lengths": "30",
+			"precision": "",
+			"M": false,            "P": false,            "comment": "行业代码描述",
+			"defaults": "",
+			"dictionary": "BUSINESS_DESC",
+			"column": "行业代码描述",
+			"scope": ""        },
+	        {
+			"code": "COMPANY",
+			"dataType": "Varchar",
+			"lengths": "20",
+			"precision": "",
+			"M": false,            "P": false,            "comment": "法人代码",
+			"defaults": "",
+			"dictionary": "COMPANY",
+			"column": "法人代码",
+			"scope": ""        }
+	,        {
+			"code": "TRAN_TIMESTAMP",
+			"dataType": "Varchar",
+			"lengths": "17",
+			"precision": "",
+			"M": false,            "P": false,            "comment": "交易时间戳",
+			"defaults": "",
+			"dictionary": "TRAN_TIMESTAMP",
+			"column": "时间戳",
+			"scope": ""        }
+	,        {
+			"code": "TRAN_TIME",
+			"dataType": "Number",
+			"lengths": "11",
+			"precision": "0",
+			"M": false,            "P": false,            "comment": "交易时间",
+			"defaults": "",
+			"dictionary": "TRAN_TIME",
+			"column": "交易时间",
+			"scope": ""        }
+	],    "table_space": "core_data",
+	"dbType": "upright",
+	"parameter": "busi_para",
+	"system": "Ensemble",
+	"commentDesc": "1、在客户类型大类的基础上进一步细分，比如：个人客户又细分为纯储蓄客户、内部员工，公司又细分为国有企业、集体企业等，该表数据做为整个系统的基础参数，在开立客户、维护客户信息时使用，也供各模块在使用客户信息时用。",
+	"moduleType":"客户参数"}

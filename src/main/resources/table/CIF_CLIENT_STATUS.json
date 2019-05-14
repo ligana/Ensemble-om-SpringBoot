@@ -22,7 +22,7 @@
 		},
 		{
 			"code":"BAD_CLIENT_IND",
-			"comment":"是否为劣质客户  Y -是， N -否",
+			"comment":"是否为劣质客户",
 			"dictionary":"BAD_CLIENT_IND",
 			"id":"084ae7a0cfe545f5a16b5406e6807b11",
 			"m":true,
@@ -57,8 +57,6 @@
 			"valid":true
 		}
 	],
-	"code":"CIF_CLIENT_STATUS",
-	"comment":"客户状态(PARAM)",
 	"dbType":"upright",
 	"id":"1d17776afbe749318929759a3f729717",
 	"parameter":"init_para",

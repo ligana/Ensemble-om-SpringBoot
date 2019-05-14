@@ -6,26 +6,26 @@
     "dataType":"Varchar",
     "lengths":"6",
     "precision":"",
-      "M":true,"P":true,"comment":"分类1",
+    "M":true,"P":true,"comment":"分类代码",
     "defaults":"",
-    "dictionary":"CLASS_1"}
-  ,{
+    "dictionary":"CLASS_1"},
+    {
       "code":"CLASS_1_DESC",
       "dataType":"Varchar",
       "lengths":"30",
       "precision":"",
-      "M":true,"P":false,"comment":"分类描述",
+      "M":true,"P":false,"comment":"描述",
       "defaults":"",
-      "dictionary":"CLASS_1_DESC"}
-  ,{
+      "dictionary":"CLASS_1_DESC"},
+    {
       "code":"COUNTER_PARTY",
       "dataType":"Varchar",
       "lengths":"10",
       "precision":"",
-      "M":false,"P":false,"comment":"交易对手代码",
+      "M":true,"P":false,"comment":"交易对手代码",
       "defaults":"",
-      "dictionary":"COUNTER_PARTY"}
-  ,{
+      "dictionary":"COUNTER_PARTY"},
+    {
       "code":"COMPANY",
       "dataType":"Varchar",
       "lengths":"20",
