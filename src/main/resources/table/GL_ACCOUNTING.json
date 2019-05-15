@@ -1,136 +1,164 @@
 {
-  "code":"GL_ACCOUNTING",
-  "comment":"分录定义表",
-  "attr":[{
-    "code":"ACCOUNTING_NO",
-    "dataType":"Varchar",
-    "lengths":"30",
-    "precision":"",
-    "M":true,"P":true,"comment":"会计分录编号",
-    "defaults":"",
-    "dictionary":"ACCOUNTING_NO"}
-  ,{
+  "attr":[
+    {
+      "code":"ACCOUNTING_NO",
+      "comment":"会计分录编号 ",
+      "dictionary":"ACCOUNTING_NO",
+      "id":"dbcdb2af3758427c8d50ae91719f67c0",
+      "m":true,
+      "p":true,
+      "valid":true
+    },
+    {
       "code":"COUNTER",
-      "dataType":"Varchar",
-      "lengths":"20",
-      "precision":"",
-      "M":true,"P":true,"comment":"序号",
-      "defaults":"",
-      "dictionary":"COUNTER"}
-  ,{
+      "comment":"会计分录序号 ",
+      "dictionary":"COUNTER",
+      "id":"b5ff3539ec2f420a9730352e75c109bb",
+      "m":true,
+      "p":true,
+      "valid":true
+    },
+    {
       "code":"AMOUNT_TYPE",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":true,"comment":"金额类型",
-      "defaults":"",
-      "dictionary":"AMOUNT_TYPE"}
-  ,{
+      "comment":"金额类型",
+      "dictionary":"AMOUNT_TYPE",
+      "id":"1d69dac32abd4d19815e651eb5fdc51f",
+      "m":true,
+      "p":true,
+      "valid":true
+    },
+    {
       "code":"CR_DR",
-      "dataType":"Varchar",
-      "lengths":"1",
-      "precision":"",
-      "M":true,"P":false,"comment":"借贷标志",
-      "defaults":"",
-      "dictionary":"CR_DR"}
-  ,{
+      "comment":"借贷标志",
+      "dictionary":"CR_DR",
+      "id":"8da71a9f410e4818a1dcdf32bd6cef00",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"GL_CODE_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"科目",
-      "defaults":"",
-      "dictionary":"GL_CODE_EXP"}
-  ,{
+      "comment":"科目 ",
+      "dictionary":"GL_CODE_EXP",
+      "id":"d82dfef62bc046639d2f6772c1877780",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"BRANCH_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"机构",
-      "defaults":"",
-      "dictionary":"BRANCH_EXP"}
-  ,{
+      "comment":"机构 ",
+      "dictionary":"BRANCH_EXP",
+      "id":"fdc028d9c57248d593694f1fb13b807f",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"CLIENT_NO_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"客户号",
-      "defaults":"",
-      "dictionary":"CLIENT_NO_EXP"}
-  ,{
+      "comment":"客户号",
+      "dictionary":"CLIENT_NO_EXP",
+      "id":"62d9805bd39940eb9598492cc0c2a47d",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"CCY_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"币种",
-      "defaults":"",
-      "dictionary":"CCY_EXP"}
-  ,{
+      "comment":"币种 ",
+      "dictionary":"CCY_EXP",
+      "id":"e1499a67be6a409abed837ce384e6ef0",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"PROFIT_CENTRE_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"利润中心",
-      "defaults":"",
-      "dictionary":"PROFIT_CENTRE_EXP"}
-  ,{
+      "comment":"利润中心 ",
+      "dictionary":"PROFIT_CENTRE_EXP",
+      "id":"457deeabb1af41bf83e4c1cebb494675",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"SEQ_NO",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"总账序号",
-      "defaults":"",
-      "dictionary":"SEQ_NO"}
-  ,{
+      "comment":"总账序号 ",
+      "dictionary":"SEQ_NO",
+      "id":"10cbc7a209494653afc699f89f4330d4",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"AMOUNT_EXP",
-      "dataType":"Varchar",
-      "lengths":"500",
-      "precision":"",
-      "M":true,"P":false,"comment":"金额",
-      "defaults":"",
-      "dictionary":"AMOUNT_EXP"}
-  ,{
+      "comment":"金额 ",
+      "dictionary":"AMOUNT_EXP",
+      "id":"8f0b4825c6534dac87f294adddcec3ec",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"PROD_TYPE_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"产品类型",
-      "defaults":"",
-      "dictionary":"PROD_TYPE_EXP"}
-  ,{
+      "comment":"产品类型 ",
+      "dictionary":"PROD_TYPE_EXP",
+      "id":"95d130c753c349b898d19fa492c99e7e",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"COMPANY_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"法人",
-      "defaults":"",
-      "dictionary":"COMPANY_EXP"}
-  ,{
+      "comment":"法人 ",
+      "dictionary":"COMPANY_EXP",
+      "id":"563f7debfd3b4420a512fd1b32b3e967",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"BUSINESS_UNIT_EXP",
-      "dataType":"Varchar",
-      "lengths":"50",
-      "precision":"",
-      "M":true,"P":false,"comment":"账套",
-      "defaults":"",
-      "dictionary":"BUSINESS_UNIT_EXP"}
-  ,{
+      "comment":"账套 ",
+      "dictionary":"BUSINESS_UNIT_EXP",
+      "id":"75018659ce1444e0937c8f1dd4f7f026",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"TRAN_TIME",
-      "dataType":"NUMBER",
-      "lengths":"11",
-      "precision":"0",
-      "M":false,"P":false,"comment":"交易时间",
-      "defaults":"",
-      "dictionary":"TRAN_TIME"}
-  ,{
+      "comment":"交易时间 ",
+      "dictionary":"TRAN_TIME",
+      "id":"bb06e0ac969b446aa0c2fb5b218f7491",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
       "code":"TRAN_TIMESTAMP",
-      "dataType":"Varchar",
-      "lengths":"17",
-      "precision":"",
-      "M":false,"P":false,"comment":"交易时间戳",
-      "defaults":"",
-      "dictionary":"TRAN_TIMESTAMP"}
-  ],"table_space":"account_data",
+      "comment":"交易时间戳 ",
+      "dictionary":"TRAN_TIMESTAMP",
+      "id":"f318fa2e049c48df942f5602fc128334",
+      "m":true,
+      "p":false,
+      "valid":true
+    },
+    {
+      "code":"COMPANY",
+      "comment":"法人代码",
+      "dictionary":"COMPANY",
+      "id":"82607053ad474d33ad8cdf0e5eedddc0",
+      "m":true,
+      "p":false,
+      "valid":true
+    }
+  ],
+  "code":"GL_ACCOUNTING",
+  "comment":"分录定义表(UPRIGHT)",
   "dbType":"upright",
-  "parameter":"busi_para",
-  "system":"Accounting",
-  "commentDesc":""}
+  "id":"1ff8b52aae8942f3bf226a1deb29bff5",
+  "parameter":"init_para",
+  "system":"AC",
+  "valid":true
+}

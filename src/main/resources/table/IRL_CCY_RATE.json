@@ -117,7 +117,7 @@
             "dataType": "Number",
             "lengths": "15",
             "precision": "8",
-            "M": false,
+            "M": true,
             "P": false,
             "comment": "央行参考汇率",
             "defaults": "",
