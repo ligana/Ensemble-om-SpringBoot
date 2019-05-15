@@ -5,7 +5,7 @@
 			"comment":"产品类型",
 			"dictionary":"PROD_TYPE",
 			"id":"520f61540303499ba49646452edc4782",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -14,7 +14,7 @@
 			"comment":"源类型 ",
 			"dictionary":"SOURCE_TYPE",
 			"id":"627461c73b684c219c7ebabbe53f48b7",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -23,7 +23,7 @@
 			"comment":"事件类型 ",
 			"dictionary":"EVENT_TYPE",
 			"id":"5951c73c3d1947f8b630f11e400195e2",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -32,7 +32,7 @@
 			"comment":"交易类型 ",
 			"dictionary":"TRAN_TYPE",
 			"id":"d85f319729384439b80df79810757b9f",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -41,7 +41,7 @@
 			"comment":"金额类型",
 			"dictionary":"AMOUNT_TYPE",
 			"id":"41b478969cbd4569a876bf270437c9e2",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -50,7 +50,7 @@
 			"comment":"核算状态 ",
 			"dictionary":"ACCOUNTING_STATUS",
 			"id":"5f474c176a574c6c84329c999e7867d7",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -59,7 +59,7 @@
 			"comment":"源类型 ",
 			"dictionary":"SOURCE_MODULE",
 			"id":"e447b8b07f734f1a800195ef40e9cc74",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -68,7 +68,7 @@
 			"comment":"交易时间 ",
 			"dictionary":"TRAN_TIME",
 			"id":"4489c318054f4da8a8a20e99a8bbd03c",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -77,16 +77,16 @@
 			"comment":"交易时间戳 ",
 			"dictionary":"TRAN_TIMESTAMP",
 			"id":"9356055fbf0c41ef9e01222cdcc4573d",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
 		{
 			"code":"COMPANY",
-			"comment":"法人代码 FM_COMPANY.COMPANY",
+			"comment":"法人代码",
 			"dictionary":"COMPANY",
 			"id":"c981d90933094011ba15ac7d84f6c262",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		}
