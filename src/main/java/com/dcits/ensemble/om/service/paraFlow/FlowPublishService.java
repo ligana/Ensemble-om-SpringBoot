@@ -1,7 +1,9 @@
 package com.dcits.ensemble.om.service.paraFlow;
 
+import com.alibaba.fastjson.JSONArray;
 import com.dcits.ensemble.om.controller.model.CoreServiceModel;
 import com.dcits.ensemble.om.controller.model.ResultUtils;
+import com.dcits.ensemble.om.exception.BusinessException;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessMainFlow;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRecordHist;
 import com.dcits.ensemble.om.model.dbmodel.OmProcessRelationHist;
@@ -129,6 +131,8 @@ public class FlowPublishService {
         return pushSql;
     }
     public void HttpAdapterPf(List<OmProcessRecordHist> omProcessRecordHists, OmEnvOrg omEnvOrg) {
+        String retStatus="S";
+        String retCode="000000";
         if (omEnvOrg == null) {
             throw ResultUtils.warn("OM1004");
         }
@@ -141,6 +145,11 @@ public class FlowPublishService {
 //        coreServiceModel.setMessageCode(omEnvOrg.getMessageCode());
         com.alibaba.fastjson.JSONObject sysHead = ConnectUtil.getSysHeadForPublish(coreServiceModel);
         com.alibaba.fastjson.JSONObject result = ConnectUtil.postToGalaxyCore(sysHead, body, omEnvOrg.getUrl());
+        retStatus = (String) result.get("retStatus");
+        retCode = ((com.alibaba.fastjson.JSONObject) ((JSONArray) result.get("ret")).get(0)).get("retCode").toString();
+        if(!retStatus.equals("S")||!retCode.equals("000000")){
+                throw new BusinessException("OM1005",omEnvOrg.getSystemId()+"-"+omEnvOrg.getEnvDesc());
+        }
     }
 
     public void writeFile(String[] systemIds, StringBuffer sql, String tablename) {
