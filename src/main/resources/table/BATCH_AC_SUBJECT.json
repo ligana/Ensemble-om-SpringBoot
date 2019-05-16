@@ -5,7 +5,7 @@
 			"comment":"科目代码 ",
 			"dictionary":"SUBJECT_CODE",
 			"id":"e05f4b795a224d938c6cb48fa8f78565",
-			"m":false,
+			"m":true,
 			"p":true,
 			"valid":true
 		},
@@ -14,7 +14,7 @@
 			"comment":"科目描述 ",
 			"dictionary":"SUBJECT_DESC",
 			"id":"ba0953ade79e42a0a2880c5ccb5919e3",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -23,7 +23,7 @@
 			"comment":"科目英文描述 ",
 			"dictionary":"SUBJECT_DESC_EN",
 			"id":"b77db23a58d34cea81763e6b55ab3230",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -32,7 +32,7 @@
 			"comment":"科目类型",
 			"dictionary":"SUBJECT_TYPE",
 			"id":"0c4df4989f8e4cdfa09c2c079f10675a",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -41,7 +41,7 @@
 			"comment":"上级科目 ",
 			"dictionary":"CONTROL_SUBJECT",
 			"id":"0ef6f024a26b4e3fb9cae0313d6f4937",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -50,7 +50,7 @@
 			"comment":"BSPL类型",
 			"dictionary":"BSPL_TYPE",
 			"id":"199b9384857f4bb484831996a381456d",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -59,7 +59,7 @@
 			"comment":"账户类型",
 			"dictionary":"GL_TYPE",
 			"id":"eafde240f9c14ad6b90db4a1cc164193",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -68,7 +68,7 @@
 			"comment":"转账标志",
 			"dictionary":"TFR_IND",
 			"id":"7565f22f284746db9da64fbeca2044ab",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -77,7 +77,7 @@
 			"comment":"转账指示",
 			"dictionary":"OF_TRF",
 			"id":"f535cd9695ec468896a70dfb52623e6b",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -86,7 +86,7 @@
 			"comment":"是否允许手工批量记账",
 			"dictionary":"MANUAL_BATCH_RES",
 			"id":"3bc36ec7f48346139a5340b99972eb96",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -95,7 +95,7 @@
 			"comment":"是否计提营业税",
 			"dictionary":"OPERATING_TAX",
 			"id":"d3312719801c4d73ad7b81fd799f960c",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -104,7 +104,7 @@
 			"comment":"是否内部科目标志",
 			"dictionary":"INTERNAL",
 			"id":"fd9f13bbd6b843b58f1442ed4d615ea2",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -113,7 +113,7 @@
 			"comment":"科目状态",
 			"dictionary":"SUBJECT_STATUS",
 			"id":"1b7082ac129e44a1b22d8e525618a35c",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -122,7 +122,7 @@
 			"comment":"科目级别 ",
 			"dictionary":"SUBJECT_LEVEL",
 			"id":"f47d14486eb44c2d944160f7e44ff24c",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -131,7 +131,7 @@
 			"comment":"是否允许手工记账",
 			"dictionary":"MANUAL_ACCOUNT",
 			"id":"5cf04a9cf791493d862b4757e0cfe319",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -140,7 +140,7 @@
 			"comment":"余额方向",
 			"dictionary":"BALANCE_WAY",
 			"id":"6a24e6dbfd114bb999107c4b3c86d37a",
-			"m":false,
+			"m":true,
 			"p":false,
 			"valid":true
 		},
@@ -149,7 +149,7 @@
 			"comment":"帐套 ",
 			"dictionary":"BUSINESS_UNIT",
 			"id":"73a1237bfc2947de8a43ee6dc0e55282",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -158,7 +158,7 @@
 			"comment":"内部账管理标志 ",
 			"dictionary":"INTER_IND",
 			"id":"1d7a158384844afe847f6077853b45db",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		},
@@ -167,7 +167,7 @@
 			"comment":"法人代码",
 			"dictionary":"COMPANY",
 			"id":"d87fb410c6964f83ad481578f5632bc2",
-			"m":true,
+			"m":false,
 			"p":false,
 			"valid":true
 		}

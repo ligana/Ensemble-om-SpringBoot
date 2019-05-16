@@ -1,119 +1,155 @@
 {
   "code": "MB_PART_TYPE",
   "comment": "指标类型定义表",
-  "attr": [        {
-    "code": "PART_TYPE",
-    "dataType": "Varchar",
-    "lengths": "50",
-    "precision": "",
-    "M": true,            "P": true,            "comment": "指标类型",
-    "defaults": "",
-    "dictionary": "PART_TYPE",
-    "column": "指标类型 取值于MB_PART_TYPE.PART_TYPE",
-    "scope": ""        }
-  ,        {
+  "attr": [
+    {
+      "code": "PART_TYPE",
+      "dataType": "Varchar",
+      "lengths": "50",
+      "precision": "",
+      "M": true,
+      "P": true,
+      "comment": "指标类型",
+      "defaults": "",
+      "dictionary": "PART_TYPE",
+      "column": "指标类型 取值于MB_PART_TYPE.PART_TYPE",
+      "scope": ""
+    },
+    {
       "code": "PART_DESC",
       "dataType": "Varchar",
       "lengths": "100",
       "precision": "",
-      "M": true,            "P": false,            "comment": "指标类型描述",
+      "M": true,
+      "P": false,
+      "comment": "指标类型描述",
       "defaults": "",
       "dictionary": "PART_DESC",
       "column": "指标类型描述",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "DEFAULT_PART",
       "dataType": "Varchar",
       "lengths": "20",
       "precision": "",
-      "M": false,            "P": false,            "comment": "基础指标类型",
+      "M": false,
+      "P": false,
+      "comment": "基础指标类型",
       "defaults": "",
       "dictionary": "DEFAULT_PART",
       "column": "基础指标类型",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "PART_CLASS",
       "dataType": "Varchar",
       "lengths": "20",
       "precision": "",
-      "M": true,            "P": false,            "comment": "指标分类",
+      "M": true,
+      "P": false,
+      "comment": "指标分类",
       "defaults": "",
       "dictionary": "PART_CLASS",
       "column": "指标分类 取值于MB_PART_CLASS.PART_CLASS",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "IS_STANDARD",
       "dataType": "Varchar",
       "lengths": "1",
       "precision": "",
-      "M": true,            "P": false,            "comment": "是否标准模板",
+      "M": true,
+      "P": false,
+      "comment": "是否标准模板",
       "defaults": "",
       "dictionary": "IS_STANDARD",
       "column": "是否标准模板 Y：标准模板 N：非标准模板",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "PROCESS_METHOD",
       "dataType": "Varchar",
       "lengths": "1",
       "precision": "",
-      "M": false,            "P": false,            "comment": "指标实现方式",
+      "M": false,
+      "P": false,
+      "comment": "指标实现方式",
       "defaults": "",
       "dictionary": "PROCESS_METHOD",
       "column": "处理方式 A：检查L类  C：提交类",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "BUSI_CATEGORY",
       "dataType": "Varchar",
       "lengths": "50",
       "precision": "",
-      "M": false,            "P": false,            "comment": "业务分类",
+      "M": false,
+      "P": false,
+      "comment": "业务分类",
       "defaults": "",
       "dictionary": "BUSI_CATEGORY",
       "column": "业务分类  RB-存款，CL-贷款，MM-货币市场，GL-总账",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "STATUS",
       "dataType": "Varchar",
       "lengths": "1",
       "precision": "",
-      "M": true,            "P": false,            "comment": "状态",
+      "M": true,
+      "P": false,
+      "comment": "状态",
       "defaults": "",
       "dictionary": "STATUS",
       "column": "状态 A：有效 F：无效",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "COMPANY",
       "dataType": "Varchar",
       "lengths": "20",
       "precision": "",
-      "M": false,            "P": false,            "comment": "",
+      "M": false,
+      "P": false,
+      "comment": "法人代码",
       "defaults": "",
       "dictionary": "COMPANY",
       "column": "法人代码",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "TRAN_TIMESTAMP",
       "dataType": "Varchar",
       "lengths": "17",
       "precision": "",
-      "M": false,            "P": false,            "comment": "交易时间戳",
+      "M": false,
+      "P": false,
+      "comment": "交易时间戳",
       "defaults": "",
       "dictionary": "TRAN_TIMESTAMP",
       "column": "时间戳",
-      "scope": ""        }
-  ,        {
+      "scope": ""
+    },
+    {
       "code": "TRAN_TIME",
       "dataType": "Number",
       "lengths": "11",
       "precision": "0",
-      "M": false,            "P": false,            "comment": "交易时间",
+      "M": false,
+      "P": false,
+      "comment": "交易时间",
       "defaults": "",
       "dictionary": "TRAN_TIME",
       "column": "交易时间",
-      "scope": ""        }
-  ],    "table_space": "core_data",
+      "scope": ""
+    }
+  ],
+  "table_space": "core_data",
   "dbType": "upright",
   "parameter": "init_para",
   "system": "Ensemble",
   "commentDesc": "描述产品工厂使用的所有的指标类型",
-  "moduleType":"产品参数"}
+  "moduleType": "产品参数"
+}
