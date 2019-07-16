@@ -14,10 +14,11 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class MbProdType {
-    public MbProdType(String prodType, String prodRange, String prodDesc, String prodClass, String prodGroup, String baseProdType,String status,String sourceModule,String prodAbbr) {
+    public MbProdType(String prodType, String prodRange, String prodDesc, String prodRateDesc, String prodClass, String prodGroup, String baseProdType,String status,String sourceModule,String prodAbbr) {
         this.prodType = prodType;
         this.prodRange = prodRange;
         this.prodDesc = prodDesc;
+        this.prodRateDesc = prodRateDesc;
         this.prodClass = prodClass;
         this.prodGroup = prodGroup;
         this.baseProdType = baseProdType;
@@ -32,6 +33,8 @@ public class MbProdType {
     private String prodType;
     @Column(name="prod_desc")
     private String prodDesc;
+    @Column(name="prod_rateDesc")
+    private String prodRateDesc;
     @Column(name="prod_abbr")
     private String prodAbbr;
     @Column(name="prod_class")
@@ -51,6 +54,7 @@ public class MbProdType {
         return "MbProdType{" +
                 "prodType='" + prodType + '\'' +
                 ", prodDesc='" + prodDesc + '\'' +
+                ", prodRateDesc='" + prodRateDesc + '\'' +
                 ", prodAbbr='" + prodAbbr + '\'' +
                 ", prodClass='" + prodClass + '\'' +
                 ", prodGroup='" + prodGroup + '\'' +
